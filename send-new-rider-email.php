@@ -81,7 +81,7 @@ if (!filter_var($riderEmail, FILTER_VALIDATE_EMAIL)) {
 }
 
 // Create HTML email template
-$emailSubject = "Contract accepted by existing rider - $firstName $lastName";
+$emailSubject = "Contract accepted new activation in progress - $firstName $lastName";
 
 $emailBody = "
 <!DOCTYPE html>
@@ -215,7 +215,7 @@ $headers .= "X-Mailer: PHP/" . phpversion();
 $riderEmailSent = mail($riderEmail, $emailSubject, $emailBody, $headers);
 
 // Create HR notification email
-$hrSubject = "Contract accepted by existing rider - $firstName $lastName";
+$hrSubject = "Contract accepted new activation in progress - $firstName $lastName";
 $hrBody = str_replace(
     "<h2>Dear $firstName $lastName,</h2>
             <p>Thank you for submitting your freelance rider agreement. Your application has been received and is under review.</p>",
