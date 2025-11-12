@@ -276,6 +276,7 @@ const contractContent = {
             vehicleScooter: "Scooter",
             vehicleBike: "Bicycle",
             vehicleNumber: "Vehicle Registration Number *",
+            licenseNumber: "Driving License Number *",
             license: "I confirm that I have a valid driving license *",
             vehicleDocs: "I confirm that I have valid RC, insurance, and PUC *",
             ownDocs: "I confirm all documents are my own and authentic *",
@@ -915,24 +916,49 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle vehicle type change for bicycle
     const vehicleTypeSelect = document.getElementById('vehicleType');
     const vehicleNumberInput = document.getElementById('vehicleNumber');
+    const vehicleNumberGroup = document.getElementById('vehicleNumberGroup');
+    const licenseNumberInput = document.getElementById('licenseNumber');
+    const licenseNumberGroup = document.getElementById('licenseNumberGroup');
     const hasLicenseCheckbox = document.getElementById('hasLicense');
     const hasVehicleDocsCheckbox = document.getElementById('hasVehicleDocs');
     
-    vehicleTypeSelect.addEventListener('change', function() {
-        if (this.value === 'bike') { // bicycle
+    // Function to handle vehicle type change
+    function handleVehicleTypeChange() {
+        if (vehicleTypeSelect.value === 'bike') { // bicycle
+            // Hide vehicle number and license number fields
+            vehicleNumberGroup.style.display = 'none';
+            licenseNumberGroup.style.display = 'none';
+            
+            // Set default values for hidden fields
             vehicleNumberInput.value = 'Bi-cycle';
-            vehicleNumberInput.readOnly = true;
             vehicleNumberInput.required = false;
+            licenseNumberInput.value = 'Not Required';
+            licenseNumberInput.required = false;
+            
+            // Make checkboxes not required
             hasLicenseCheckbox.required = false;
             hasVehicleDocsCheckbox.required = false;
         } else {
+            // Show vehicle number and license number fields
+            vehicleNumberGroup.style.display = 'block';
+            licenseNumberGroup.style.display = 'block';
+            
+            // Clear values and make required
             vehicleNumberInput.value = '';
-            vehicleNumberInput.readOnly = false;
             vehicleNumberInput.required = true;
+            licenseNumberInput.value = '';
+            licenseNumberInput.required = true;
+            
+            // Make checkboxes required
             hasLicenseCheckbox.required = true;
             hasVehicleDocsCheckbox.required = true;
         }
-    });
+    }
+    
+    vehicleTypeSelect.addEventListener('change', handleVehicleTypeChange);
+    
+    // Set initial state on page load
+    handleVehicleTypeChange();
 });
 
 function disableForm() {
@@ -1079,6 +1105,7 @@ document.getElementById('rider-contract-form').addEventListener('submit', functi
         workLocation: document.getElementById('workLocation').value.trim(),
         vehicleType: document.getElementById('vehicleType').value,
         vehicleNumber: document.getElementById('vehicleNumber').value.toUpperCase().trim(),
+        licenseNumber: document.getElementById('licenseNumber').value.toUpperCase().trim(),
         hasLicense: document.getElementById('hasLicense').checked,
         hasVehicleDocs: document.getElementById('hasVehicleDocs').checked,
         ownDocuments: document.getElementById('ownDocuments').checked,
