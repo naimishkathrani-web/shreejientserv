@@ -53,6 +53,21 @@
             </div>
 
             <div class="form-group">
+                <label for="parentName" id="label-parent-name">Father/Mother Full Name *</label>
+                <input type="text" id="parentName" name="parentName" placeholder="Enter father's or mother's full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="parentMobile" id="label-parent-mobile">Father/Mother Mobile Number *</label>
+                <input type="tel" id="parentMobile" name="parentMobile" pattern="[0-9]{10}" maxlength="10" placeholder="10-digit mobile number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email" id="label-email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+            </div>
+
+            <div class="form-group">
                 <label for="aadharNumber" id="label-aadhar">Aadhar Card Number *</label>
                 <input type="text" id="aadharNumber" name="aadharNumber" pattern="[0-9]{12}" maxlength="12" placeholder="Enter 12-digit Aadhar number" required>
                 <small id="aadhar-help">Enter 12-digit Aadhar number</small>
