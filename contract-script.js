@@ -907,29 +907,39 @@ document.getElementById('rider-contract-form').addEventListener('submit', functi
         submittedAt: new Date().toISOString()
     };
     
-    // Store in localStorage (in production, this should be sent to a backend server)
+    // Send data to PHP backend for email processing
+    fetch('https://www.shreejientserv.in/send-contract-email.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Show success message
+            document.getElementById('rider-contract-form').style.display = 'none';
+            document.getElementById('contract-content').style.display = 'none';
+            document.getElementById('success-message').style.display = 'block';
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+            
+            console.log('Contract submitted successfully:', data);
+        } else {
+            throw new Error(data.message || 'Failed to submit contract');
+        }
+    })
+    .catch(error => {
+        console.error('Error submitting contract:', error);
+        alert('Error submitting contract: ' + error.message + '\nPlease try again or contact us at info@shreejientserv.in');
+    });
+    
+    // Optional: Store in localStorage as backup for testing
     const existingData = JSON.parse(localStorage.getItem('riderContracts') || '[]');
     existingData.push(formData);
     localStorage.setItem('riderContracts', JSON.stringify(existingData));
-    
-    // Show success message
-    document.getElementById('rider-contract-form').style.display = 'none';
-    document.getElementById('contract-content').style.display = 'none';
-    document.getElementById('success-message').style.display = 'block';
-    
-    // Scroll to top
-    window.scrollTo(0, 0);
-    
-    console.log('Contract submitted:', formData);
-    
-    // In production, you would send this data to your backend:
-    // fetch('/api/rider-contracts', {
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify(formData)
-    // }).then(response => response.json())
-    //   .then(data => console.log('Success:', data))
-    //   .catch(error => console.error('Error:', error));
 });
 
 function validateFormData() {
