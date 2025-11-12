@@ -835,6 +835,10 @@ const contractContent = {
         labels: {
             firstname: "प्रथम नाम *",
             lastname: "अंतिम नाम *",
+            parentName: "पिता/माता का पूरा नाम *",
+            parentMobile: "पिता/माता का मोबाइल नंबर *",
+            email: "ईमेल पता *",
+            dateOfBirth: "जन्म तिथि *",
             aadhar: "आधार कार्ड नंबर *",
             aadharHelp: "12-अंकीय आधार नंबर दर्ज करें",
             pan: "पैन कार्ड नंबर *",
