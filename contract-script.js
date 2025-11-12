@@ -15,8 +15,10 @@ const contractContent = {
             <h3>2. NATURE OF ENGAGEMENT</h3>
             <p>2.1. The Rider agrees to work as an <strong>independent freelance contractor</strong> and NOT as an employee of the Company.</p>
             <p>2.2. This is a <strong>trial engagement for the first 3 (three) months</strong> from the date of acceptance of this agreement.</p>
-            <p>2.3. After successful completion of 3 months of continuous service, the Rider will be eligible for a <strong>one-year contract</strong> with additional benefits including salary account and insurance coverage.</p>
-            <p>2.4. The Rider understands and acknowledges that during the initial 3-month trial period, they are working entirely at their own risk.</p>
+            <p>2.3. After successful completion of 3 months of continuous service <strong>AND meeting ALL eligibility criteria mentioned in this agreement</strong>, the Rider will be eligible for a <strong>one-year fixed-term contract</strong> with additional benefits including salary account and insurance coverage.</p>
+            <p>2.4. Upon successful completion of the one-year contract, the Rider may be considered for <strong>permanent employment with the Company</strong> under a contract-to-hire arrangement (optional, at Company's discretion).</p>
+            <p>2.5. The Rider understands and acknowledges that during the initial 3-month trial period, they are working entirely at their own risk.</p>
+            <p>2.6. Eligibility for the one-year contract after 3 months is subject to meeting performance standards, maintaining good conduct, zero MDND complaints, and fulfilling all work requirements.</p>
             
             <h3>3. PAYMENT STRUCTURE & REMUNERATION</h3>
             <p>The Rider will be compensated on a <strong>daily or weekly basis</strong> as per the following delivery-based payment structure:</p>
@@ -125,10 +127,29 @@ const contractContent = {
                 <li>Wear appropriate safety gear including helmet at all times</li>
                 <li>Maintain professional conduct with customers and company representatives</li>
                 <li>Handle all deliveries with care and responsibility</li>
+                <li><strong>Ensure accurate and honest delivery status updates</strong></li>
             </ul>
             <p>10.2. Violation of safety norms or unprofessional conduct may result in immediate termination.</p>
             
-            <h3>11. TERMINATION</h3>
+            <h3>11. MDND (MARKED DELIVERED NOT DELIVERED) POLICY</h3>
+            <p>11.1. <strong>ZERO TOLERANCE POLICY:</strong> The Company maintains a strict zero-tolerance policy for MDND complaints.</p>
+            <p>11.2. <strong>MDND Definition:</strong> MDND occurs when a Rider marks an order as "Delivered" in the system, but the customer reports that they did not receive the order.</p>
+            <p>11.3. <strong>CONSEQUENCES OF MDND:</strong></p>
+            <ul>
+                <li><strong>First MDND Complaint:</strong> Written warning and investigation. Payment for that order will be withheld pending investigation.</li>
+                <li><strong>Second MDND Complaint:</strong> Suspension for 7 days without pay and mandatory retraining.</li>
+                <li><strong>Third MDND Complaint:</strong> Immediate and permanent termination of agreement with no rehire eligibility.</li>
+                <li>The Rider will be liable to compensate for the order value and may face legal action for fraud.</li>
+            </ul>
+            <p>11.4. <strong>IMPACT ON CONTRACT ELIGIBILITY:</strong></p>
+            <ul>
+                <li>ANY MDND complaint during the 3-month trial period will <strong>DISQUALIFY</strong> the Rider from receiving the one-year contract.</li>
+                <li>Clean record with ZERO MDND complaints is MANDATORY for contract renewal and permanent employment consideration.</li>
+            </ul>
+            <p>11.5. The Rider acknowledges that marking an order as delivered without actually delivering it to the customer constitutes fraud and breach of trust.</p>
+            <p>11.6. The Company reserves the right to report MDND cases to law enforcement authorities if fraud is suspected.</p>
+            
+            <h3>12. TERMINATION</h3>
             <p>11.1. Either party may terminate this agreement with immediate effect by providing written notice.</p>
             <p>11.2. The Company reserves the right to terminate this agreement immediately if:</p>
             <ul>
@@ -136,32 +157,51 @@ const contractContent = {
                 <li>The Rider provides false information or documents</li>
                 <li>The Rider engages in misconduct, fraud, or illegal activities</li>
                 <li>The Rider fails to meet minimum work requirements</li>
+                <li>The Rider receives MDND complaints (as per MDND Policy)</li>
                 <li>The Rider's performance is unsatisfactory</li>
             </ul>
-            <p>11.3. Upon termination, all pending payments will be settled within 15 days, subject to verification of completed work.</p>
+            <p>12.3. Upon termination, all pending payments will be settled within 15 days, subject to verification of completed work.</p>
             
-            <h3>12. DATA PRIVACY</h3>
-            <p>12.1. The Company will store and process the Rider's personal information in accordance with applicable data protection laws.</p>
-            <p>12.2. The Rider's information will be used only for operational, payment, and legal purposes.</p>
-            <p>12.3. The Company will maintain confidentiality of Rider information and will not share it with unauthorized third parties.</p>
+            <h3>13. ELIGIBILITY CRITERIA FOR ONE-YEAR CONTRACT</h3>
+            <p>13.1. To be eligible for the one-year contract after completing the 3-month trial period, the Rider MUST meet ALL of the following criteria:</p>
+            <ul>
+                <li><strong>Zero MDND complaints</strong> throughout the 3-month period</li>
+                <li><strong>Minimum 6 days per week</strong> work commitment maintained consistently</li>
+                <li><strong>Mandatory attendance</strong> on all Thursdays, Fridays, Saturdays, and Sundays</li>
+                <li><strong>Minimum average of 17 orders per day</strong> (or as specified by the Company)</li>
+                <li><strong>No disciplinary actions</strong> or written warnings during the trial period</li>
+                <li><strong>Clean safety record</strong> - no accidents due to negligence or violations</li>
+                <li><strong>Zero customer complaints</strong> regarding behavior, professionalism, or conduct</li>
+                <li><strong>Timely completion</strong> of all assigned deliveries</li>
+                <li><strong>Full 3 months completed</strong> from the date of acceptance of this agreement</li>
+            </ul>
+            <p>13.2. The Company's decision regarding contract eligibility is final and based on comprehensive performance evaluation.</p>
+            <p>13.3. Meeting the minimum criteria does not guarantee contract extension; the Company reserves the right to make the final decision.</p>
             
-            <h3>13. MISCELLANEOUS</h3>
-            <p>13.1. <strong>Independent Contractor:</strong> The Rider is an independent contractor and not an employee. No employer-employee relationship exists.</p>
-            <p>13.2. <strong>No Benefits:</strong> During the trial period, the Rider is not entitled to employee benefits, provident fund, gratuity, or any statutory benefits.</p>
-            <p>13.3. <strong>Governing Law:</strong> This agreement shall be governed by the laws of India and subject to the jurisdiction of Rajkot, Gujarat courts.</p>
-            <p>13.4. <strong>Amendments:</strong> The Company reserves the right to modify these terms with prior notice to the Rider.</p>
-            <p>13.5. <strong>Entire Agreement:</strong> This document constitutes the entire agreement between the parties.</p>
+            <h3>14. DATA PRIVACY</h3>
+            <p>14.1. The Company will store and process the Rider's personal information in accordance with applicable data protection laws.</p>
+            <p>14.2. The Rider's information will be used only for operational, payment, and legal purposes.</p>
+            <p>14.3. The Company will maintain confidentiality of Rider information and will not share it with unauthorized third parties.</p>
             
-            <h3>14. ACKNOWLEDGMENT & ACCEPTANCE</h3>
+            <h3>15. MISCELLANEOUS</h3>
+            <p>15.1. <strong>Independent Contractor:</strong> The Rider is an independent contractor and not an employee. No employer-employee relationship exists during the trial period.</p>
+            <p>15.2. <strong>No Benefits:</strong> During the trial period, the Rider is not entitled to employee benefits, provident fund, gratuity, or any statutory benefits.</p>
+            <p>15.3. <strong>Governing Law:</strong> This agreement shall be governed by the laws of India and subject to the jurisdiction of Rajkot, Gujarat courts.</p>
+            <p>15.4. <strong>Amendments:</strong> The Company reserves the right to modify these terms with prior notice to the Rider.</p>
+            <p>15.5. <strong>Entire Agreement:</strong> This document constitutes the entire agreement between the parties.</p>
+            
+            <h3>16. ACKNOWLEDGMENT & ACCEPTANCE</h3>
             <p>By signing/submitting this agreement, the Rider acknowledges that:</p>
             <ul>
                 <li>They have read and understood all terms and conditions</li>
                 <li>They agree to all terms voluntarily without any coercion</li>
-                <li>They understand this is a trial period with no guaranteed benefits until 3 months completion</li>
+                <li>They understand this is a trial period with no guaranteed benefits until 3 months completion AND meeting all eligibility criteria</li>
                 <li>They work at their own risk during the trial period</li>
                 <li>All information provided is true and accurate</li>
                 <li>They will comply with all safety and conduct requirements</li>
+                <li>They understand the MDND policy and its consequences</li>
                 <li>They understand the consequences of violating any terms</li>
+                <li>They may be considered for permanent employment after successful completion of one-year contract (optional)</li>
             </ul>
             
             <div class="important-notice">
@@ -178,6 +218,8 @@ const contractContent = {
             aadhar: "Aadhar Card Number *",
             pan: "PAN Card Number *",
             mobile: "Mobile Number *",
+            permanentAddress: "Permanent/Hometown Address (Where you were born and brought up) *",
+            currentAddress: "Current Address (Where you are currently living and working) *",
             location: "Work Location *",
             vehicle: "Vehicle Type *",
             vehicleNumber: "Vehicle Registration Number *",
@@ -369,6 +411,8 @@ const contractContent = {
             aadhar: "आधार कार्ड नंबर *",
             pan: "पैन कार्ड नंबर *",
             mobile: "मोबाइल नंबर *",
+            permanentAddress: "स्थायी/गृहनगर पता (जहां आप पैदा हुए और पले-बढ़े) *",
+            currentAddress: "वर्तमान पता (जहां आप वर्तमान में रह रहे हैं और काम कर रहे हैं) *",
             location: "कार्य स्थान *",
             vehicle: "वाहन प्रकार *",
             vehicleNumber: "वाहन पंजीकरण संख्या *",
@@ -423,6 +467,8 @@ function changeLanguage() {
     document.getElementById('label-aadhar').textContent = content.labels.aadhar;
     document.getElementById('label-pan').textContent = content.labels.pan;
     document.getElementById('label-mobile').textContent = content.labels.mobile;
+    document.getElementById('label-permanent-address').textContent = content.labels.permanentAddress;
+    document.getElementById('label-current-address').textContent = content.labels.currentAddress;
     document.getElementById('label-location').textContent = content.labels.location;
     document.getElementById('label-vehicle').textContent = content.labels.vehicle;
     document.getElementById('label-vehicle-number').textContent = content.labels.vehicleNumber;
@@ -477,6 +523,8 @@ document.getElementById('rider-contract-form').addEventListener('submit', functi
         aadharNumber: document.getElementById('aadharNumber').value,
         panNumber: document.getElementById('panNumber').value.toUpperCase(),
         mobileNumber: document.getElementById('mobileNumber').value,
+        permanentAddress: document.getElementById('permanentAddress').value,
+        currentAddress: document.getElementById('currentAddress').value,
         workLocation: document.getElementById('workLocation').value,
         vehicleType: document.getElementById('vehicleType').value,
         vehicleNumber: document.getElementById('vehicleNumber').value.toUpperCase(),
