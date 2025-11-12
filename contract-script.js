@@ -1,26 +1,56 @@
-// Contract translations
 const contractContent = {
     en: {
         pageTitle: "Freelance Rider Agreement",
         langLabel: "Select Language:",
         formTitle: "Rider Information & Acceptance",
+        headerSubtitle: "This is a Freelancer Agreement for riders choosing to work with Shreeji Enterprise Services. This agreement includes terms for freelance riders to read, understand, and abide by.",
         content: `
             <h2>FREELANCE RIDER AGREEMENT</h2>
-            <h3>Between Shreeji Enterprise Services and Delivery Partner</h3>
+            <h3>Between Shreeji Enterprise Services and Independent Delivery Partner</h3>
             <p><strong>Effective Date:</strong> As accepted by the rider below</p>
             
-            <h3>1. AGREEMENT OVERVIEW</h3>
-            <p>This agreement is entered into between <strong>Shreeji Enterprise Services</strong> (hereinafter referred to as "Company") with registered office at 714 The Spire 2 Shital Park, 150 Feet Ring Road, Rajkot, Gujarat, India, and the delivery partner (hereinafter referred to as "Rider" or "Freelancer").</p>
+            <div class="legal-notice">
+                <h3>⚖️ LEGAL NOTICE</h3>
+                <p>This is a legally binding freelance contractor agreement governed by the Indian Contract Act, 1872, and other applicable laws of India. This agreement establishes an independent contractor relationship and NOT an employer-employee relationship. By accepting this agreement, you acknowledge that you have read, understood, and agree to be bound by all terms and conditions herein.</p>
+            </div>
             
-            <h3>2. NATURE OF ENGAGEMENT</h3>
-            <p>2.1. The Rider agrees to work as an <strong>independent freelance contractor</strong> and NOT as an employee of the Company.</p>
-            <p>2.2. This is a <strong>trial engagement for the first 3 (three) months</strong> from the date of acceptance of this agreement.</p>
-            <p>2.3. After successful completion of 3 months of continuous service <strong>AND meeting ALL eligibility criteria mentioned in this agreement</strong>, the Rider will be eligible for a <strong>one-year fixed-term contract</strong> with additional benefits including salary account and insurance coverage.</p>
-            <p>2.4. Upon successful completion of the one-year contract, the Rider may be considered for <strong>permanent employment with the Company</strong> under a contract-to-hire arrangement (optional, at Company's discretion).</p>
-            <p>2.5. The Rider understands and acknowledges that during the initial 3-month trial period, they are working entirely at their own risk.</p>
-            <p>2.6. Eligibility for the one-year contract after 3 months is subject to meeting performance standards, maintaining good conduct, zero MDND complaints, and fulfilling all work requirements.</p>
+            <h3>1. AGREEMENT OVERVIEW AND PARTIES</h3>
+            <p>1.1. This Freelance Contractor Agreement ("Agreement") is entered into between:</p>
+            <ul>
+                <li><strong>PARTY 1 - Service Provider:</strong> Shreeji Enterprise Services (hereinafter referred to as "Company" or "Service Provider"), a manpower supply and recruitment services company with its registered office at 714 The Spire 2 Shital Park, 150 Feet Ring Road, Rajkot, Gujarat - 360005, India.</li>
+                <li><strong>PARTY 2 - Freelance Contractor:</strong> The individual delivery partner (hereinafter referred to as "Rider", "Freelancer", or "Contractor") whose details are provided in the acceptance form below.</li>
+            </ul>
+            <p>1.2. This Agreement shall be governed by and construed in accordance with the laws of India, particularly the Indian Contract Act, 1872, and shall be subject to the exclusive jurisdiction of the courts in Rajkot, Gujarat, India.</p>
             
-            <h3>3. PAYMENT STRUCTURE & REMUNERATION</h3>
+            <h3>2. NATURE OF ENGAGEMENT - INDEPENDENT CONTRACTOR RELATIONSHIP</h3>
+            <p>2.1. The Rider hereby agrees and acknowledges that they are engaging with the Company as an <strong>independent freelance contractor</strong> and NOT as an employee. This relationship does not create any employer-employee relationship, partnership, joint venture, or agency relationship.</p>
+            <p>2.2. This is a <strong>trial engagement period of 3 (three) calendar months</strong> commencing from the date of acceptance of this Agreement by the Rider.</p>
+            <p>2.3. Upon successful completion of the 3-month trial period <strong>AND meeting ALL eligibility criteria</strong> as enumerated in Section 13 of this Agreement, the Rider shall become eligible for consideration for a <strong>one-year fixed-term contract</strong> with additional benefits including salary account and insurance coverage.</p>
+            <p>2.4. Upon successful completion of the one-year contract period and subject to satisfactory performance evaluation, the Rider may be considered for <strong>permanent employment with the Company</strong> under a contract-to-hire arrangement. Such consideration shall be entirely at the sole discretion of the Company.</p>
+            <p>2.5. The Rider expressly understands and acknowledges that during the initial 3-month trial period, they are working entirely at their own risk and the Company bears no liability whatsoever for any loss, injury, accident, or damage suffered by the Rider.</p>
+            <p>2.6. Eligibility for extension beyond the trial period is contingent upon meeting performance benchmarks, maintaining exemplary conduct, zero MDND complaints, and fulfilling all work requirements as specified herein.</p>
+            
+            <h3>3. THIRD-PARTY PLATFORM USAGE - PEDGE MOBILE APPLICATION</h3>
+            <p>3.1. <strong>IMPORTANT DISCLOSURE:</strong> During the course of providing delivery services, the Rider will be required to use the <strong>Pedge Mobile Application</strong> ("Pedge App"), which is a third-party technology platform service provider.</p>
+            <p>3.2. The Rider expressly acknowledges and agrees that:</p>
+            <ul>
+                <li><strong>Pedge, its owners, directors, shareholders, employees, platform developers, technology partners, and affiliated companies</strong> are independent third-party service providers and have NO relationship, liability, or responsibility towards the Rider.</li>
+                <li>The Pedge App is provided to the Rider as a technological tool to facilitate order management and delivery coordination.</li>
+                <li>Pedge and its associated entities shall NOT be held responsible, liable, or accountable for:
+                    <ul>
+                        <li>Any loss, injury, accident, or damage suffered by the Rider while using the Pedge App</li>
+                        <li>Any financial losses, disputes, or payment issues</li>
+                        <li>Any accidents, injuries, or casualties occurring during delivery operations</li>
+                        <li>Any disputes between the Rider and customers, vendors, or the Company</li>
+                        <li>Any technical malfunctions, data loss, or app-related issues</li>
+                    </ul>
+                </li>
+                <li>The Rider shall NOT hold Pedge, its platform, or any of its representatives liable for any claims, demands, or legal actions arising from the Rider's engagement with the Company.</li>
+                <li>All responsibilities, liabilities, and obligations rest solely with the Rider and/or the Company as per the terms of this Agreement.</li>
+            </ul>
+            <p>3.3. The Rider agrees to use the Pedge App in accordance with its terms of service and shall be solely responsible for maintaining the confidentiality of their login credentials.</p>
+            
+            <h3>4. PAYMENT STRUCTURE & REMUNERATION</h3>
             <p>The Rider will be compensated on a <strong>daily or weekly basis</strong> as per the following delivery-based payment structure:</p>
             <ul>
                 <li><strong>9 orders per day:</strong> INR 500/-</li>
@@ -38,18 +68,28 @@ const contractContent = {
             <p>4.3. The Rider may take ONE weekly off day on either Monday, Tuesday, or Wednesday.</p>
             <p>4.4. Failure to meet these minimum work requirements may result in termination of this agreement.</p>
             
-            <h3>5. INSURANCE & BENEFITS</h3>
+            <h3>5. INSURANCE & RISK MANAGEMENT</h3>
             <p>5.1. <strong>During the Initial 3-Month Trial Period:</strong></p>
             <ul>
-                <li>The Company will NOT provide any medical insurance, accidental insurance, or death coverage.</li>
+                <li>The Company will NOT provide any medical insurance, accidental insurance, personal accident coverage, or death coverage.</li>
                 <li>The Rider works entirely at their own risk and responsibility.</li>
-                <li>The Company bears NO liability for any accidents, injuries, or medical expenses incurred during this period.</li>
+                <li>The Company bears NO liability whatsoever for any accidents, injuries, medical expenses, hospitalization costs, or any other damages incurred during this period.</li>
+                <li><strong>MANDATORY REQUIREMENT:</strong> The Rider MUST maintain their own personal accident insurance and health insurance at their own cost during the trial period.</li>
             </ul>
-            <p>5.2. <strong>After Completing 3 Months:</strong></p>
+            <p>5.2. <strong>In Case of Accident During Delivery:</strong></p>
             <ul>
-                <li>Upon successful completion of 3 continuous months of service, the Rider will be eligible for medical and accidental death coverage.</li>
+                <li>The Rider acknowledges that delivery work involves inherent risks including road accidents, traffic incidents, and personal injury.</li>
+                <li>In the event of any accident occurring during delivery operations, the Rider shall be solely responsible for managing their own medical treatment, hospitalization, and recovery expenses.</li>
+                <li>The Rider MUST use their own personal insurance policy/policies to cover any medical, hospitalization, disability, or accident-related expenses.</li>
+                <li>The Company, Pedge platform, and any third-party service providers shall NOT be liable for providing or compensating for any accident-related expenses during the trial period.</li>
+                <li>The Rider agrees to indemnify and hold harmless the Company and Pedge from any claims arising from accidents during delivery operations.</li>
+            </ul>
+            <p>5.3. <strong>After Completing 3 Months (Subject to Eligibility):</strong></p>
+            <ul>
+                <li>Upon successful completion of 3 continuous months of service AND meeting all eligibility criteria, the Rider will be eligible for Company-provided medical and accidental death coverage.</li>
                 <li>The Company will provide a dedicated salary account for remuneration credit.</li>
-                <li>The Rider will be offered a one-year contract with enhanced benefits.</li>
+                <li>The Rider will be offered a one-year contract with enhanced benefits including insurance coverage.</li>
+                <li>Insurance benefits under the one-year contract shall be as per the Company's insurance policy terms and conditions.</li>
             </ul>
             
             <h3>6. SALARY ACCOUNT TERMS (Applicable After 3 Months)</h3>
@@ -237,21 +277,46 @@ const contractContent = {
         pageTitle: "फ्रीलांस राइडर समझौता",
         langLabel: "भाषा चुनें:",
         formTitle: "राइडर जानकारी और स्वीकृति",
+        headerSubtitle: "यह श्रीजी एंटरप्राइज सर्विसेज के साथ काम करने के इच्छुक राइडर्स के लिए एक फ्रीलांसर समझौता है। इस समझौते में फ्रीलांस राइडर्स के लिए पढ़ने, समझने और पालन करने के लिए शर्तें शामिल हैं।",
         content: `
             <h2>फ्रीलांस राइडर समझौता</h2>
-            <h3>श्रीजी एंटरप्राइज सर्विसेज और डिलीवरी पार्टनर के बीच</h3>
+            <h3>श्रीजी एंटरप्राइज सर्विसेज और स्वतंत्र डिलीवरी पार्टनर के बीच</h3>
             <p><strong>प्रभावी तिथि:</strong> जैसा कि नीचे राइडर द्वारा स्वीकार किया गया है</p>
             
-            <h3>1. समझौते का अवलोकन</h3>
-            <p>यह समझौता <strong>श्रीजी एंटरप्राइज सर्विसेज</strong> (जिसे आगे "कंपनी" के रूप में संदर्भित किया जाएगा) जिसका पंजीकृत कार्यालय 714 द स्पायर 2 शीतल पार्क, 150 फीट रिंग रोड, राजकोट, गुजरात, भारत में है, और डिलीवरी पार्टनर (जिसे आगे "राइडर" या "फ्रीलांसर" के रूप में संदर्भित किया जाएगा) के बीच किया गया है।</p>
+            <div class="legal-notice">
+                <h3>⚖️ कानूनी सूचना</h3>
+                <p>यह भारतीय अनुबंध अधिनियम, 1872, और भारत के अन्य लागू कानूनों द्वारा शासित एक कानूनी रूप से बाध्यकारी फ्रीलांस ठेकेदार समझौता है। यह समझौता एक स्वतंत्र ठेकेदार संबंध स्थापित करता है न कि नियोक्ता-कर्मचारी संबंध। इस समझौते को स्वीकार करके, आप स्वीकार करते हैं कि आपने यहां सभी नियमों और शर्तों को पढ़ा, समझा है, और उनसे बाध्य होने के लिए सहमत हैं।</p>
+            </div>
             
-            <h3>2. जुड़ाव की प्रकृति</h3>
-            <p>2.1. राइडर एक <strong>स्वतंत्र फ्रीलांस ठेकेदार</strong> के रूप में काम करने के लिए सहमत है और कंपनी के कर्मचारी के रूप में नहीं।</p>
-            <p>2.2. यह इस समझौते की स्वीकृति की तारीख से <strong>पहले 3 (तीन) महीनों के लिए एक परीक्षण जुड़ाव</strong> है।</p>
-            <p>2.3. निरंतर सेवा के 3 महीने सफलतापूर्वक पूरे करने के बाद, राइडर वेतन खाता और बीमा कवरेज सहित अतिरिक्त लाभों के साथ <strong>एक वर्ष के अनुबंध</strong> के लिए पात्र होगा।</p>
-            <p>2.4. राइडर समझता है और स्वीकार करता है कि प्रारंभिक 3-महीने की परीक्षण अवधि के दौरान, वे पूरी तरह से अपने जोखिम पर काम कर रहे हैं।</p>
+            <h3>1. समझौते का अवलोकन और पक्षकार</h3>
+            <p>1.1. यह फ्रीलांस ठेकेदार समझौता ("समझौता") निम्नलिखित के बीच किया गया है:</p>
+            <ul>
+                <li><strong>पक्ष 1 - सेवा प्रदाता:</strong> श्रीजी एंटरप्राइज सर्विसेज (जिसे आगे "कंपनी" या "सेवा प्रदाता" के रूप में संदर्भित किया जाएगा), 714 द स्पायर 2 शीतल पार्क, 150 फीट रिंग रोड, राजकोट, गुजरात - 360005, भारत में पंजीकृत कार्यालय के साथ एक जनशक्ति आपूर्ति और भर्ती सेवा कंपनी।</li>
+                <li><strong>पक्ष 2 - फ्रीलांस ठेकेदार:</strong> व्यक्तिगत डिलीवरी पार्टनर (जिसे आगे "राइडर", "फ्रीलांसर", या "ठेकेदार" के रूप में संदर्भित किया जाएगा) जिसका विवरण नीचे स्वीकृति फॉर्म में प्रदान किया गया है।</li>
+            </ul>
+            <p>1.2. यह समझौता भारत के कानूनों, विशेष रूप से भारतीय अनुबंध अधिनियम, 1872 के अनुसार शासित और व्याख्या किया जाएगा, और राजकोट, गुजरात, भारत में न्यायालयों के विशेष अधिकार क्षेत्र के अधीन होगा।</p>
             
-            <h3>3. भुगतान संरचना और पारिश्रमिक</h3>
+            <h3>2. जुड़ाव की प्रकृति - स्वतंत्र ठेकेदार संबंध</h3>
+            <p>2.1. राइडर एतद्द्वारा सहमत और स्वीकार करता है कि वे कंपनी के साथ एक <strong>स्वतंत्र फ्रीलांस ठेकेदार</strong> के रूप में जुड़ रहे हैं न कि कर्मचारी के रूप में। यह संबंध कोई नियोक्ता-कर्मचारी संबंध, साझेदारी, संयुक्त उद्यम, या एजेंसी संबंध नहीं बनाता है।</p>
+            
+            <h3>3. तृतीय-पक्ष प्लेटफॉर्म उपयोग - पेज मोबाइल एप्लिकेशन</h3>
+            <p>3.1. <strong>महत्वपूर्ण प्रकटीकरण:</strong> डिलीवरी सेवाएं प्रदान करने के दौरान, राइडर को <strong>पेज मोबाइल एप्लिकेशन</strong> ("पेज ऐप") का उपयोग करना होगा, जो एक तृतीय-पक्ष प्रौद्योगिकी प्लेटफॉर्म सेवा प्रदाता है।</p>
+            <p>3.2. राइडर स्पष्ट रूप से स्वीकार करता है और सहमत है कि:</p>
+            <ul>
+                <li><strong>पेज, इसके मालिक, निदेशक, शेयरधारक, कर्मचारी, प्लेटफॉर्म डेवलपर्स, प्रौद्योगिकी भागीदार, और संबद्ध कंपनियां</strong> स्वतंत्र तृतीय-पक्ष सेवा प्रदाता हैं और राइडर के प्रति कोई संबंध, दायित्व या जिम्मेदारी नहीं है।</li>
+                <li>पेज ऐप राइडर को ऑर्डर प्रबंधन और डिलीवरी समन्वय की सुविधा के लिए एक तकनीकी उपकरण के रूप में प्रदान किया जाता है।</li>
+                <li>पेज और उसकी संबद्ध संस्थाओं को जिम्मेदार, उत्तरदायी या जवाबदेह नहीं ठहराया जाएगा:
+                    <ul>
+                        <li>पेज ऐप का उपयोग करते समय राइडर द्वारा सहन किए गए किसी भी नुकसान, चोट, दुर्घटना या क्षति के लिए</li>
+                        <li>किसी भी वित्तीय नुकसान, विवाद या भुगतान मुद्दों के लिए</li>
+                        <li>डिलीवरी संचालन के दौरान होने वाली किसी भी दुर्घटना, चोट या हताहत के लिए</li>
+                        <li>राइडर और ग्राहकों, विक्रेताओं या कंपनी के बीच किसी भी विवाद के लिए</li>
+                    </ul>
+                </li>
+                <li>सभी जिम्मेदारियां, दायित्व और कर्तव्य इस समझौते की शर्तों के अनुसार केवल राइडर और/या कंपनी के साथ रहते हैं।</li>
+            </ul>
+            
+            <h3>4. भुगतान संरचना और पारिश्रमिक</h3>
             <p>राइडर को निम्नलिखित डिलीवरी-आधारित भुगतान संरचना के अनुसार <strong>दैनिक या साप्ताहिक आधार</strong> पर मुआवजा दिया जाएगा:</p>
             <ul>
                 <li><strong>प्रति दिन 9 ऑर्डर:</strong> ₹500/-</li>
@@ -453,8 +518,9 @@ function changeLanguage() {
     const lang = document.getElementById('language').value;
     const content = contractContent[lang] || contractContent.en;
     
-    // Update page title
+    // Update page title and subtitle
     document.getElementById('page-title').textContent = content.pageTitle;
+    document.getElementById('header-subtitle').textContent = content.headerSubtitle;
     document.getElementById('lang-label').textContent = content.langLabel;
     document.getElementById('form-title').textContent = content.formTitle;
     
