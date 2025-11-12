@@ -899,7 +899,18 @@ document.addEventListener('DOMContentLoaded', function() {
         languageSelect.value = 'en';
     }
     
+    // Load content immediately - critical for showing terms on page load
     changeLanguage();
+    
+    // Ensure contract content is visible
+    const contractContentDiv = document.getElementById('contract-content');
+    if (contractContentDiv && !contractContentDiv.innerHTML.trim()) {
+        // If content didn't load, force load English
+        const enContent = contractContent.en || contractContent['en'];
+        if (enContent && enContent.content) {
+            contractContentDiv.innerHTML = enContent.content;
+        }
+    }
     
     // Copy work location to signed location
     const workLocationInput = document.getElementById('workLocation');
