@@ -888,6 +888,9 @@ document.addEventListener('DOMContentLoaded', function() {
                langCode === 'ta' || langCode === 'te' || langCode === 'bn' || 
                langCode === 'kn' || langCode === 'ml' || langCode === 'pa') {
         languageSelect.value = langCode;
+    } else {
+        // Default to English if no match
+        languageSelect.value = 'en';
     }
     
     changeLanguage();
