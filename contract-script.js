@@ -259,6 +259,7 @@ const contractContent = {
             parentName: "Father/Mother Full Name *",
             parentMobile: "Father/Mother Mobile Number *",
             email: "Email Address *",
+            dateOfBirth: "Date of Birth *",
             aadhar: "Aadhar Card Number *",
             aadharHelp: "Enter 12-digit Aadhar number",
             pan: "PAN Card Number *",
@@ -1024,6 +1025,7 @@ function changeLanguage() {
     document.getElementById('label-parent-name').textContent = content.labels.parentName;
     document.getElementById('label-parent-mobile').textContent = content.labels.parentMobile;
     document.getElementById('label-email').textContent = content.labels.email;
+    document.getElementById('label-dob').textContent = content.labels.dateOfBirth;
     document.getElementById('label-aadhar').textContent = content.labels.aadhar;
     document.getElementById('aadhar-help').textContent = content.labels.aadharHelp;
     document.getElementById('label-pan').textContent = content.labels.pan;
@@ -1100,6 +1102,7 @@ document.getElementById('rider-contract-form').addEventListener('submit', functi
         parentName: document.getElementById('parentName').value.trim(),
         parentMobile: document.getElementById('parentMobile').value.trim(),
         email: document.getElementById('email').value.trim(),
+        dateOfBirth: document.getElementById('dateOfBirth').value,
         aadharNumber: document.getElementById('aadharNumber').value.trim(),
         panNumber: document.getElementById('panNumber').value.toUpperCase().trim(),
         mobileNumber: document.getElementById('mobileNumber').value.trim(),
