@@ -284,6 +284,7 @@ const contractContent = {
             date: "Date of Acceptance *",
             signedLocation: "Signed Location *",
             signedLocationHelp: "This is automatically copied from your work location",
+            confirmTerms: "I have read and understood all the terms and conditions above",
             agree: "I have read and agree to all terms and conditions *",
             submit: "Submit Agreement",
             successTitle: "Agreement Submitted Successfully!",
@@ -936,55 +937,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initially disable the form
     disableForm();
     
-    // Add scroll tracking for contract content
-    const contractContentElement = document.getElementById('contract-content');
-    
-    // Function to check if scrolled to bottom
-    function checkScrollPosition() {
-        if (hasReadContract) return;
-        
-        const scrollTop = contractContentElement.scrollTop;
-        const scrollHeight = contractContentElement.scrollHeight;
-        const clientHeight = contractContentElement.clientHeight;
-        const scrolledToBottom = scrollTop + clientHeight >= scrollHeight - 100; // 100px tolerance
-        
-        console.log('Scroll check:', { scrollTop, scrollHeight, clientHeight, scrolledToBottom });
-        
-        if (scrolledToBottom) {
+    // Listen for checkbox change
+    const confirmCheckbox = document.getElementById('confirmReadTerms');
+    confirmCheckbox.addEventListener('change', function() {
+        if (this.checked) {
             hasReadContract = true;
             enableForm();
-        }
-    }
-    
-    // Listen for scroll events on the contract content div
-    contractContentElement.addEventListener('scroll', checkScrollPosition);
-    
-    // Also check on window scroll for mobile devices
-    window.addEventListener('scroll', function() {
-        if (hasReadContract) return;
-        
-        const rect = contractContentElement.getBoundingClientRect();
-        const isBottomVisible = rect.bottom <= window.innerHeight + 100;
-        
-        console.log('Window scroll check:', { rectBottom: rect.bottom, windowHeight: window.innerHeight, isBottomVisible });
-        
-        if (isBottomVisible) {
-            hasReadContract = true;
-            enableForm();
+        } else {
+            hasReadContract = false;
+            disableForm();
         }
     });
-    
-    // Check initial position (in case content is short enough to not need scrolling)
-    setTimeout(function() {
-        checkScrollPosition();
-        
-        // Also check if content is visible without scrolling
-        const rect = contractContentElement.getBoundingClientRect();
-        if (rect.bottom <= window.innerHeight + 100 && !hasReadContract) {
-            hasReadContract = true;
-            enableForm();
-        }
-    }, 500);
     
     // Handle vehicle type change for bicycle
     const vehicleTypeSelect = document.getElementById('vehicleType');
@@ -1129,6 +1092,9 @@ function changeLanguage() {
     if (content.labels.signedLocation) {
         document.getElementById('label-signed-location').textContent = content.labels.signedLocation;
         document.getElementById('signed-location-help').textContent = content.labels.signedLocationHelp;
+    }
+    if (content.labels.confirmTerms) {
+        document.getElementById('confirm-terms-label').textContent = content.labels.confirmTerms;
     }
     document.getElementById('label-agree').innerHTML = '<strong>' + content.labels.agree + '</strong>';
     document.getElementById('submit-btn').textContent = content.labels.submit;

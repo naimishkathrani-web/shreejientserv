@@ -182,6 +182,47 @@ body {
     padding: 0;
 }
 
+/* Terms confirmation checkbox */
+.terms-confirmation {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.checkbox-container {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    padding: 1rem 2rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.checkbox-container:hover {
+    border-color: var(--primary-color);
+    background: var(--background-light);
+}
+
+.checkbox-container input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    margin-right: 1rem;
+    cursor: pointer;
+    accent-color: var(--primary-color);
+}
+
+.checkbox-label {
+    flex: 1;
+}
+
 .contract-form {
     background: white;
     padding: 2.5rem;
