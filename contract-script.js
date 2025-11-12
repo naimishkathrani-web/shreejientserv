@@ -883,33 +883,38 @@ document.addEventListener('DOMContentLoaded', function() {
     const today = new Date().toISOString().split('T')[0];
     document.getElementById('acceptanceDate').value = today;
     
+    // Hide form initially
+    const form = document.getElementById('rider-contract-form');
+    form.classList.remove('visible');
+    
     // Detect browser language and set accordingly
     const browserLang = navigator.language || navigator.userLanguage;
     const langCode = browserLang.split('-')[0];
     const languageSelect = document.getElementById('language');
     
-    if (contractContent[langCode]) {
-        languageSelect.value = langCode;
-    } else if (langCode === 'gu' || langCode === 'hi' || langCode === 'mr' || 
-               langCode === 'ta' || langCode === 'te' || langCode === 'bn' || 
-               langCode === 'kn' || langCode === 'ml' || langCode === 'pa') {
-        languageSelect.value = langCode;
-    } else {
-        // Default to English if no match
-        languageSelect.value = 'en';
-    }
+    // Always default to English first
+    languageSelect.value = 'en';
     
-    // Load content immediately - critical for showing terms on page load
+    // Load English content immediately
     changeLanguage();
     
-    // Ensure contract content is visible
-    const contractContentDiv = document.getElementById('contract-content');
-    if (contractContentDiv && !contractContentDiv.innerHTML.trim()) {
-        // If content didn't load, force load English
-        const enContent = contractContent.en || contractContent['en'];
-        if (enContent && enContent.content) {
-            contractContentDiv.innerHTML = enContent.content;
+    // Force load content if still empty after changeLanguage
+    setTimeout(function() {
+        const contractContentDiv = document.getElementById('contract-content');
+        if (!contractContentDiv.innerHTML.trim()) {
+            const enContent = contractContent['en'];
+            if (enContent && enContent.content) {
+                contractContentDiv.innerHTML = enContent.content;
+                document.getElementById('page-title').textContent = enContent.pageTitle;
+                document.getElementById('header-subtitle').textContent = enContent.headerSubtitle;
+            }
         }
+    }, 100);
+    
+    // Then check if browser language is supported and switch
+    if (contractContent[langCode] && langCode !== 'en') {
+        languageSelect.value = langCode;
+        changeLanguage();
     }
     
     // Copy work location to signed location
@@ -1025,6 +1030,9 @@ function enableForm() {
     const form = document.getElementById('rider-contract-form');
     const inputs = form.querySelectorAll('input, select, textarea, button');
     
+    // Show the form with animation
+    form.classList.add('visible');
+    
     inputs.forEach(input => {
         input.disabled = false;
     });
@@ -1038,8 +1046,13 @@ function enableForm() {
     // Show success message
     const successNotice = document.createElement('div');
     successNotice.className = 'read-contract-success';
-    successNotice.innerHTML = '<strong>✓ Thank you for reading the contract. You may now fill the form.</strong>';
+    successNotice.innerHTML = '<strong>✓ Thank you for reading the contract. You may now fill the form below.</strong>';
     form.insertBefore(successNotice, form.firstChild);
+    
+    // Scroll to form smoothly
+    setTimeout(() => {
+        form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 300);
     
     // Remove success message after 5 seconds
     setTimeout(() => {
