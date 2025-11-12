@@ -895,6 +895,22 @@ document.addEventListener('DOMContentLoaded', function() {
     
     changeLanguage();
     
+    // Copy work location to signed location
+    const workLocationInput = document.getElementById('workLocation');
+    const signedLocationInput = document.getElementById('signedLocation');
+    
+    if (workLocationInput && signedLocationInput) {
+        // Set initial value if work location has value
+        if (workLocationInput.value) {
+            signedLocationInput.value = workLocationInput.value;
+        }
+        
+        // Update signed location when work location changes
+        workLocationInput.addEventListener('input', function() {
+            signedLocationInput.value = this.value;
+        });
+    }
+    
     // Initially disable the form
     disableForm();
     
@@ -1056,6 +1072,10 @@ function changeLanguage() {
     document.getElementById('label-vehicle-docs').textContent = content.labels.vehicleDocs;
     document.getElementById('label-own-docs').textContent = content.labels.ownDocs;
     document.getElementById('label-date').textContent = content.labels.date;
+    if (content.labels.signedLocation) {
+        document.getElementById('label-signed-location').textContent = content.labels.signedLocation;
+        document.getElementById('signed-location-help').textContent = content.labels.signedLocationHelp;
+    }
     document.getElementById('label-agree').innerHTML = '<strong>' + content.labels.agree + '</strong>';
     document.getElementById('submit-btn').textContent = content.labels.submit;
     document.getElementById('success-title').textContent = content.labels.successTitle;

@@ -282,6 +282,8 @@ const contractContent = {
             vehicleDocs: "I confirm that I have valid RC, insurance, and PUC *",
             ownDocs: "I confirm all documents are my own and authentic *",
             date: "Date of Acceptance *",
+            signedLocation: "Signed Location *",
+            signedLocationHelp: "This is automatically copied from your work location",
             agree: "I have read and agree to all terms and conditions *",
             submit: "Submit Agreement",
             successTitle: "Agreement Submitted Successfully!",
@@ -558,6 +560,8 @@ const contractContent = {
             vehicleDocs: "હું પુષ્ટિ કરું છું કે મારી પાસે માન્ય RC, વીમો અને PUC છે *",
             ownDocs: "હું પુષ્ટિ કરું છું કે તમામ દસ્તાવેજો મારા પોતાના અને અધિકૃત છે *",
             date: "સ્વીકૃતિની તારીખ *",
+            signedLocation: "હસ્તાક્ષરિત સ્થાન *",
+            signedLocationHelp: "આ તમારા કાર્ય સ્થાનમાંથી આપમેળે કોપી થાય છે",
             agree: "મેં તમામ શરતો અને નિયમો વાંચ્યા છે અને સંમત છું *",
             submit: "કરાર સબમિટ કરો",
             successTitle: "કરાર સફળતાપૂર્વક સબમિટ થયો!",
@@ -571,7 +575,7 @@ const contractContent = {
         headerSubtitle: "हा श्रीजी एंटरप्राइझ सर्व्हिसेस सोबत काम करण्यासाठी निवडलेल्या रायडर्ससाठी फ्रीलान्सर करार आहे. या करारामध्ये फ्रीलान्स रायडर्ससाठी वाचण्यासाठी, समजून घेण्यासाठी आणि पालन करण्यासाठी अटी समाविष्ट आहेत.",
         content: `<h2>फ्रीलान्स रायडर करार</h2><p>हा श्रीजी एंटरप्राइझ सर्व्हिसेस आणि स्वतंत्र डिलिव्हरी भागीदार यांच्यातील करार आहे. या करारात 3 महिन्यांचा चाचणी कालावधी, पेडज मोबाईल ॲप्लिकेशन वापर, MDND धोरण, विमा आवश्यकता आणि इतर अटी समाविष्ट आहेत.</p>`,
         labels: {
-            firstname: "पहिले नाव *", lastname: "आडनाव *", parentName: "वडील/आईचे संपूर्ण नाव *", parentMobile: "वडील/आईचा मोबाईल नंबर *", email: "ईमेल पत्ता *", dateOfBirth: "जन्मतारीख *", aadhar: "आधार कार्ड क्रमांक *", aadharHelp: "12-अंकी आधार क्रमांक प्रविष्ट करा", pan: "पॅन कार्ड क्रमांक *", panHelp: "10-अक्षरी पॅन क्रमांक प्रविष्ट करा", mobile: "मोबाईल नंबर *", mobileHelp: "10-अंकी मोबाईल नंबर प्रविष्ट करा", permanentAddress: "कायमचा/मूळ पत्ता *", permanentHelp: "तुमचा मूळ/कायमचा पत्ता प्रविष्ट करा", currentAddress: "सध्याचा पत्ता *", currentHelp: "तुमचा सध्याचा निवासी पत्ता प्रविष्ट करा", location: "कामाचे ठिकाण *", vehicle: "वाहनाचा प्रकार *", vehicleSelect: "वाहनाचा प्रकार निवडा", vehicleMotorcycle: "मोटारसायकल", vehicleScooter: "स्कूटर", vehicleBike: "सायकल", vehicleNumber: "वाहन नोंदणी क्रमांक *", licenseNumber: "ड्रायव्हिंग लायसन्स क्रमांक *", license: "मी पुष्टी करतो की माझ्याकडे वैध ड्रायव्हिंग लायसन्स आहे *", vehicleDocs: "मी पुष्टी करतो की माझ्याकडे वैध RC, विमा आणि PUC आहे *", ownDocs: "मी पुष्टी करतो की सर्व कागदपत्रे माझी स्वतःची आणि अस्सल आहेत *", date: "स्वीकृतीची तारीख *", agree: "मी सर्व अटी आणि शर्ती वाचल्या आहेत आणि सहमत आहे *", submit: "करार सबमिट करा", successTitle: "करार यशस्वीरित्या सबमिट झाला!", successText: "तुमचा रायडर करार सबमिट झाला आहे. आमचा संघ लवकरच तुमच्याशी संपर्क साधेल."
+            firstname: "पहिले नाव *", lastname: "आडनाव *", parentName: "वडील/आईचे संपूर्ण नाव *", parentMobile: "वडील/आईचा मोबाईल नंबर *", email: "ईमेल पत्ता *", dateOfBirth: "जन्मतारीख *", aadhar: "आधार कार्ड क्रमांक *", aadharHelp: "12-अंकी आधार क्रमांक प्रविष्ट करा", pan: "पॅन कार्ड क्रमांक *", panHelp: "10-अक्षरी पॅन क्रमांक प्रविष्ट करा", mobile: "मोबाईल नंबर *", mobileHelp: "10-अंकी मोबाईल नंबर प्रविष्ट करा", permanentAddress: "कायमचा/मूळ पत्ता *", permanentHelp: "तुमचा मूळ/कायमचा पत्ता प्रविष्ट करा", currentAddress: "सध्याचा पत्ता *", currentHelp: "तुमचा सध्याचा निवासी पत्ता प्रविष्ट करा", location: "कामाचे ठिकाण *", vehicle: "वाहनाचा प्रकार *", vehicleSelect: "वाहनाचा प्रकार निवडा", vehicleMotorcycle: "मोटारसायकल", vehicleScooter: "स्कूटर", vehicleBike: "सायकल", vehicleNumber: "वाहन नोंदणी क्रमांक *", licenseNumber: "ड्रायव्हिंग लायसन्स क्रमांक *", license: "मी पुष्टी करतो की माझ्याकडे वैध ड्रायव्हिंग लायसन्स आहे *", vehicleDocs: "मी पुष्टी करतो की माझ्याकडे वैध RC, विमा आणि PUC आहे *", ownDocs: "मी पुष्टी करतो की सर्व कागदपत्रे माझी स्वतःची आणि अस्सल आहेत *", date: "स्वीकृतीची तारीख *", signedLocation: "स्वाक्षरी स्थान *", signedLocationHelp: "हे तुमच्या कामाच्या ठिकाणाहून आपोआप कॉपी केले जाते", agree: "मी सर्व अटी आणि शर्ती वाचल्या आहेत आणि सहमत आहे *", submit: "करार सबमिट करा", successTitle: "करार यशस्वीरित्या सबमिट झाला!", successText: "तुमचा रायडर करार सबमिट झाला आहे. आमचा संघ लवकरच तुमच्याशी संपर्क साधेल."
         }
     },
     ta: {
@@ -861,6 +865,8 @@ const contractContent = {
             vehicleDocs: "मैं पुष्टि करता/करती हूं कि मेरे पास वैध RC, बीमा और PUC है *",
             ownDocs: "मैं पुष्टि करता/करती हूं कि सभी दस्तावेज़ मेरे स्वयं के और प्रामाणिक हैं *",
             date: "स्वीकृति की तारीख *",
+            signedLocation: "हस्ताक्षर स्थान *",
+            signedLocationHelp: "यह स्वचालित रूप से आपके कार्य स्थान से कॉपी किया जाता है",
             agree: "मैंने सभी नियम और शर्तें पढ़ी हैं और सहमत हूं *",
             submit: "समझौता जमा करें",
             successTitle: "समझौता सफलतापूर्वक जमा किया गया!",
@@ -894,6 +900,22 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     changeLanguage();
+    
+    // Copy work location to signed location
+    const workLocationInput = document.getElementById('workLocation');
+    const signedLocationInput = document.getElementById('signedLocation');
+    
+    if (workLocationInput && signedLocationInput) {
+        // Set initial value if work location has value
+        if (workLocationInput.value) {
+            signedLocationInput.value = workLocationInput.value;
+        }
+        
+        // Update signed location when work location changes
+        workLocationInput.addEventListener('input', function() {
+            signedLocationInput.value = this.value;
+        });
+    }
     
     // Initially disable the form
     disableForm();
@@ -1056,6 +1078,10 @@ function changeLanguage() {
     document.getElementById('label-vehicle-docs').textContent = content.labels.vehicleDocs;
     document.getElementById('label-own-docs').textContent = content.labels.ownDocs;
     document.getElementById('label-date').textContent = content.labels.date;
+    if (content.labels.signedLocation) {
+        document.getElementById('label-signed-location').textContent = content.labels.signedLocation;
+        document.getElementById('signed-location-help').textContent = content.labels.signedLocationHelp;
+    }
     document.getElementById('label-agree').innerHTML = '<strong>' + content.labels.agree + '</strong>';
     document.getElementById('submit-btn').textContent = content.labels.submit;
     document.getElementById('success-title').textContent = content.labels.successTitle;
