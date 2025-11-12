@@ -931,30 +931,54 @@ document.addEventListener('DOMContentLoaded', function() {
     disableForm();
     
     // Add scroll tracking for contract content
-    const contractContent = document.getElementById('contract-content');
-    contractContent.addEventListener('scroll', function() {
-        if (!hasReadContract) {
-            // Check if scrolled to bottom (with 50px tolerance)
-            const isAtBottom = contractContent.scrollHeight - contractContent.scrollTop <= contractContent.clientHeight + 50;
-            if (isAtBottom) {
-                hasReadContract = true;
-                enableForm();
-            }
+    const contractContentElement = document.getElementById('contract-content');
+    
+    // Function to check if scrolled to bottom
+    function checkScrollPosition() {
+        if (hasReadContract) return;
+        
+        const scrollTop = contractContentElement.scrollTop;
+        const scrollHeight = contractContentElement.scrollHeight;
+        const clientHeight = contractContentElement.clientHeight;
+        const scrolledToBottom = scrollTop + clientHeight >= scrollHeight - 100; // 100px tolerance
+        
+        console.log('Scroll check:', { scrollTop, scrollHeight, clientHeight, scrolledToBottom });
+        
+        if (scrolledToBottom) {
+            hasReadContract = true;
+            enableForm();
+        }
+    }
+    
+    // Listen for scroll events on the contract content div
+    contractContentElement.addEventListener('scroll', checkScrollPosition);
+    
+    // Also check on window scroll for mobile devices
+    window.addEventListener('scroll', function() {
+        if (hasReadContract) return;
+        
+        const rect = contractContentElement.getBoundingClientRect();
+        const isBottomVisible = rect.bottom <= window.innerHeight + 100;
+        
+        console.log('Window scroll check:', { rectBottom: rect.bottom, windowHeight: window.innerHeight, isBottomVisible });
+        
+        if (isBottomVisible) {
+            hasReadContract = true;
+            enableForm();
         }
     });
     
-    // Also track window scroll for smaller screens where contract-content might not have its own scrollbar
-    window.addEventListener('scroll', function() {
-        if (!hasReadContract) {
-            const contractContentElement = document.getElementById('contract-content');
-            const rect = contractContentElement.getBoundingClientRect();
-            const isVisible = rect.bottom <= window.innerHeight + 100;
-            if (isVisible) {
-                hasReadContract = true;
-                enableForm();
-            }
+    // Check initial position (in case content is short enough to not need scrolling)
+    setTimeout(function() {
+        checkScrollPosition();
+        
+        // Also check if content is visible without scrolling
+        const rect = contractContentElement.getBoundingClientRect();
+        if (rect.bottom <= window.innerHeight + 100 && !hasReadContract) {
+            hasReadContract = true;
+            enableForm();
         }
-    });
+    }, 500);
     
     // Handle vehicle type change for bicycle
     const vehicleTypeSelect = document.getElementById('vehicleType');
