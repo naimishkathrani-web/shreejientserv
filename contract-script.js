@@ -256,21 +256,93 @@ const contractContent = {
             firstname: "First Name *",
             lastname: "Last Name *",
             aadhar: "Aadhar Card Number *",
+            aadharHelp: "Enter 12-digit Aadhar number",
             pan: "PAN Card Number *",
+            panHelp: "Enter 10-character PAN number (e.g., ABCDE1234F)",
             mobile: "Mobile Number *",
-            permanentAddress: "Permanent/Hometown Address (Where you were born and brought up) *",
-            currentAddress: "Current Address (Where you are currently living and working) *",
+            mobileHelp: "Enter 10-digit mobile number",
+            permanentAddress: "Permanent/Hometown Address *",
+            permanentHelp: "Enter your hometown/permanent address",
+            currentAddress: "Current Address *",
+            currentHelp: "Enter your current residential address",
             location: "Work Location *",
             vehicle: "Vehicle Type *",
+            vehicleSelect: "Select Vehicle Type",
+            vehicleMotorcycle: "Motorcycle",
+            vehicleScooter: "Scooter",
+            vehicleBike: "Bicycle",
             vehicleNumber: "Vehicle Registration Number *",
             license: "I confirm that I have a valid driving license *",
-            vehicleDocs: "I confirm that I have valid RC, insurance, and PUC for my vehicle *",
-            ownDocs: "I confirm that all documents provided are my own and authentic *",
+            vehicleDocs: "I confirm that I have valid RC, insurance, and PUC *",
+            ownDocs: "I confirm all documents are my own and authentic *",
             date: "Date of Acceptance *",
-            agree: "I have read and agree to all the terms and conditions mentioned above *",
+            agree: "I have read and agree to all terms and conditions *",
             submit: "Submit Agreement",
             successTitle: "Agreement Submitted Successfully!",
             successText: "Your rider agreement has been submitted. You will be contacted by our team soon."
+        }
+    },
+    gu: {
+        pageTitle: "ફ્રીલાન્સ રાઇડર કરાર",
+        langLabel: "ભાષા પસંદ કરો:",
+        formTitle: "રાઇડર માહિતી અને સ્વીકૃતિ",
+        headerSubtitle: "આ શ્રીજી એન્ટરપ્રાઇઝ સર્વિસિસ સાથે કામ કરવાનું પસંદ કરનાર રાઇડર્સ માટે ફ્રીલાન્સર કરાર છે. આ કરારમાં ફ્રીલાન્સ રાઇડર્સ માટે વાંચવા, સમજવા અને પાલન કરવા માટેની શરતો સામેલ છે.",
+        content: `
+            <h2>ફ્રીલાન્સ રાઇડર કરાર</h2>
+            <h3>શ્રીજી એન્ટરપ્રાઇઝ સર્વિસિસ અને સ્વતંત્ર ડિલિવરી પાર્ટનર વચ્ચે</h3>
+            <p><strong>પ્રભાવી તારીખ:</strong> નીચે રાઇડર દ્વારા સ્વીકૃત મુજબ</p>
+            
+            <div class="legal-notice">
+                <h3>⚖️ કાનૂની સૂચના</h3>
+                <p>આ ભારતીય કરાર અધિનિયમ, 1872, અને ભારતના અન્ય લાગુ કાયદાઓ દ્વારા શાસિત કાનૂની રીતે બંધનકર્તા ફ્રીલાન્સ ઠેકેદાર કરાર છે. આ કરાર સ્વતંત્ર ઠેકેદાર સંબંધ સ્થાપિત કરે છે અને નોકરીદાતા-કર્મચારી સંબંધ નહીં. આ કરાર સ્વીકારીને, તમે સ્વીકારો છો કે તમે અહીંની તમામ શરતો અને નિયમો વાંચ્યા, સમજ્યા અને તેનાથી બંધાયેલા થવા સંમત થાઓ છો.</p>
+            </div>
+            
+            <h3>1. કરારની ઝાંખી અને પક્ષકારો</h3>
+            <p>1.1. આ ફ્રીલાન્સ ઠેકેદાર કરાર ("કરાર") નીચેના વચ્ચે કરવામાં આવેલ છે:</p>
+            <ul>
+                <li><strong>પક્ષ 1 - સેવા પ્રદાતા:</strong> શ્રીજી એન્ટરપ્રાઇઝ સર્વિસિસ (આગળ "કંપની" તરીકે ઉલ્લેખિત), 714 ધ સ્પાયર 2 શીતલ પાર્ક, 150 ફીટ રિંગ રોડ, રાજકોટ, ગુજરાત - 360005, ભારત ખાતે નોંધાયેલ કાર્યાલય સાથે જનશક્તિ પુરવઠા અને ભરતી સેવા કંપની.</li>
+                <li><strong>પક્ષ 2 - ફ્રીલાન્સ ઠેકેદાર:</strong> વ્યક્તિગત ડિલિવરી પાર્ટનર (આગળ "રાઇડર", "ફ્રીલાન્સર", અથવા "ઠેકેદાર" તરીકે ઉલ્લેખિત) જેની વિગતો નીચે સ્વીકૃતિ ફોર્મમાં આપવામાં આવી છે.</li>
+            </ul>
+            
+            <h3>2. જોડાણની પ્રકૃતિ - સ્વતંત્ર ઠેકેદાર સંબંધ</h3>
+            <p>2.1. રાઇડર આથી સંમત થાય છે અને સ્વીકારે છે કે તેઓ કંપની સાથે <strong>સ્વતંત્ર ફ્રીલાન્સ ઠેકેદાર</strong> તરીકે જોડાઈ રહ્યા છે અને કર્મચારી તરીકે નહીં.</p>
+            
+            <h3>3. તૃતીય-પક્ષ પ્લેટફોર્મનો ઉપયોગ - પેજ મોબાઇલ એપ્લિકેશન</h3>
+            <p>3.1. <strong>મહત્વપૂર્ણ જાહેરાત:</strong> ડિલિવરી સેવાઓ પ્રદાન કરવા દરમિયાન, રાઇડરને <strong>પેજ મોબાઇલ એપ્લિકેશન</strong> ("પેજ એપ") નો ઉપયોગ કરવાની જરૂર પડશે, જે તૃતીય-પક્ષ ટેકનોલોજી પ્લેટફોર્મ સેવા પ્રદાતા છે.</p>
+            <p>3.2. રાઇડર સ્પષ્ટપણે સ્વીકારે છે અને સંમત થાય છે કે:</p>
+            <ul>
+                <li><strong>પેજ, તેના માલિકો, નિર્દેશકો, શેરધારકો, કર્મચારીઓ, પ્લેટફોર્મ ડેવલપર્સ, ટેકનોલોજી ભાગીદારો અને સંબંધિત કંપનીઓ</strong> સ્વતંત્ર તૃતીય-પક્ષ સેવા પ્રદાતાઓ છે અને રાઇડર પ્રત્યે કોઈ સંબંધ, જવાબદારી અથવા જવાબદારી નથી.</li>
+                <li>દરેક જવાબદારીઓ, જવાબદારીઓ અને ફરજો આ કરારની શરતો અનુસાર ફક્ત રાઇડર અને/અથવા કંપની સાથે રહે છે.</li>
+            </ul>
+        `,
+        labels: {
+            firstname: "પ્રથમ નામ *",
+            lastname: "છેલ્લું નામ *",
+            aadhar: "આધાર કાર્ડ નંબર *",
+            aadharHelp: "12-અંકનો આધાર નંબર દાખલ કરો",
+            pan: "પાન કાર્ડ નંબર *",
+            panHelp: "10-અક્ષરનો પાન નંબર દાખલ કરો",
+            mobile: "મોબાઇલ નંબર *",
+            mobileHelp: "10-અંકનો મોબાઇલ નંબર દાખલ કરો",
+            permanentAddress: "કાયમી/ગૃહનગર સરનામું *",
+            permanentHelp: "તમારું ગૃહનગર/કાયમી સરનામું દાખલ કરો",
+            currentAddress: "વર્તમાન સરનામું *",
+            currentHelp: "તમારું વર્તમાન રહેઠાણ સરનામું દાખલ કરો",
+            location: "કાર્ય સ્થાન *",
+            vehicle: "વાહનનો પ્રકાર *",
+            vehicleSelect: "વાહનનો પ્રકાર પસંદ કરો",
+            vehicleMotorcycle: "મોટરસાઇકલ",
+            vehicleScooter: "સ્કૂટર",
+            vehicleBike: "સાયકલ",
+            vehicleNumber: "વાહન નોંધણી નંબર *",
+            license: "હું પુષ્ટિ કરું છું કે મારી પાસે માન્ય ડ્રાઇવિંગ લાયસન્સ છે *",
+            vehicleDocs: "હું પુષ્ટિ કરું છું કે મારી પાસે માન્ય RC, વીમો અને PUC છે *",
+            ownDocs: "હું પુષ્ટિ કરું છું કે તમામ દસ્તાવેજો મારા પોતાના અને અધિકૃત છે *",
+            date: "સ્વીકૃતિની તારીખ *",
+            agree: "મેં તમામ શરતો અને નિયમો વાંચ્યા છે અને સંમત છું *",
+            submit: "કરાર સબમિટ કરો",
+            successTitle: "કરાર સફળતાપૂર્વક સબમિટ થયો!",
+            successText: "તમારો રાઇડર કરાર સબમિટ થઈ ગયો છે. અમારી ટીમ ટૂંક સમયમાં તમારો સંપર્ક કરશે."
         }
     },
     hi: {
@@ -474,18 +546,27 @@ const contractContent = {
             firstname: "प्रथम नाम *",
             lastname: "अंतिम नाम *",
             aadhar: "आधार कार्ड नंबर *",
+            aadharHelp: "12-अंकीय आधार नंबर दर्ज करें",
             pan: "पैन कार्ड नंबर *",
+            panHelp: "10-अक्षर का पैन नंबर दर्ज करें",
             mobile: "मोबाइल नंबर *",
-            permanentAddress: "स्थायी/गृहनगर पता (जहां आप पैदा हुए और पले-बढ़े) *",
-            currentAddress: "वर्तमान पता (जहां आप वर्तमान में रह रहे हैं और काम कर रहे हैं) *",
+            mobileHelp: "10-अंकीय मोबाइल नंबर दर्ज करें",
+            permanentAddress: "स्थायी/गृहनगर पता *",
+            permanentHelp: "अपना गृहनगर/स्थायी पता दर्ज करें",
+            currentAddress: "वर्तमान पता *",
+            currentHelp: "अपना वर्तमान आवासीय पता दर्ज करें",
             location: "कार्य स्थान *",
             vehicle: "वाहन प्रकार *",
+            vehicleSelect: "वाहन प्रकार चुनें",
+            vehicleMotorcycle: "मोटरसाइकिल",
+            vehicleScooter: "स्कूटर",
+            vehicleBike: "साइकिल",
             vehicleNumber: "वाहन पंजीकरण संख्या *",
             license: "मैं पुष्टि करता/करती हूं कि मेरे पास वैध ड्राइविंग लाइसेंस है *",
-            vehicleDocs: "मैं पुष्टि करता/करती हूं कि मेरे पास अपने वाहन के लिए वैध RC, बीमा और PUC है *",
-            ownDocs: "मैं पुष्टि करता/करती हूं कि प्रदान किए गए सभी दस्तावेज़ मेरे स्वयं के और प्रामाणिक हैं *",
+            vehicleDocs: "मैं पुष्टि करता/करती हूं कि मेरे पास वैध RC, बीमा और PUC है *",
+            ownDocs: "मैं पुष्टि करता/करती हूं कि सभी दस्तावेज़ मेरे स्वयं के और प्रामाणिक हैं *",
             date: "स्वीकृति की तारीख *",
-            agree: "मैंने ऊपर उल्लिखित सभी नियम और शर्तें पढ़ ली हैं और उनसे सहमत हूं *",
+            agree: "मैंने सभी नियम और शर्तें पढ़ी हैं और सहमत हूं *",
             submit: "समझौता जमा करें",
             successTitle: "समझौता सफलतापूर्वक जमा किया गया!",
             successText: "आपका राइडर समझौता जमा कर दिया गया है। हमारी टीम जल्द ही आपसे संपर्क करेगी।"
@@ -531,12 +612,21 @@ function changeLanguage() {
     document.getElementById('label-firstname').textContent = content.labels.firstname;
     document.getElementById('label-lastname').textContent = content.labels.lastname;
     document.getElementById('label-aadhar').textContent = content.labels.aadhar;
+    document.getElementById('aadhar-help').textContent = content.labels.aadharHelp;
     document.getElementById('label-pan').textContent = content.labels.pan;
+    document.getElementById('pan-help').textContent = content.labels.panHelp;
     document.getElementById('label-mobile').textContent = content.labels.mobile;
+    document.getElementById('mobile-help').textContent = content.labels.mobileHelp;
     document.getElementById('label-permanent-address').textContent = content.labels.permanentAddress;
+    document.getElementById('permanent-help').textContent = content.labels.permanentHelp;
     document.getElementById('label-current-address').textContent = content.labels.currentAddress;
+    document.getElementById('current-help').textContent = content.labels.currentHelp;
     document.getElementById('label-location').textContent = content.labels.location;
     document.getElementById('label-vehicle').textContent = content.labels.vehicle;
+    document.getElementById('vehicle-select').textContent = content.labels.vehicleSelect;
+    document.getElementById('vehicle-motorcycle').textContent = content.labels.vehicleMotorcycle;
+    document.getElementById('vehicle-scooter').textContent = content.labels.vehicleScooter;
+    document.getElementById('vehicle-bike').textContent = content.labels.vehicleBike;
     document.getElementById('label-vehicle-number').textContent = content.labels.vehicleNumber;
     document.getElementById('label-license').textContent = content.labels.license;
     document.getElementById('label-vehicle-docs').textContent = content.labels.vehicleDocs;
