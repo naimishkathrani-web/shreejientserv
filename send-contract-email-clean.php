@@ -306,4 +306,161 @@ $emailBody = "
                 <li>Any misrepresentation of facts or documents</li>
             </ul>
         </div>
+        
+        <div class='term'>
+            <h4>10. Termination Conditions</h4>
+            <p><strong>Either party may terminate this agreement with proper notice:</strong></p>
+            <ul>
+                <li><strong>By the Rider:</strong> 7 days written notice to the Company</li>
+                <li><strong>By the Company:</strong> Immediate termination for violations of MDND policy, document fraud, or breach of terms</li>
+                <li><strong>Mutual Termination:</strong> Both parties may agree to terminate immediately by mutual written consent</li>
+                <li><strong>End of Trial Period:</strong> Either party may choose not to continue after 3-month trial completion</li>
+            </ul>
+            <p>Upon termination, the Rider must return all Company property including uniform, ID card, and any equipment provided. Final payment will be processed after settlement of any outstanding dues or damages.</p>
+        </div>
+        
+        <div class='term'>
+            <h4>11. Confidentiality and Non-Disclosure</h4>
+            <p>The Rider agrees to maintain strict confidentiality regarding:</p>
+            <ul>
+                <li>Customer information including names, addresses, contact details, and order information</li>
+                <li>Company business operations, strategies, and internal processes</li>
+                <li>Payment structures, commission rates, and financial arrangements</li>
+                <li>Proprietary information related to the Pedge platform or other systems used</li>
+            </ul>
+            <p>This confidentiality obligation continues even after termination of this agreement. Breach of confidentiality may result in legal action and claims for damages.</p>
+        </div>
+        
+        <div class='term'>
+            <h4>12. Intellectual Property Rights</h4>
+            <p>The Rider acknowledges that all intellectual property related to the Company's business, including but not limited to trademarks, logos, trade names (such as "Shreeji Enterprise Services"), mobile applications, software, and business processes, are the exclusive property of their respective owners.</p>
+            <p>The Rider is granted a limited, non-exclusive license to use Company-provided materials solely for the purpose of performing delivery services during the term of this agreement. No rights of ownership are transferred.</p>
+        </div>
+        
+        <div class='term'>
+            <h4>13. Data Privacy and Protection</h4>
+            <p>The Company is committed to protecting the Rider's personal information in accordance with applicable data privacy laws. The personal information provided (including Aadhar " . $maskedAadhar . ", PAN " . $maskedPAN . ", contact details, and address information) will be:</p>
+            <ul>
+                <li>Used solely for the purposes of this engagement and compliance with legal requirements</li>
+                <li>Stored securely with appropriate technical and organizational measures</li>
+                <li>Not shared with third parties except as required by law or for business operations</li>
+                <li>Retained only for as long as necessary for business and legal purposes</li>
+            </ul>
+            <p>The Rider has the right to access, correct, or request deletion of their personal data subject to legal and business requirements.</p>
+        </div>
+        
+        <div class='term'>
+            <h4>14. Governing Law and Jurisdiction</h4>
+            <p>This agreement shall be governed by and construed in accordance with the laws of India. Any disputes arising from this agreement shall be subject to the exclusive jurisdiction of the courts in <strong>Rajkot, Gujarat</strong>.</p>
+            <p>Both parties irrevocably submit to the jurisdiction of these courts and waive any objection to venue or inconvenient forum.</p>
+        </div>
+        
+        <div class='term'>
+            <h4>15. Dispute Resolution and Arbitration</h4>
+            <p>In the event of any dispute or difference arising out of or in connection with this agreement, the parties agree to first attempt resolution through good faith negotiations.</p>
+            <p>If negotiation fails within 15 days, the dispute shall be referred to arbitration in accordance with the Arbitration and Conciliation Act, 1996. The arbitration shall be conducted in Rajkot, Gujarat, by a sole arbitrator mutually appointed by both parties. The decision of the arbitrator shall be final and binding.</p>
+        </div>
+        
+        <div class='term'>
+            <h4>16. Amendments and Modifications</h4>
+            <p>This agreement may only be amended or modified by written agreement signed by both parties. No oral modifications or amendments shall be valid or binding.</p>
+            <p>The Company reserves the right to update policies and procedures with reasonable notice to the Rider. Material changes affecting payment, working hours, or core terms will require Rider's written consent.</p>
+        </div>
+        
+        <div class='term'>
+            <h4>17. Entire Agreement and Severability</h4>
+            <p><strong>Entire Agreement:</strong> This document constitutes the entire agreement between the parties and supersedes all prior negotiations, representations, or agreements, whether written or oral.</p>
+            <p><strong>Severability:</strong> If any provision of this agreement is found to be invalid or unenforceable, the remaining provisions shall continue in full force and effect.</p>
+            <p><strong>Waiver:</strong> No waiver of any provision shall be deemed a waiver of any other provision or of the same provision at a later time.</p>
+            <p><strong>Notices:</strong> All notices under this agreement must be in writing and delivered to the addresses provided in this document or as updated by written notice.</p>
+        </div>
+        
+        <div class='important-box' style='margin-top: 30px;'>
+            <h4>📋 CAREER PROGRESSION PATH</h4>
+            <p><strong>3-Month Trial Period → Fixed-Term Contract → Permanent Employment Opportunity</strong></p>
+            <p>This 3-month trial period is designed to assess mutual compatibility. Upon successful completion:</p>
+            <ul>
+                <li>Riders demonstrating consistent performance may be offered a fixed-term contract with enhanced benefits</li>
+                <li>Exceptional performers may be considered for permanent employment with full employee benefits</li>
+                <li>Performance evaluation will be based on: delivery completion rate, MDND compliance, customer feedback, and professionalism</li>
+            </ul>
+            <p><strong>Company reserves the right to make employment decisions based on business requirements and individual performance.</strong></p>
+        </div>
+        
+    </div>
+    
+    <!-- Footer -->
+    <div class='footer'>
+        <h3>Shreeji Enterprise Services</h3>
+        <p>
+            <strong>📍 Address:</strong> 714 The Spyre 2 Sheetal Park, 150 Feet Ring Road, Rajkot, Gujarat - 360005, India<br>
+            <strong>📞 Phone:</strong> +91-7016899689<br>
+            <strong>✉️ Email:</strong> info@shreejientserv.in<br>
+            <strong>🌐 Website:</strong> <a href='http://www.shreejientserv.in' style='color: #667eea;'>www.shreejientserv.in</a>
+        </p>
+        <hr style='border: none; border-top: 1px solid #e2e8f0; margin: 20px 0;'>
+        <p style='font-size: 11px; color: #718096;'>
+            <strong>LEGAL NOTICE:</strong> This email and any attachments contain confidential information intended solely for the named recipient. 
+            If you are not the intended recipient, please notify the sender immediately and delete this email. 
+            Unauthorized use, disclosure, or distribution is strictly prohibited.<br><br>
+            
+            <strong>DOCUMENT AUTHENTICITY:</strong> This is a system-generated legal document. The digital copy holds the same legal validity as a physical signed document. 
+            Please retain this email for your records.<br><br>
+            
+            © 2024 Shreeji Enterprise Services. All rights reserved.
+        </p>
+    </div>
+    
+</body>
+</html>
 ";
+
+// Email headers for HTML email
+$headers = "MIME-Version: 1.0" . "\r\n";
+$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+$headers .= "From: Shreeji Enterprise Services <info@shreejientserv.in>" . "\r\n";
+$headers .= "Reply-To: info@shreejientserv.in" . "\r\n";
+$headers .= "X-Mailer: PHP/" . phpversion();
+
+// Send email to rider
+$riderEmailSent = mail($email, $emailSubject, $emailBody, $headers);
+
+// Send notification to HR with different subject
+$hrEmail = "hr@shreejientserv.in";
+$hrSubject = "New Contract Submission - Existing Rider: " . $firstName . " " . $lastName;
+$hrBody = "<div style='font-family: Arial, sans-serif; padding: 20px;'>";
+$hrBody .= "<h2 style='color: #667eea;'>New Existing Rider Contract Submission</h2>";
+$hrBody .= "<p><strong>Rider Name:</strong> " . $firstName . " " . $lastName . "</p>";
+$hrBody .= "<p><strong>Email:</strong> " . $email . "</p>";
+$hrBody .= "<p><strong>Mobile:</strong> " . $mobileNumber . "</p>";
+$hrBody .= "<p><strong>Work Location:</strong> " . $workLocation . "</p>";
+$hrBody .= "<p><strong>Vehicle Type:</strong> " . $vehicleType . "</p>";
+$hrBody .= "<p><strong>Submission Date:</strong> " . date('d/m/Y H:i:s') . "</p>";
+$hrBody .= "<hr>";
+$hrBody .= "<p><em>Complete contract details have been sent to the rider's email address.</em></p>";
+$hrBody .= "<p><em>Please review the submission and proceed with activation process.</em></p>";
+$hrBody .= "</div>";
+
+$hrEmailSent = mail($hrEmail, $hrSubject, $hrBody, $headers);
+
+// Log the submission
+$logEntry = date('Y-m-d H:i:s') . " | Existing Rider | " . $firstName . " " . $lastName . " | " . $email . " | " . $mobileNumber . " | Rider Email: " . ($riderEmailSent ? "Sent" : "Failed") . " | HR Email: " . ($hrEmailSent ? "Sent" : "Failed") . "\n";
+file_put_contents('contract_submissions.log', $logEntry, FILE_APPEND);
+
+// Send response
+if ($riderEmailSent) {
+    http_response_code(200);
+    echo json_encode([
+        'success' => true,
+        'message' => 'Contract accepted successfully! A confirmation email with complete terms and conditions has been sent to your email address.',
+        'riderEmail' => $riderEmailSent,
+        'hrNotification' => $hrEmailSent
+    ]);
+} else {
+    http_response_code(500);
+    echo json_encode([
+        'success' => false,
+        'message' => 'There was an error sending the confirmation email. Please contact us at +91-7016899689 or info@shreejientserv.in'
+    ]);
+}
+
