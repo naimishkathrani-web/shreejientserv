@@ -88,5 +88,70 @@ $formattedDate = $dateObj ? $dateObj->format('d F Y') : $acceptanceDate;
 $maskedAadhar = 'XXXX-XXXX-' . substr($aadharNumber, -4);
 $maskedPAN = substr($panNumber, 0, 3) . 'XXXXXX' . substr($panNumber, -2);
 
-// TO BE CONTINUED - Email template will be added next
-?>
+// Create email subject
+$emailSubject = "Contract accepted by existing rider - $firstName $lastName";
+
+// Create comprehensive email body with legal declaration
+$emailBody = "
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Contract Agreement</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Georgia', 'Times New Roman', serif; line-height: 1.7; color: #1a1a1a; background: #f5f5f5; }
+        .email-container { max-width: 800px; margin: 0 auto; background: white; }
+        .header { background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%); color: white; padding: 40px 30px; text-align: center; }
+        .header h1 { font-size: 26px; margin-bottom: 10px; font-weight: 600; letter-spacing: 0.5px; }
+        .header p { font-size: 14px; opacity: 0.95; margin: 5px 0; }
+        .legal-banner { background: #fef9e7; border-top: 4px solid #f59e0b; border-bottom: 4px solid #f59e0b; padding: 20px 30px; text-align: center; }
+        .legal-banner h2 { color: #d97706; font-size: 20px; margin-bottom: 8px; }
+        .legal-banner p { color: #92400e; font-size: 13px; }
+        .declaration { padding: 40px 30px; background: #fffef5; border-left: 6px solid #f59e0b; }
+        .declaration h3 { color: #d97706; font-size: 18px; margin-bottom: 20px; }
+        .declaration-text { font-size: 15px; line-height: 2; text-align: justify; margin-bottom: 20px; }
+        .declaration-text strong { color: #000; font-weight: 600; }
+        .declaration-list { margin: 20px 0; padding-left: 30px; }
+        .declaration-list li { margin: 12px 0; }
+        .personal-info { background: #f9fafb; padding: 30px; border-top: 3px solid #e5e7eb; }
+        .personal-info h3 { color: #1e40af; margin-bottom: 20px; font-size: 18px; }
+        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .info-item { padding: 12px; background: white; border-left: 3px solid #3b82f6; }
+        .info-label { font-size: 12px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+        .info-value { font-size: 14px; color: #1f2937; font-weight: 500; }
+        .terms-section { padding: 30px; }
+        .terms-section h3 { color: #1e40af; font-size: 20px; margin-bottom: 15px; border-bottom: 3px solid #2563eb; padding-bottom: 10px; }
+        .terms-section h4 { color: #1f2937; font-size: 16px; margin: 25px 0 12px 0; }
+        .terms-section p { margin: 12px 0; text-align: justify; }
+        .terms-section ul { padding-left: 25px; margin: 12px 0; }
+        .terms-section li { margin: 8px 0; }
+        .terms-section strong { color: #000; }
+        .important-box { background: #fef2f2; border: 2px solid #dc2626; border-radius: 6px; padding: 20px; margin: 20px 0; }
+        .important-box strong { color: #dc2626; }
+        .footer { background: #111827; color: #9ca3af; padding: 30px; text-align: center; }
+        .footer p { margin: 8px 0; font-size: 13px; }
+        .footer a { color: #60a5fa; text-decoration: none; }
+        @media only screen and (max-width: 600px) {
+            .info-grid { grid-template-columns: 1fr; }
+            .header, .declaration, .personal-info, .terms-section { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class='email-container'>
+        <!-- Header -->
+        <div class='header'>
+            <h1>⚖️ LEGAL CONTRACT AGREEMENT</h1>
+            <p>Freelance Rider Agreement - Existing Rider Contract Renewal</p>
+            <p>Shreeji Enterprise Services, Rajkot, Gujarat, India</p>
+            <p>Contract Date: $formattedDate</p>
+        </div>
+        
+        <!-- Legal Banner -->
+        <div class='legal-banner'>
+            <h2>📜 LEGALLY BINDING DOCUMENT</h2>
+            <p>This email constitutes a legally binding contract agreement. Please read carefully and retain for your records.</p>
+        </div>
+";
