@@ -551,6 +551,7 @@ const contractContent = {
             vehicleScooter: "સ્કૂટર",
             vehicleBike: "સાયકલ",
             vehicleNumber: "વાહન નોંધણી નંબર *",
+            licenseNumber: "ડ્રાઇવિંગ લાયસન્સ નંબર *",
             license: "હું પુષ્ટિ કરું છું કે મારી પાસે માન્ય ડ્રાઇવિંગ લાયસન્સ છે *",
             vehicleDocs: "હું પુષ્ટિ કરું છું કે મારી પાસે માન્ય RC, વીમો અને PUC છે *",
             ownDocs: "હું પુષ્ટિ કરું છું કે તમામ દસ્તાવેજો મારા પોતાના અને અધિકૃત છે *",
@@ -849,6 +850,7 @@ const contractContent = {
             vehicleScooter: "स्कूटर",
             vehicleBike: "साइकिल",
             vehicleNumber: "वाहन पंजीकरण संख्या *",
+            licenseNumber: "ड्राइविंग लाइसेंस नंबर *",
             license: "मैं पुष्टि करता/करती हूं कि मेरे पास वैध ड्राइविंग लाइसेंस है *",
             vehicleDocs: "मैं पुष्टि करता/करती हूं कि मेरे पास वैध RC, बीमा और PUC है *",
             ownDocs: "मैं पुष्टि करता/करती हूं कि सभी दस्तावेज़ मेरे स्वयं के और प्रामाणिक हैं *",
@@ -1039,6 +1041,7 @@ function changeLanguage() {
     document.getElementById('vehicle-scooter').textContent = content.labels.vehicleScooter;
     document.getElementById('vehicle-bike').textContent = content.labels.vehicleBike;
     document.getElementById('label-vehicle-number').textContent = content.labels.vehicleNumber;
+    document.getElementById('label-license-number').textContent = content.labels.licenseNumber;
     document.getElementById('label-license').textContent = content.labels.license;
     document.getElementById('label-vehicle-docs').textContent = content.labels.vehicleDocs;
     document.getElementById('label-own-docs').textContent = content.labels.ownDocs;
