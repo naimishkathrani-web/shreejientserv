@@ -154,4 +154,87 @@ $emailBody = "
             <h2>📜 LEGALLY BINDING DOCUMENT</h2>
             <p>This email constitutes a legally binding contract agreement. Please read carefully and retain for your records.</p>
         </div>
+        
+        <!-- Declaration Section -->
+        <div class='declaration'>
+            <h3>DECLARATION OF VOLUNTARY AGREEMENT</h3>
+            <div class='declaration-text'>
+                <p>I, <strong>$firstName $lastName</strong>, son/daughter of <strong>$parentName</strong>, born on <strong>$dateOfBirth</strong>, currently residing at <strong>$currentAddress</strong>, with permanent address at <strong>$permanentAddress</strong>, hereby solemnly declare and confirm the following:</p>
+                
+                <p>I am entering into this freelance rider agreement with <strong>Shreeji Enterprise Services</strong>, having its registered office at 714 The Spyre 2 Sheetal Park, 150 Feet Ring Road, Rajkot, Gujarat - 360005, India, on this day of <strong>$formattedDate</strong> at <strong>$signedLocation</strong>.</p>
+                
+                <p><strong>I HEREBY CONFIRM AND DECLARE THAT:</strong></p>
+                <ul class='declaration-list'>
+                    <li>I will abide by all the terms and conditions mentioned below at all times until the end of this 3-month freelance contract period with Shreeji Enterprise Services.</li>
+                    <li>I am agreeing to these terms and conditions in full confidence and in full consciousness, with complete understanding of my rights and obligations.</li>
+                    <li>I have <strong>NOT</strong> been forced, coerced, threatened, or pressured by any individual, any party, or by Shreeji Enterprise Services to agree to these terms and conditions.</li>
+                    <li>I am entering into this agreement of my own free will and volition, after having read and understood all terms completely in my preferred language.</li>
+                    <li>All information provided by me in this agreement is true, accurate, complete, and provided voluntarily to the best of my knowledge and belief.</li>
+                    <li>I understand this is a legally binding contract and I accept full responsibility for compliance with all stated terms.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Personal Information Section -->
+        <div class='personal-info'>
+            <h3>CONTRACT PARTICIPANT INFORMATION</h3>
+            <div class='info-grid'>
+                <div class='info-item'>
+                    <div class='info-label'>Full Name</div>
+                    <div class='info-value'>$firstName $lastName</div>
+                </div>
+                <div class='info-item'>
+                    <div class='info-label'>Parent/Guardian Name</div>
+                    <div class='info-value'>$parentName</div>
+                </div>
+                <div class='info-item'>
+                    <div class='info-label'>Date of Birth</div>
+                    <div class='info-value'>$dateOfBirth</div>
+                </div>
+                <div class='info-item'>
+                    <div class='info-label'>Contact Number</div>
+                    <div class='info-value'>$mobileNumber</div>
+                </div>
+                <div class='info-item'>
+                    <div class='info-label'>Parent Contact</div>
+                    <div class='info-value'>$parentMobile</div>
+                </div>
+                <div class='info-item'>
+                    <div class='info-label'>Email Address</div>
+                    <div class='info-value'>$riderEmail</div>
+                </div>
+                <div class='info-item'>
+                    <div class='info-label'>Aadhar Number</div>
+                    <div class='info-value'>$maskedAadhar</div>
+                </div>
+                <div class='info-item'>
+                    <div class='info-label'>PAN Number</div>
+                    <div class='info-value'>$maskedPAN</div>
+                </div>
+                <div class='info-item'>
+                    <div class='info-label'>Work Location</div>
+                    <div class='info-value'>$workLocation</div>
+                </div>
+                <div class='info-item'>
+                    <div class='info-label'>Vehicle Type</div>
+                    <div class='info-value'>" . ucfirst($vehicleType) . "</div>
+                </div>
+                <div class='info-item'>
+                    <div class='info-label'>Vehicle Registration</div>
+                    <div class='info-value'>$vehicleNumber</div>
+                </div>
+                <div class='info-item'>
+                    <div class='info-label'>License Number</div>
+                    <div class='info-value'>$licenseNumber</div>
+                </div>
+                <div class='info-item'>
+                    <div class='info-label'>Contract Date</div>
+                    <div class='info-value'>$formattedDate</div>
+                </div>
+                <div class='info-item'>
+                    <div class='info-label'>Signed At</div>
+                    <div class='info-value'>$signedLocation</div>
+                </div>
+            </div>
+        </div>
 ";
