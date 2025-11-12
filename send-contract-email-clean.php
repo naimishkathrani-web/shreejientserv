@@ -237,4 +237,73 @@ $emailBody = "
                 </div>
             </div>
         </div>
+        
+        <!-- Contract Terms Section -->
+        <div class='terms-section'>
+            <h3>COMPLETE TERMS AND CONDITIONS OF AGREEMENT</h3>
+            
+            <h4>1. Nature of Engagement - Independent Contractor Relationship</h4>
+            <p>The Rider acknowledges and agrees that they are engaging with the Company as an <strong>independent freelance contractor</strong> and not as an employee. This is a <strong>3-month trial period engagement</strong> starting from the date of acceptance. No employer-employee relationship, partnership, joint venture, or agency relationship is created by this agreement.</p>
+            
+            <h4>2. Third-Party Platform Usage - Pedge Mobile Application</h4>
+            <p><strong>Important Notice:</strong> During the provision of delivery services, the Rider will be required to use the <strong>Pedge Mobile Application</strong>, which is a third-party technology platform service provider. The Rider expressly acknowledges that Pedge, its owners, directors, shareholders, employees, platform developers, technology partners, and associated companies are independent third-party service providers and have no relationship, liability, or responsibility towards the Rider.</p>
+            
+            <h4>3. Payment Structure and Remuneration</h4>
+            <p>The Rider shall be paid on a <strong>daily or weekly basis</strong> according to the following delivery-based payment structure:</p>
+            <ul>
+                <li><strong>9 orders per day:</strong> ₹500/-</li>
+                <li><strong>17 orders per day:</strong> ₹1,000/-</li>
+                <li><strong>26 orders per day:</strong> ₹2,000/-</li>
+                <li><strong>37 orders per day:</strong> ₹4,000/-</li>
+            </ul>
+            <p>A \"day\" is defined as a period starting and ending at <strong>5:30 AM each day</strong>. Payment will be processed on a daily or weekly basis as determined by the Company's payment schedule. All payments are subject to successful completion and verification of deliveries.</p>
+            
+            <h4>4. Work Schedule and Flexibility</h4>
+            <p>As an independent contractor, the Rider has the flexibility to set their own working hours and schedule. However, the Rider is expected to commit to a minimum of <strong>6 days per week</strong> during the trial period to meet performance benchmarks. The Rider may choose their working hours, but must maintain professional service standards during accepted delivery assignments.</p>
+            
+            <h4>5. Vehicle Requirements and Documentation</h4>
+            <p>The Rider confirms ownership or authorized use of: <strong>" . ucfirst($vehicleType) . "</strong> with registration number <strong>$vehicleNumber</strong>. The Rider must maintain valid documents including:</p>
+            <ul>
+                <li>Valid Driving License (if required): $licenseNumber</li>
+                <li>Vehicle Registration Certificate (RC)</li>
+                <li>Valid Motor Insurance Policy</li>
+                <li>Pollution Under Control (PUC) Certificate</li>
+            </ul>
+            <p>The Rider is solely responsible for maintaining all vehicle documentation and ensuring compliance with traffic regulations.</p>
+            
+            <h4>6. MDND Policy - Misdelivery, Damage, and Non-Delivery</h4>
+            <div class='important-box'>
+                <p><strong>⚠️ CRITICAL POLICY:</strong></p>
+                <ul>
+                    <li><strong>Zero Tolerance Policy:</strong> Any instance of misdelivery (wrong delivery), damage to goods, or non-delivery will result in immediate termination of this agreement.</li>
+                    <li><strong>Financial Liability:</strong> The Rider shall be fully liable for the cost of any lost, damaged, or misdelivered items.</li>
+                    <li><strong>No Appeals:</strong> MDND incidents result in automatic contract termination with no right to appeal or re-engagement.</li>
+                    <li><strong>Duty of Care:</strong> The Rider must handle all items with utmost care and ensure proper delivery to the correct recipient.</li>
+                </ul>
+            </div>
+            
+            <h4>7. Insurance Requirements During Trial Period</h4>
+            <p>During the <strong>3-month trial period</strong>, the Rider is responsible for their own insurance coverage. The Company does not provide medical insurance, accident insurance, or any other insurance coverage during the trial period. The Rider is working entirely at their own risk.</p>
+            <p><strong>Post-Trial Benefits:</strong> Upon successful completion of the 3-month trial period and transition to a fixed-term contract, the Rider will be eligible for medical insurance coverage and other benefits as per Company policy.</p>
+            
+            <h4>8. Document Authenticity and Information Accuracy</h4>
+            <p>The Rider confirms that:</p>
+            <ul>
+                <li>The provided <strong>Aadhar Card</strong> ($maskedAadhar) belongs to the Rider and contains accurate information</li>
+                <li>The provided <strong>PAN Card</strong> ($maskedPAN) belongs to the Rider and contains accurate information</li>
+                <li>All submitted documents are genuine, unaltered, and legally valid</li>
+                <li>All personal information provided (name, address, contact details) is true and accurate to the best of their knowledge</li>
+            </ul>
+            <p>Providing false, forged, or misleading documents/information will result in immediate termination, legal action, and reporting to law enforcement authorities.</p>
+            
+            <h4>9. Liability and Indemnification</h4>
+            <p>The Rider agrees to indemnify and hold harmless Shreeji Enterprise Services, its directors, officers, employees, and agents from any claims, damages, losses, or expenses arising from:</p>
+            <ul>
+                <li>The Rider's negligence or willful misconduct</li>
+                <li>Violation of traffic laws or regulations</li>
+                <li>Damage to third-party property or injury to third parties</li>
+                <li>Breach of any terms of this agreement</li>
+                <li>Any misrepresentation of facts or documents</li>
+            </ul>
+        </div>
 ";
