@@ -38,9 +38,9 @@ $jsonData = file_get_contents('php://input');
 $formData = json_decode($jsonData, true);
 
 // Validate required fields
-$requiredFields = ['firstName', 'lastName', 'parentName', 'parentMobile', 'email', 'aadharNumber', 
+$requiredFields = ['firstName', 'lastName', 'parentName', 'parentMobile', 'email', 'dateOfBirth', 'aadharNumber', 
                    'panNumber', 'mobileNumber', 'permanentAddress', 'currentAddress', 'workLocation', 
-                   'vehicleType', 'acceptanceDate', 'language'];
+                   'vehicleType', 'acceptanceDate', 'signedLocation', 'language'];
 
 foreach ($requiredFields as $field) {
     if (empty($formData[$field])) {
@@ -56,6 +56,7 @@ $lastName = htmlspecialchars($formData['lastName']);
 $parentName = htmlspecialchars($formData['parentName']);
 $parentMobile = htmlspecialchars($formData['parentMobile']);
 $riderEmail = filter_var($formData['email'], FILTER_SANITIZE_EMAIL);
+$dateOfBirth = htmlspecialchars($formData['dateOfBirth']);
 $aadharNumber = htmlspecialchars($formData['aadharNumber']);
 $panNumber = htmlspecialchars($formData['panNumber']);
 $mobileNumber = htmlspecialchars($formData['mobileNumber']);
@@ -65,6 +66,7 @@ $workLocation = htmlspecialchars($formData['workLocation']);
 $vehicleType = htmlspecialchars($formData['vehicleType']);
 $vehicleNumber = htmlspecialchars($formData['vehicleNumber']);
 $acceptanceDate = htmlspecialchars($formData['acceptanceDate']);
+$signedLocation = htmlspecialchars($formData['signedLocation']);
 $language = htmlspecialchars($formData['language']);
 $submittedAt = htmlspecialchars($formData['submittedAt']);
 

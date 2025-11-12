@@ -1150,6 +1150,7 @@ document.getElementById('rider-contract-form').addEventListener('submit', functi
         hasVehicleDocs: document.getElementById('hasVehicleDocs').checked,
         ownDocuments: document.getElementById('ownDocuments').checked,
         acceptanceDate: document.getElementById('acceptanceDate').value,
+        signedLocation: document.getElementById('signedLocation').value,
         agreeTerms: document.getElementById('agreeTerms').checked,
         language: document.getElementById('language').value,
         submittedAt: new Date().toISOString()
