@@ -920,7 +920,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     vehicleTypeSelect.addEventListener('change', function() {
         if (this.value === 'bike') { // bicycle
-            vehicleNumberInput.value = 'N/A';
+            vehicleNumberInput.value = 'Bi-cycle';
             vehicleNumberInput.readOnly = true;
             vehicleNumberInput.required = false;
             hasLicenseCheckbox.required = false;
