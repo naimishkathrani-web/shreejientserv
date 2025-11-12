@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rider Agreement - Shreeji Enterprise Services</title>
+    <link rel="stylesheet" href="contract-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700&family=Noto+Sans+Telugu:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&family=Noto+Sans+Gujarati:wght@400;500;600;700&family=Noto+Sans+Kannada:wght@400;500;600;700&family=Noto+Sans+Malayalam:wght@400;500;600;700&family=Noto+Sans+Gurmukhi:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="contract-header">
+            <img src="Images/Shreeji Logo 1.jpg" alt="Shreeji Enterprise Services" class="logo">
+            <h1 id="page-title">Freelance Rider Agreement</h1>
+            
+            <div class="language-selector">
+                <label for="language" id="lang-label">Select Language / भाषा चुनें:</label>
+                <select id="language" onchange="changeLanguage()">
+                    <option value="en">English</option>
+                    <option value="hi">हिंदी (Hindi)</option>
+                    <option value="gu">ગુજરાતી (Gujarati)</option>
+                    <option value="mr">मराठी (Marathi)</option>
+                    <option value="ta">தமிழ் (Tamil)</option>
+                    <option value="te">తెలుగు (Telugu)</option>
+                    <option value="bn">বাংলা (Bengali)</option>
+                    <option value="kn">ಕನ್ನಡ (Kannada)</option>
+                    <option value="ml">മലയാളം (Malayalam)</option>
+                    <option value="pa">ਪੰਜਾਬੀ (Punjabi)</option>
+                </select>
+            </div>
+        </header>
+
+        <div class="contract-content" id="contract-content">
+            <!-- Contract content will be loaded here based on language -->
+        </div>
+
+        <form id="rider-contract-form" class="contract-form">
+            <h2 id="form-title">Rider Information & Acceptance</h2>
+            
+            <div class="form-group">
+                <label for="firstName" id="label-firstname">First Name / प्रथम नाम *</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lastName" id="label-lastname">Last Name / अंतिम नाम *</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="aadharNumber" id="label-aadhar">Aadhar Card Number / आधार कार्ड नंबर *</label>
+                <input type="text" id="aadharNumber" name="aadharNumber" pattern="[0-9]{12}" maxlength="12" required>
+                <small id="aadhar-help">Enter 12-digit Aadhar number</small>
+            </div>
+
+            <div class="form-group">
+                <label for="panNumber" id="label-pan">PAN Card Number / पैन कार्ड नंबर *</label>
+                <input type="text" id="panNumber" name="panNumber" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" maxlength="10" style="text-transform: uppercase" required>
+                <small id="pan-help">Enter 10-character PAN number (e.g., ABCDE1234F)</small>
+            </div>
+
+            <div class="form-group">
+                <label for="mobileNumber" id="label-mobile">Mobile Number / मोबाइल नंबर *</label>
+                <input type="tel" id="mobileNumber" name="mobileNumber" pattern="[0-9]{10}" maxlength="10" required>
+                <small id="mobile-help">Enter 10-digit mobile number</small>
+            </div>
+
+            <div class="form-group">
+                <label for="workLocation" id="label-location">Work Location / कार्य स्थान *</label>
+                <input type="text" id="workLocation" name="workLocation" placeholder="City, State" required>
+            </div>
+
+            <div class="form-group">
+                <label for="vehicleType" id="label-vehicle">Vehicle Type / वाहन प्रकार *</label>
+                <select id="vehicleType" name="vehicleType" required>
+                    <option value="">Select / चुनें</option>
+                    <option value="motorcycle">Motorcycle / मोटरसाइकिल</option>
+                    <option value="scooter">Scooter / स्कूटर</option>
+                    <option value="bike">Bicycle / साइकिल</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="vehicleNumber" id="label-vehicle-number">Vehicle Registration Number / वाहन पंजीकरण संख्या *</label>
+                <input type="text" id="vehicleNumber" name="vehicleNumber" style="text-transform: uppercase" required>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="hasLicense" name="hasLicense" required>
+                <label for="hasLicense" id="label-license">I confirm that I have a valid driving license / मैं पुष्टि करता/करती हूं कि मेरे पास वैध ड्राइविंग लाइसेंस है *</label>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="hasVehicleDocs" name="hasVehicleDocs" required>
+                <label for="hasVehicleDocs" id="label-vehicle-docs">I confirm that I have valid RC, insurance, and PUC for my vehicle / मैं पुष्टि करता/करती हूं कि मेरे पास अपने वाहन के लिए वैध RC, बीमा और PUC है *</label>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="ownDocuments" name="ownDocuments" required>
+                <label for="ownDocuments" id="label-own-docs">I confirm that all documents provided are my own and authentic / मैं पुष्टि करता/करती हूं कि प्रदान किए गए सभी दस्तावेज़ मेरे स्वयं के और प्रामाणिक हैं *</label>
+            </div>
+
+            <div class="form-group">
+                <label for="acceptanceDate" id="label-date">Date of Acceptance / स्वीकृति की तारीख *</label>
+                <input type="date" id="acceptanceDate" name="acceptanceDate" required>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                <label for="agreeTerms" id="label-agree">
+                    <strong>I have read and agree to all the terms and conditions mentioned above / मैंने ऊपर उल्लिखित सभी नियम और शर्तें पढ़ ली हैं और उनसे सहमत हूं *</strong>
+                </label>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" id="submit-btn" class="submit-btn">Submit Agreement / अनुबंध जमा करें</button>
+            </div>
+        </form>
+
+        <div id="success-message" class="success-message" style="display: none;">
+            <h3 id="success-title">Agreement Submitted Successfully!</h3>
+            <p id="success-text">Your rider agreement has been submitted. You will be contacted by our team soon.</p>
+        </div>
+    </div>
+
+    <script src="contract-script.js"></script>
+</body>
+</html>
