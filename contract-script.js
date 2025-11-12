@@ -345,6 +345,76 @@ const contractContent = {
             successText: "તમારો રાઇડર કરાર સબમિટ થઈ ગયો છે. અમારી ટીમ ટૂંક સમયમાં તમારો સંપર્ક કરશે."
         }
     },
+    mr: {
+        pageTitle: "फ्रीलान्स रायडर करार",
+        langLabel: "भाषा निवडा:",
+        formTitle: "रायडर माहिती आणि स्वीकृती",
+        headerSubtitle: "हा श्रीजी एंटरप्राइझ सर्व्हिसेस सोबत काम करण्यासाठी निवडलेल्या रायडर्ससाठी फ्रीलान्सर करार आहे. या करारामध्ये फ्रीलान्स रायडर्ससाठी वाचण्यासाठी, समजून घेण्यासाठी आणि पालन करण्यासाठी अटी समाविष्ट आहेत.",
+        content: `<h2>फ्रीलान्स रायडर करार</h2><p>हा श्रीजी एंटरप्राइझ सर्व्हिसेस आणि स्वतंत्र डिलिव्हरी भागीदार यांच्यातील करार आहे. या करारात 3 महिन्यांचा चाचणी कालावधी, पेडज मोबाईल ॲप्लिकेशन वापर, MDND धोरण, विमा आवश्यकता आणि इतर अटी समाविष्ट आहेत.</p>`,
+        labels: {
+            firstname: "पहिले नाव *", lastname: "आडनाव *", aadhar: "आधार कार्ड क्रमांक *", aadharHelp: "12-अंकी आधार क्रमांक प्रविष्ट करा", pan: "पॅन कार्ड क्रमांक *", panHelp: "10-अक्षरी पॅन क्रमांक प्रविष्ट करा", mobile: "मोबाईल नंबर *", mobileHelp: "10-अंकी मोबाईल नंबर प्रविष्ट करा", permanentAddress: "कायमचा/मूळ पत्ता *", permanentHelp: "तुमचा मूळ/कायमचा पत्ता प्रविष्ट करा", currentAddress: "सध्याचा पत्ता *", currentHelp: "तुमचा सध्याचा निवासी पत्ता प्रविष्ट करा", location: "कामाचे ठिकाण *", vehicle: "वाहनाचा प्रकार *", vehicleSelect: "वाहनाचा प्रकार निवडा", vehicleMotorcycle: "मोटारसायकल", vehicleScooter: "स्कूटर", vehicleBike: "सायकल", vehicleNumber: "वाहन नोंदणी क्रमांक *", license: "मी पुष्टी करतो की माझ्याकडे वैध ड्रायव्हिंग लायसन्स आहे *", vehicleDocs: "मी पुष्टी करतो की माझ्याकडे वैध RC, विमा आणि PUC आहे *", ownDocs: "मी पुष्टी करतो की सर्व कागदपत्रे माझी स्वतःची आणि अस्सल आहेत *", date: "स्वीकृतीची तारीख *", agree: "मी सर्व अटी आणि शर्ती वाचल्या आहेत आणि सहमत आहे *", submit: "करार सबमिट करा", successTitle: "करार यशस्वीरित्या सबमिट झाला!", successText: "तुमचा रायडर करार सबमिट झाला आहे. आमचा संघ लवकरच तुमच्याशी संपर्क साधेल."
+        }
+    },
+    ta: {
+        pageTitle: "ஃப்ரீலான்ஸ் ரைடர் ஒப்பந்தம்",
+        langLabel: "மொழியைத் தேர்ந்தெடுக்கவும்:",
+        formTitle: "ரைடர் தகவல் மற்றும் ஏற்புதல்",
+        headerSubtitle: "இது ஸ்ரீஜி எண்டர்பிரைஸ் சர்வீசஸுடன் பணிபுரிய தேர்வு செய்யும் ரைடர்களுக்கான ஃப்ரீலான்ஸர் ஒப்பந்தம். இந்த ஒப்பந்தத்தில் ஃப்ரீலான்ஸ் ரைடர்கள் படிக்க, புரிந்துகொள்ள மற்றும் கடைபிடிக்க வேண்டிய விதிமுறைகள் உள்ளன.",
+        content: `<h2>ஃப்ரீலான்ஸ் ரைடர் ஒப்பந்தம்</h2><p>இது ஸ்ரீஜி எண்டர்பிரைஸ் சர்வீசஸ் மற்றும் சுதந்திர டெலிவரி பார்ட்னர் இடையேயான ஒப்பந்தம். இந்த ஒப்பந்தத்தில் 3 மாத சோதனை காலம், பெட்ஜ் மொபைல் செயலி பயன்பாடு, MDND கொள்கை, காப்பீட்டு தேவைகள் மற்றும் பிற விதிமுறைகள் உள்ளன.</p>`,
+        labels: {
+            firstname: "முதல் பெயர் *", lastname: "கடைசி பெயர் *", aadhar: "ஆதார் அட்டை எண் *", aadharHelp: "12-இலக்க ஆதார் எண்ணை உள்ளிடவும்", pan: "பான் அட்டை எண் *", panHelp: "10-எழுத்து பான் எண்ணை உள்ளிடவும்", mobile: "மொபைல் எண் *", mobileHelp: "10-இலக்க மொபைல் எண்ணை உள்ளிடவும்", permanentAddress: "நிரந்தர/சொந்த ஊர் முகவரி *", permanentHelp: "உங்கள் சொந்த ஊர்/நிரந்தர முகவரியை உள்ளிடவும்", currentAddress: "தற்போதைய முகவரி *", currentHelp: "உங்கள் தற்போதைய குடியிருப்பு முகவரியை உள்ளிடவும்", location: "பணி இடம் *", vehicle: "வாகன வகை *", vehicleSelect: "வாகன வகையைத் தேர்ந்தெடுக்கவும்", vehicleMotorcycle: "மோட்டார் சைக்கிள்", vehicleScooter: "ஸ்கூட்டர்", vehicleBike: "சைக்கிள்", vehicleNumber: "வாகன பதிவு எண் *", license: "என்னிடம் செல்லுபடியாகும் ஓட்டுநர் உரிமம் உள்ளது என உறுதிப்படுத்துகிறேன் *", vehicleDocs: "என்னிடம் செல்லுபடியாகும் RC, காப்பீடு மற்றும் PUC உள்ளது என உறுதிப்படுத்துகிறேன் *", ownDocs: "அனைத்து ஆவணங்களும் என்னுடையவை மற்றும் உண்மையானவை என உறுதிப்படுத்துகிறேன் *", date: "ஏற்புதல் தேதி *", agree: "நான் அனைத்து விதிமுறைகளையும் நிபந்தனைகளையும் படித்து ஒப்புக்கொள்கிறேன் *", submit: "ஒப்பந்தத்தை சமர்ப்பிக்கவும்", successTitle: "ஒப்பந்தம் வெற்றிகரமாக சமர்ப்பிக்கப்பட்டது!", successText: "உங்கள் ரைடர் ஒப்பந்தம் சமர்ப்பிக்கப்பட்டுள்ளது. எங்கள் குழு விரைவில் உங்களைத் தொடர்புகொள்ளும்."
+        }
+    },
+    te: {
+        pageTitle: "ఫ్రీలాన్స్ రైడర్ ఒప్పందం",
+        langLabel: "భాషను ఎంచుకోండి:",
+        formTitle: "రైడర్ సమాచారం మరియు అంగీకారం",
+        headerSubtitle: "ఇది శ్రీజీ ఎంటర్‌ప్రైజ్ సర్వీసెస్‌తో పనిచేయడానికి ఎంచుకున్న రైడర్‌ల కోసం ఫ్రీలాన్సర్ ఒప్పందం. ఈ ఒప్పందంలో ఫ్రీలాన్స్ రైడర్లు చదవడానికి, అర్థం చేసుకోవడానికి మరియు పాటించడానికి నియమాలు ఉన్నాయి.",
+        content: `<h2>ఫ్రీలాన్స్ రైడర్ ఒప్పందం</h2><p>ఇది శ్రీజీ ఎంటర్‌ప్రైజ్ సర్వీసెస్ మరియు స్వతంత్ర డెలివరీ భాగస్వామి మధ్య ఒప్పందం. ఈ ఒప్పందంలో 3 నెలల ట్రయల్ వ్యవధి, పెడ్జ్ మొబైల్ యాప్ వినియోగం, MDND విధానం, బీమా అవసరాలు మరియు ఇతర నియమాలు ఉన్నాయి.</p>`,
+        labels: {
+            firstname: "మొదటి పేరు *", lastname: "చివరి పేరు *", aadhar: "ఆధార్ కార్డ్ నంబర్ *", aadharHelp: "12-అంకెల ఆధార్ నంబర్ నమోదు చేయండి", pan: "పాన్ కార్డ్ నంబర్ *", panHelp: "10-అక్షరాల పాన్ నంబర్ నమోదు చేయండి", mobile: "మొబైల్ నంబర్ *", mobileHelp: "10-అంకెల మొబైల్ నంబర్ నమోదు చేయండి", permanentAddress: "శాశ్వత/స్వస్థలం చిరునామా *", permanentHelp: "మీ స్వస్థలం/శాశ్వత చిరునామా నమోదు చేయండి", currentAddress: "ప్రస్తుత చిరునామా *", currentHelp: "మీ ప్రస్తుత నివాస చిరునామా నమోదు చేయండి", location: "పని ప్రదేశం *", vehicle: "వాహన రకం *", vehicleSelect: "వాహన రకాన్ని ఎంచుకోండి", vehicleMotorcycle: "మోటార్‌సైకిల్", vehicleScooter: "స్కూటర్", vehicleBike: "సైకిల్", vehicleNumber: "వాహన నమోదు సంఖ్య *", license: "నా వద్ద చెల్లుబాటు అయ్యే డ్రైవింగ్ లైసెన్స్ ఉందని నేను ధృవీకరిస్తున్నాను *", vehicleDocs: "నా వద్ద చెల్లుబాటు అయ్యే RC, బీమా మరియు PUC ఉన్నాయని నేను ధృవీకరిస్తున్నాను *", ownDocs: "అన్ని పత్రాలు నా స్వంతం మరియు ప్రామాణికమైనవని నేను ధృవీకరిస్తున్నాను *", date: "అంగీకార తేదీ *", agree: "నేను అన్ని నియమాలు మరియు షరతులను చదివాను మరియు అంగీకరిస్తున్నాను *", submit: "ఒప్పందం సమర్పించండి", successTitle: "ఒప్పందం విజయవంతంగా సమర్పించబడింది!", successText: "మీ రైడర్ ఒప్పందం సమర్పించబడింది. మా బృందం త్వరలో మిమ్మల్ని సంప్రదిస్తుంది."
+        }
+    },
+    bn: {
+        pageTitle: "ফ্রিল্যান্স রাইডার চুক্তি",
+        langLabel: "ভাষা নির্বাচন করুন:",
+        formTitle: "রাইডার তথ্য এবং গ্রহণযোগ্যতা",
+        headerSubtitle: "এটি শ্রীজি এন্টারপ্রাইজ সার্ভিসেসের সাথে কাজ করতে ইচ্ছুক রাইডারদের জন্য একটি ফ্রিল্যান্সার চুক্তি। এই চুক্তিতে ফ্রিল্যান্স রাইডারদের পড়া, বোঝা এবং মেনে চলার জন্য শর্তাবলী রয়েছে।",
+        content: `<h2>ফ্রিল্যান্স রাইডার চুক্তি</h2><p>এটি শ্রীজি এন্টারপ্রাইজ সার্ভিসেস এবং স্বাধীন ডেলিভারি পার্টনারের মধ্যে একটি চুক্তি। এই চুক্তিতে 3 মাসের ট্রায়াল পিরিয়ড, পেজ মোবাইল অ্যাপ্লিকেশন ব্যবহার, MDND নীতি, বীমা প্রয়োজনীয়তা এবং অন্যান্য শর্তাবলী রয়েছে।</p>`,
+        labels: {
+            firstname: "প্রথম নাম *", lastname: "শেষ নাম *", aadhar: "আধার কার্ড নম্বর *", aadharHelp: "12-সংখ্যার আধার নম্বর লিখুন", pan: "প্যান কার্ড নম্বর *", panHelp: "10-অক্ষরের প্যান নম্বর লিখুন", mobile: "মোবাইল নম্বর *", mobileHelp: "10-সংখ্যার মোবাইল নম্বর লিখুন", permanentAddress: "স্থায়ী/নিজ শহরের ঠিকানা *", permanentHelp: "আপনার নিজ শহর/স্থায়ী ঠিকানা লিখুন", currentAddress: "বর্তমান ঠিকানা *", currentHelp: "আপনার বর্তমান আবাসিক ঠিকানা লিখুন", location: "কাজের জায়গা *", vehicle: "গাড়ির ধরন *", vehicleSelect: "গাড়ির ধরন নির্বাচন করুন", vehicleMotorcycle: "মোটরসাইকেল", vehicleScooter: "স্কুটার", vehicleBike: "সাইকেল", vehicleNumber: "গাড়ির নিবন্ধন নম্বর *", license: "আমি নিশ্চিত করছি যে আমার বৈধ ড্রাইভিং লাইসেন্স আছে *", vehicleDocs: "আমি নিশ্চিত করছি যে আমার বৈধ RC, বীমা এবং PUC আছে *", ownDocs: "আমি নিশ্চিত করছি যে সমস্ত নথি আমার নিজস্ব এবং প্রকৃত *", date: "গ্রহণের তারিখ *", agree: "আমি সমস্ত শর্তাবলী পড়েছি এবং সম্মত আছি *", submit: "চুক্তি জমা দিন", successTitle: "চুক্তি সফলভাবে জমা দেওয়া হয়েছে!", successText: "আপনার রাইডার চুক্তি জমা দেওয়া হয়েছে। আমাদের দল শীঘ্রই আপনার সাথে যোগাযোগ করবে।"
+        }
+    },
+    kn: {
+        pageTitle: "ಫ್ರೀಲಾನ್ಸ್ ರೈಡರ್ ಒಪ್ಪಂದ",
+        langLabel: "ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ:",
+        formTitle: "ರೈಡರ್ ಮಾಹಿತಿ ಮತ್ತು ಸ್ವೀಕಾರ",
+        headerSubtitle: "ಇದು ಶ್ರೀಜಿ ಎಂಟರ್‌ಪ್ರೈಸ್ ಸರ್ವೀಸಸ್‌ನೊಂದಿಗೆ ಕೆಲಸ ಮಾಡಲು ಆಯ್ಕೆಮಾಡುವ ರೈಡರ್‌ಗಳಿಗೆ ಫ್ರೀಲಾನ್ಸರ್ ಒಪ್ಪಂದವಾಗಿದೆ. ಈ ಒಪ್ಪಂದದಲ್ಲಿ ಫ್ರೀಲಾನ್ಸ್ ರೈಡರ್‌ಗಳು ಓದಲು, ಅರ್ಥಮಾಡಿಕೊಳ್ಳಲು ಮತ್ತು ಪಾಲಿಸಲು ನಿಯಮಗಳು ಸೇರಿವೆ.",
+        content: `<h2>ಫ್ರೀಲಾನ್ಸ್ ರೈಡರ್ ಒಪ್ಪಂದ</h2><p>ಇದು ಶ್ರೀಜಿ ಎಂಟರ್‌ಪ್ರೈಸ್ ಸರ್ವೀಸಸ್ ಮತ್ತು ಸ್ವತಂತ್ರ ಡೆಲಿವರಿ ಪಾಲುದಾರರ ನಡುವಿನ ಒಪ್ಪಂದ. ಈ ಒಪ್ಪಂದದಲ್ಲಿ 3 ತಿಂಗಳ ಪ್ರಯೋಗ ಅವಧಿ, ಪೆಡ್ಜ್ ಮೊಬೈಲ್ ಅಪ್ಲಿಕೇಶನ್ ಬಳಕೆ, MDND ನೀತಿ, ವಿಮಾ ಅಗತ್ಯತೆಗಳು ಮತ್ತು ಇತರ ನಿಯಮಗಳು ಸೇರಿವೆ.</p>`,
+        labels: {
+            firstname: "ಮೊದಲ ಹೆಸರು *", lastname: "ಕೊನೆಯ ಹೆಸರು *", aadhar: "ಆಧಾರ್ ಕಾರ್ಡ್ ಸಂಖ್ಯೆ *", aadharHelp: "12-ಅಂಕಿಯ ಆಧಾರ್ ಸಂಖ್ಯೆ ನಮೂದಿಸಿ", pan: "ಪ್ಯಾನ್ ಕಾರ್ಡ್ ಸಂಖ್ಯೆ *", panHelp: "10-ಅಕ್ಷರದ ಪ್ಯಾನ್ ಸಂಖ್ಯೆ ನಮೂದಿಸಿ", mobile: "ಮೊಬೈಲ್ ಸಂಖ್ಯೆ *", mobileHelp: "10-ಅಂಕಿಯ ಮೊಬೈಲ್ ಸಂಖ್ಯೆ ನಮೂದಿಸಿ", permanentAddress: "ಶಾಶ್ವತ/ಸ್ವಂತ ಊರಿನ ವಿಳಾಸ *", permanentHelp: "ನಿಮ್ಮ ಸ್ವಂತ ಊರು/ಶಾಶ್ವತ ವಿಳಾಸವನ್ನು ನಮೂದಿಸಿ", currentAddress: "ಪ್ರಸ್ತುತ ವಿಳಾಸ *", currentHelp: "ನಿಮ್ಮ ಪ್ರಸ್ತುತ ವಾಸಸ್ಥಳದ ವಿಳಾಸವನ್ನು ನಮೂದಿಸಿ", location: "ಕೆಲಸದ ಸ್ಥಳ *", vehicle: "ವಾಹನ ಪ್ರಕಾರ *", vehicleSelect: "ವಾಹನ ಪ್ರಕಾರವನ್ನು ಆಯ್ಕೆಮಾಡಿ", vehicleMotorcycle: "ಮೋಟಾರ್‌ಸೈಕಲ್", vehicleScooter: "ಸ್ಕೂಟರ್", vehicleBike: "ಸೈಕಲ್", vehicleNumber: "ವಾಹನ ನೋಂದಣಿ ಸಂಖ್ಯೆ *", license: "ನನ್ನ ಬಳಿ ಮಾನ್ಯ ಚಾಲನಾ ಪರವಾನಗಿ ಇದೆ ಎಂದು ನಾನು ದೃಢೀಕರಿಸುತ್ತೇನೆ *", vehicleDocs: "ನನ್ನ ಬಳಿ ಮಾನ್ಯ RC, ವಿಮೆ ಮತ್ತು PUC ಇದೆ ಎಂದು ನಾನು ದೃಢೀಕರಿಸುತ್ತೇನೆ *", ownDocs: "ಎಲ್ಲಾ ದಾಖಲೆಗಳು ನನ್ನದು ಮತ್ತು ನಿಜವಾದವು ಎಂದು ನಾನು ದೃಢೀಕರಿಸುತ್ತೇನೆ *", date: "ಸ್ವೀಕಾರದ ದಿನಾಂಕ *", agree: "ನಾನು ಎಲ್ಲಾ ನಿಯಮಗಳು ಮತ್ತು ಷರತ್ತುಗಳನ್ನು ಓದಿದ್ದೇನೆ ಮತ್ತು ಒಪ್ಪುತ್ತೇನೆ *", submit: "ಒಪ್ಪಂದವನ್ನು ಸಲ್ಲಿಸಿ", successTitle: "ಒಪ್ಪಂದವನ್ನು ಯಶಸ್ವಿಯಾಗಿ ಸಲ್ಲಿಸಲಾಗಿದೆ!", successText: "ನಿಮ್ಮ ರೈಡರ್ ಒಪ್ಪಂದವನ್ನು ಸಲ್ಲಿಸಲಾಗಿದೆ. ನಮ್ಮ ತಂಡ ಶೀಘ್ರದಲ್ಲೇ ನಿಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸುತ್ತದೆ."
+        }
+    },
+    ml: {
+        pageTitle: "ഫ്രീലാൻസ് റൈഡർ കരാർ",
+        langLabel: "ഭാഷ തിരഞ്ഞെടുക്കുക:",
+        formTitle: "റൈഡർ വിവരങ്ങളും സ്വീകാര്യതയും",
+        headerSubtitle: "ഇത് ശ്രീജി എന്റർപ്രൈസ് സർവീസസുമായി പ്രവർത്തിക്കാൻ തിരഞ്ഞെടുക്കുന്ന റൈഡർമാർക്കുള്ള ഒരു ഫ്രീലാൻസർ കരാറാണ്. ഈ കരാറിൽ ഫ്രീലാൻസ് റൈഡർമാർ വായിക്കാനും മനസ്സിലാക്കാനും പാലിക്കാനുമുള്ള നിബന്ധനകൾ ഉൾപ്പെടുന്നു.",
+        content: `<h2>ഫ്രീലാൻസ് റൈഡർ കരാർ</h2><p>ഇത് ശ്രീജി എന്റർപ്രൈസ് സർവീസസും സ്വതന്ത്ര ഡെലിവറി പാർട്ണറും തമ്മിലുള്ള ഒരു കരാറാണ്. ഈ കരാറിൽ 3 മാസത്തെ പരീക്ഷണ കാലയളവ്, പെഡ്ജ് മൊബൈൽ ആപ്ലിക്കേഷൻ ഉപയോഗം, MDND നയം, ഇൻഷുറൻസ് ആവശ്യകതകൾ, മറ്റ് നിബന്ധനകൾ എന്നിവ ഉൾപ്പെടുന്നു.</p>`,
+        labels: {
+            firstname: "ആദ്യനാമം *", lastname: "അവസാനനാമം *", aadhar: "ആധാർ കാർഡ് നമ്പർ *", aadharHelp: "12-അക്ക ആധാർ നമ്പർ നൽകുക", pan: "പാൻ കാർഡ് നമ്പർ *", panHelp: "10-അക്ഷര പാൻ നമ്പർ നൽകുക", mobile: "മൊബൈൽ നമ്പർ *", mobileHelp: "10-അക്ക മൊബൈൽ നമ്പർ നൽകുക", permanentAddress: "സ്ഥിര/സ്വദേശ വിലാസം *", permanentHelp: "നിങ്ങളുടെ സ്വദേശം/സ്ഥിര വിലാസം നൽകുക", currentAddress: "നിലവിലെ വിലാസം *", currentHelp: "നിങ്ങളുടെ നിലവിലെ താമസ വിലാസം നൽകുക", location: "ജോലി സ്ഥലം *", vehicle: "വാഹന തരം *", vehicleSelect: "വാഹന തരം തിരഞ്ഞെടുക്കുക", vehicleMotorcycle: "മോട്ടോർസൈക്കിൾ", vehicleScooter: "സ്കൂട്ടർ", vehicleBike: "സൈക്കിൾ", vehicleNumber: "വാഹന രജിസ്ട്രേഷൻ നമ്പർ *", license: "എനിക്ക് സാധുവായ ഡ്രൈവിംഗ് ലൈസൻസ് ഉണ്ടെന്ന് ഞാൻ സ്ഥിരീകരിക്കുന്നു *", vehicleDocs: "എനിക്ക് സാധുവായ RC, ഇൻഷുറൻസ്, PUC എന്നിവ ഉണ്ടെന്ന് ഞാൻ സ്ഥിരീകരിക്കുന്നു *", ownDocs: "എല്ലാ രേഖകളും എന്റേതാണെന്നും യഥാർത്ഥമാണെന്നും ഞാൻ സ്ഥിരീകരിക്കുന്നു *", date: "സ്വീകാര്യത തീയതി *", agree: "ഞാൻ എല്ലാ നിബന്ധനകളും വ്യവസ്ഥകളും വായിച്ച് അംഗീകരിക്കുന്നു *", submit: "കരാർ സമർപ്പിക്കുക", successTitle: "കരാർ വിജയകരമായി സമർപ്പിച്ചു!", successText: "നിങ്ങളുടെ റൈഡർ കരാർ സമർപ്പിച്ചു. ഞങ്ങളുടെ ടീം ഉടൻ നിങ്ങളെ ബന്ധപ്പെടും."
+        }
+    },
+    pa: {
+        pageTitle: "ਫ੍ਰੀਲਾਂਸ ਰਾਈਡਰ ਸਮਝੌਤਾ",
+        langLabel: "ਭਾਸ਼ਾ ਚੁਣੋ:",
+        formTitle: "ਰਾਈਡਰ ਜਾਣਕਾਰੀ ਅਤੇ ਸਵੀਕ੍ਰਿਤੀ",
+        headerSubtitle: "ਇਹ ਸ਼੍ਰੀਜੀ ਐਂਟਰਪ੍ਰਾਈਜ਼ ਸਰਵਿਸਿਜ਼ ਨਾਲ ਕੰਮ ਕਰਨ ਦੀ ਚੋਣ ਕਰਨ ਵਾਲੇ ਰਾਈਡਰਾਂ ਲਈ ਇੱਕ ਫ੍ਰੀਲਾਂਸਰ ਸਮਝੌਤਾ ਹੈ। ਇਸ ਸਮਝੌਤੇ ਵਿੱਚ ਫ੍ਰੀਲਾਂਸ ਰਾਈਡਰਾਂ ਲਈ ਪੜ੍ਹਨ, ਸਮਝਣ ਅਤੇ ਪਾਲਣਾ ਕਰਨ ਲਈ ਸ਼ਰਤਾਂ ਸ਼ਾਮਲ ਹਨ।",
+        content: `<h2>ਫ੍ਰੀਲਾਂਸ ਰਾਈਡਰ ਸਮਝੌਤਾ</h2><p>ਇਹ ਸ਼੍ਰੀਜੀ ਐਂਟਰਪ੍ਰਾਈਜ਼ ਸਰਵਿਸਿਜ਼ ਅਤੇ ਸੁਤੰਤਰ ਡਿਲੀਵਰੀ ਪਾਰਟਨਰ ਵਿਚਕਾਰ ਇੱਕ ਸਮਝੌਤਾ ਹੈ। ਇਸ ਸਮਝੌਤੇ ਵਿੱਚ 3 ਮਹੀਨੇ ਦੀ ਅਜ਼ਮਾਇਸ਼ ਮਿਆਦ, ਪੈਡਜ ਮੋਬਾਈਲ ਐਪਲੀਕੇਸ਼ਨ ਵਰਤੋਂ, MDND ਨੀਤੀ, ਬੀਮਾ ਲੋੜਾਂ ਅਤੇ ਹੋਰ ਸ਼ਰਤਾਂ ਸ਼ਾਮਲ ਹਨ।</p>`,
+        labels: {
+            firstname: "ਪਹਿਲਾ ਨਾਮ *", lastname: "ਆਖਰੀ ਨਾਮ *", aadhar: "ਆਧਾਰ ਕਾਰਡ ਨੰਬਰ *", aadharHelp: "12-ਅੰਕਾਂ ਦਾ ਆਧਾਰ ਨੰਬਰ ਦਾਖਲ ਕਰੋ", pan: "ਪੈਨ ਕਾਰਡ ਨੰਬਰ *", panHelp: "10-ਅੱਖਰਾਂ ਦਾ ਪੈਨ ਨੰਬਰ ਦਾਖਲ ਕਰੋ", mobile: "ਮੋਬਾਈਲ ਨੰਬਰ *", mobileHelp: "10-ਅੰਕਾਂ ਦਾ ਮੋਬਾਈਲ ਨੰਬਰ ਦਾਖਲ ਕਰੋ", permanentAddress: "ਸਥਾਈ/ਜੱਦੀ ਪਿੰਡ ਦਾ ਪਤਾ *", permanentHelp: "ਆਪਣਾ ਜੱਦੀ ਪਿੰਡ/ਸਥਾਈ ਪਤਾ ਦਾਖਲ ਕਰੋ", currentAddress: "ਮੌਜੂਦਾ ਪਤਾ *", currentHelp: "ਆਪਣਾ ਮੌਜੂਦਾ ਰਿਹਾਇਸ਼ੀ ਪਤਾ ਦਾਖਲ ਕਰੋ", location: "ਕੰਮ ਦਾ ਸਥਾਨ *", vehicle: "ਵਾਹਨ ਦੀ ਕਿਸਮ *", vehicleSelect: "ਵਾਹਨ ਦੀ ਕਿਸਮ ਚੁਣੋ", vehicleMotorcycle: "ਮੋਟਰਸਾਈਕਲ", vehicleScooter: "ਸਕੂਟਰ", vehicleBike: "ਸਾਈਕਲ", vehicleNumber: "ਵਾਹਨ ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਨੰਬਰ *", license: "ਮੈਂ ਪੁਸ਼ਟੀ ਕਰਦਾ/ਕਰਦੀ ਹਾਂ ਕਿ ਮੇਰੇ ਕੋਲ ਵੈਧ ਡ੍ਰਾਈਵਿੰਗ ਲਾਇਸੰਸ ਹੈ *", vehicleDocs: "ਮੈਂ ਪੁਸ਼ਟੀ ਕਰਦਾ/ਕਰਦੀ ਹਾਂ ਕਿ ਮੇਰੇ ਕੋਲ ਵੈਧ RC, ਬੀਮਾ ਅਤੇ PUC ਹੈ *", ownDocs: "ਮੈਂ ਪੁਸ਼ਟੀ ਕਰਦਾ/ਕਰਦੀ ਹਾਂ ਕਿ ਸਾਰੇ ਦਸਤਾਵੇਜ਼ ਮੇਰੇ ਆਪਣੇ ਅਤੇ ਅਸਲੀ ਹਨ *", date: "ਸਵੀਕ੍ਰਿਤੀ ਦੀ ਤਾਰੀਖ *", agree: "ਮੈਂ ਸਾਰੀਆਂ ਸ਼ਰਤਾਂ ਅਤੇ ਨਿਯਮਾਂ ਨੂੰ ਪੜ੍ਹਿਆ ਹੈ ਅਤੇ ਸਹਿਮਤ ਹਾਂ *", submit: "ਸਮਝੌਤਾ ਜਮ੍ਹਾਂ ਕਰੋ", successTitle: "ਸਮਝੌਤਾ ਸਫਲਤਾਪੂਰਵਕ ਜਮ੍ਹਾਂ ਹੋ ਗਿਆ!", successText: "ਤੁਹਾਡਾ ਰਾਈਡਰ ਸਮਝੌਤਾ ਜਮ੍ਹਾਂ ਹੋ ਗਿਆ ਹੈ। ਸਾਡੀ ਟੀਮ ਜਲਦੀ ਹੀ ਤੁਹਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੇਗੀ।"
+        }
+    },
     hi: {
         pageTitle: "फ्रीलांस राइडर समझौता",
         langLabel: "भाषा चुनें:",
@@ -574,6 +644,9 @@ const contractContent = {
     }
 };
 
+// Track if user has scrolled to the bottom of contract
+let hasReadContract = false;
+
 // Set today's date as default
 document.addEventListener('DOMContentLoaded', function() {
     const today = new Date().toISOString().split('T')[0];
@@ -593,7 +666,100 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     changeLanguage();
+    
+    // Initially disable the form
+    disableForm();
+    
+    // Add scroll tracking for contract content
+    const contractContent = document.getElementById('contract-content');
+    contractContent.addEventListener('scroll', function() {
+        if (!hasReadContract) {
+            // Check if scrolled to bottom (with 50px tolerance)
+            const isAtBottom = contractContent.scrollHeight - contractContent.scrollTop <= contractContent.clientHeight + 50;
+            if (isAtBottom) {
+                hasReadContract = true;
+                enableForm();
+            }
+        }
+    });
+    
+    // Also track window scroll for smaller screens where contract-content might not have its own scrollbar
+    window.addEventListener('scroll', function() {
+        if (!hasReadContract) {
+            const contractContentElement = document.getElementById('contract-content');
+            const rect = contractContentElement.getBoundingClientRect();
+            const isVisible = rect.bottom <= window.innerHeight + 100;
+            if (isVisible) {
+                hasReadContract = true;
+                enableForm();
+            }
+        }
+    });
+    
+    // Handle vehicle type change for bicycle
+    const vehicleTypeSelect = document.getElementById('vehicleType');
+    const vehicleNumberInput = document.getElementById('vehicleNumber');
+    const hasLicenseCheckbox = document.getElementById('hasLicense');
+    const hasVehicleDocsCheckbox = document.getElementById('hasVehicleDocs');
+    
+    vehicleTypeSelect.addEventListener('change', function() {
+        if (this.value === 'bike') { // bicycle
+            vehicleNumberInput.value = 'N/A';
+            vehicleNumberInput.readOnly = true;
+            vehicleNumberInput.required = false;
+            hasLicenseCheckbox.required = false;
+            hasVehicleDocsCheckbox.required = false;
+        } else {
+            vehicleNumberInput.value = '';
+            vehicleNumberInput.readOnly = false;
+            vehicleNumberInput.required = true;
+            hasLicenseCheckbox.required = true;
+            hasVehicleDocsCheckbox.required = true;
+        }
+    });
 });
+
+function disableForm() {
+    const form = document.getElementById('rider-contract-form');
+    const inputs = form.querySelectorAll('input, select, textarea, button');
+    
+    inputs.forEach(input => {
+        input.disabled = true;
+    });
+    
+    // Show notice
+    const notice = document.createElement('div');
+    notice.id = 'read-contract-notice';
+    notice.className = 'read-contract-notice';
+    notice.innerHTML = '<strong>⚠️ Please read the full contract by scrolling to the bottom to enable this form.</strong>';
+    form.insertBefore(notice, form.firstChild);
+}
+
+function enableForm() {
+    const form = document.getElementById('rider-contract-form');
+    const inputs = form.querySelectorAll('input, select, textarea, button');
+    
+    inputs.forEach(input => {
+        input.disabled = false;
+    });
+    
+    // Remove notice
+    const notice = document.getElementById('read-contract-notice');
+    if (notice) {
+        notice.remove();
+    }
+    
+    // Show success message
+    const successNotice = document.createElement('div');
+    successNotice.className = 'read-contract-success';
+    successNotice.innerHTML = '<strong>✓ Thank you for reading the contract. You may now fill the form.</strong>';
+    form.insertBefore(successNotice, form.firstChild);
+    
+    // Remove success message after 5 seconds
+    setTimeout(() => {
+        successNotice.remove();
+    }, 5000);
+}
 
 function changeLanguage() {
     const lang = document.getElementById('language').value;
@@ -662,7 +828,7 @@ function changeLanguage() {
     }
 }
 
-// Form submission handling
+// Form submission handling with comprehensive validation
 document.getElementById('rider-contract-form').addEventListener('submit', function(e) {
     e.preventDefault();
     
@@ -672,18 +838,25 @@ document.getElementById('rider-contract-form').addEventListener('submit', functi
         return;
     }
     
+    // Comprehensive custom validation
+    const validation = validateFormData();
+    if (!validation.isValid) {
+        alert(validation.message);
+        return;
+    }
+    
     // Collect form data
     const formData = {
-        firstName: document.getElementById('firstName').value,
-        lastName: document.getElementById('lastName').value,
-        aadharNumber: document.getElementById('aadharNumber').value,
-        panNumber: document.getElementById('panNumber').value.toUpperCase(),
-        mobileNumber: document.getElementById('mobileNumber').value,
-        permanentAddress: document.getElementById('permanentAddress').value,
-        currentAddress: document.getElementById('currentAddress').value,
-        workLocation: document.getElementById('workLocation').value,
+        firstName: document.getElementById('firstName').value.trim(),
+        lastName: document.getElementById('lastName').value.trim(),
+        aadharNumber: document.getElementById('aadharNumber').value.trim(),
+        panNumber: document.getElementById('panNumber').value.toUpperCase().trim(),
+        mobileNumber: document.getElementById('mobileNumber').value.trim(),
+        permanentAddress: document.getElementById('permanentAddress').value.trim(),
+        currentAddress: document.getElementById('currentAddress').value.trim(),
+        workLocation: document.getElementById('workLocation').value.trim(),
         vehicleType: document.getElementById('vehicleType').value,
-        vehicleNumber: document.getElementById('vehicleNumber').value.toUpperCase(),
+        vehicleNumber: document.getElementById('vehicleNumber').value.toUpperCase().trim(),
         hasLicense: document.getElementById('hasLicense').checked,
         hasVehicleDocs: document.getElementById('hasVehicleDocs').checked,
         ownDocuments: document.getElementById('ownDocuments').checked,
@@ -717,3 +890,118 @@ document.getElementById('rider-contract-form').addEventListener('submit', functi
     //   .then(data => console.log('Success:', data))
     //   .catch(error => console.error('Error:', error));
 });
+
+function validateFormData() {
+    const firstName = document.getElementById('firstName').value.trim();
+    const lastName = document.getElementById('lastName').value.trim();
+    const aadharNumber = document.getElementById('aadharNumber').value.trim();
+    const panNumber = document.getElementById('panNumber').value.toUpperCase().trim();
+    const mobileNumber = document.getElementById('mobileNumber').value.trim();
+    const permanentAddress = document.getElementById('permanentAddress').value.trim();
+    const currentAddress = document.getElementById('currentAddress').value.trim();
+    const workLocation = document.getElementById('workLocation').value.trim();
+    const vehicleType = document.getElementById('vehicleType').value;
+    const vehicleNumber = document.getElementById('vehicleNumber').value.toUpperCase().trim();
+    
+    // Name validation - only letters, spaces, hyphens, apostrophes
+    const namePattern = /^[A-Za-z\s\-']+$/;
+    if (!namePattern.test(firstName)) {
+        return {
+            isValid: false,
+            message: 'First Name should contain only letters, spaces, hyphens, or apostrophes. No numbers or special characters allowed.'
+        };
+    }
+    if (!namePattern.test(lastName)) {
+        return {
+            isValid: false,
+            message: 'Last Name should contain only letters, spaces, hyphens, or apostrophes. No numbers or special characters allowed.'
+        };
+    }
+    
+    // Aadhar validation - exactly 12 numeric digits
+    const aadharPattern = /^[0-9]{12}$/;
+    if (!aadharPattern.test(aadharNumber)) {
+        return {
+            isValid: false,
+            message: 'Aadhar Card Number must be exactly 12 numeric digits with no spaces or special characters.'
+        };
+    }
+    
+    // PAN validation - exact format: 5 uppercase letters, 4 digits, 1 uppercase letter
+    const panPattern = /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/;
+    if (!panPattern.test(panNumber)) {
+        return {
+            isValid: false,
+            message: 'PAN Card Number must be in format: ABCDE1234F (5 letters, 4 digits, 1 letter). Example: ABCDE1234F'
+        };
+    }
+    
+    // Mobile validation - exactly 10 numeric digits
+    const mobilePattern = /^[0-9]{10}$/;
+    if (!mobilePattern.test(mobileNumber)) {
+        return {
+            isValid: false,
+            message: 'Mobile Number must be exactly 10 numeric digits with no spaces, +91, or special characters.'
+        };
+    }
+    
+    // Check if mobile starts with valid digit (6-9)
+    if (!['6', '7', '8', '9'].includes(mobileNumber[0])) {
+        return {
+            isValid: false,
+            message: 'Mobile Number must start with 6, 7, 8, or 9.'
+        };
+    }
+    
+    // Address validation - no dangerous special characters
+    const dangerousChars = /<>|;`$&()/;
+    if (dangerousChars.test(permanentAddress)) {
+        return {
+            isValid: false,
+            message: 'Permanent Address contains invalid special characters. Please remove: < > | ; ` $ & ( )'
+        };
+    }
+    if (dangerousChars.test(currentAddress)) {
+        return {
+            isValid: false,
+            message: 'Current Address contains invalid special characters. Please remove: < > | ; ` $ & ( )'
+        };
+    }
+    
+    // Work location validation
+    if (dangerousChars.test(workLocation)) {
+        return {
+            isValid: false,
+            message: 'Work Location contains invalid special characters. Please use only letters, numbers, spaces, commas, and hyphens.'
+        };
+    }
+    
+    // Vehicle number validation (only if not bicycle)
+    if (vehicleType !== 'bike') {
+        // Indian vehicle number format: 2 letters, 2 digits, 1-2 letters/digits, 4 digits
+        // Example: GJ01AB1234, MH12AB1234, KA01AB1234
+        const vehiclePattern = /^[A-Z]{2}[0-9]{2}[A-Z]{0,2}[0-9]{4}$/;
+        if (!vehiclePattern.test(vehicleNumber) && vehicleNumber !== 'N/A') {
+            return {
+                isValid: false,
+                message: 'Vehicle Registration Number must be in valid Indian format (e.g., GJ01AB1234, MH12AB1234). No spaces or special characters.'
+            };
+        }
+    }
+    
+    // Address length validation
+    if (permanentAddress.length < 20) {
+        return {
+            isValid: false,
+            message: 'Permanent Address is too short. Please provide complete address with village/town, district, state, and PIN code.'
+        };
+    }
+    if (currentAddress.length < 20) {
+        return {
+            isValid: false,
+            message: 'Current Address is too short. Please provide complete address with area, city, state, and PIN code.'
+        };
+    }
+    
+    return { isValid: true };
+}

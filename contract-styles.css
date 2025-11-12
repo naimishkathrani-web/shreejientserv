@@ -277,6 +277,54 @@ body {
     color: var(--text-dark);
 }
 
+/* Read contract notice styles */
+.read-contract-notice {
+    background: #fef3c7;
+    border: 2px solid #f59e0b;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #92400e;
+    animation: pulse 2s infinite;
+}
+
+.read-contract-success {
+    background: #d1fae5;
+    border: 2px solid var(--success-color);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #065f46;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.85;
+    }
+}
+
+/* Readonly vehicle number styling */
+input[readonly] {
+    background-color: #f3f4f6;
+    cursor: not-allowed;
+    color: #6b7280;
+}
+
+/* Disabled form styling */
+form:has(.read-contract-notice) input:disabled,
+form:has(.read-contract-notice) select:disabled,
+form:has(.read-contract-notice) textarea:disabled,
+form:has(.read-contract-notice) button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: #f3f4f6;
+}
+
 /* Scrollbar styling for contract content */
 .contract-content::-webkit-scrollbar {
     width: 8px;
