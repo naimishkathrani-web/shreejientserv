@@ -252,6 +252,17 @@ const contractContent = {
                 Website: www.shreejientserv.in<br>
                 Phone: +91-7016899689</p>
             </div>
+            
+            <!-- Confirmation checkbox at bottom of terms -->
+            <div class="terms-confirmation" id="terms-confirmation">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="confirmReadTerms" />
+                    <span class="checkmark"></span>
+                    <span class="checkbox-label" id="confirm-terms-label">
+                        I have read and understood all the terms and conditions above
+                    </span>
+                </label>
+            </div>
         `,
         labels: {
             firstname: "First Name *",
