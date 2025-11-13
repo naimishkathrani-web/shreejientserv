@@ -53,10 +53,10 @@ const contractContent = {
             <h3>4. PAYMENT STRUCTURE & REMUNERATION</h3>
             <p>The Rider will be compensated on a <strong>daily or weekly basis</strong> as per the following delivery-based payment structure:</p>
             <ul>
-                <li><strong>9 orders per day:</strong> INR 500/-</li>
-                <li><strong>17 orders per day:</strong> INR 1,000/-</li>
-                <li><strong>26 orders per day:</strong> INR 2,000/-</li>
-                <li><strong>37 orders per day:</strong> INR 4,000/-</li>
+                <li><strong>9 orders per day:</strong> INR 400/-</li>
+                <li><strong>17 orders per day:</strong> INR 750/-</li>
+                <li><strong>26 orders per day:</strong> INR 1,800/-</li>
+                <li><strong>37 orders per day:</strong> INR 3,700/-</li>
             </ul>
             <p>3.1. A "day" is defined as the period starting and ending at <strong>5:30 AM daily</strong>.</p>
             <p>3.2. Payment will be processed on a daily or weekly basis as determined by the Company's payment schedule.</p>

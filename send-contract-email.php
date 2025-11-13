@@ -251,10 +251,10 @@ $emailBody = "
             <h4>3. Payment Structure and Remuneration</h4>
             <p>The Rider shall be paid on a <strong>daily or weekly basis</strong> according to the following delivery-based payment structure:</p>
             <ul>
-                <li><strong>9 orders per day:</strong> ₹500/-</li>
-                <li><strong>17 orders per day:</strong> ₹1,000/-</li>
-                <li><strong>26 orders per day:</strong> ₹2,000/-</li>
-                <li><strong>37 orders per day:</strong> ₹4,000/-</li>
+                <li><strong>9 orders per day:</strong> ₹400/-</li>
+                <li><strong>17 orders per day:</strong> ₹750/-</li>
+                <li><strong>26 orders per day:</strong> ₹1,800/-</li>
+                <li><strong>37 orders per day:</strong> ₹3,700/-</li>
             </ul>
             <p>A \"day\" is defined as a period starting and ending at <strong>5:30 AM each day</strong>. Payment will be processed on a daily or weekly basis as determined by the Company's payment schedule. All payments are subject to successful completion and verification of deliveries.</p>
             

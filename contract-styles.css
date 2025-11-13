@@ -99,30 +99,6 @@ body {
     position: relative;
 }
 
-/* Scroll indicator */
-.contract-content::after {
-    content: '⬇ Scroll down to read all terms ⬇';
-    position: sticky;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, rgba(102, 126, 234, 0.95), rgba(102, 126, 234, 0.7));
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    font-weight: 600;
-    font-size: 0.95rem;
-    animation: pulse 2s infinite;
-    pointer-events: none;
-    display: block;
-    border-radius: 0 0 12px 12px;
-}
-
-@keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.7; }
-}
-
 .contract-content h2 {
     color: var(--primary-color);
     font-size: 1.75rem;
