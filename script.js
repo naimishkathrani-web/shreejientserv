@@ -36,8 +36,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Form Submission Handler
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
+        
+        // Get the submit button
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.textContent;
+        
+        // Disable button and show loading state
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
         
         // Get form values
         const formData = {
@@ -48,12 +56,32 @@ if (contactForm) {
             message: document.getElementById('message').value
         };
 
-        // Here you would typically send the data to a server
-        // For now, we'll just show a success message
-        alert('Thank you for your message! We will get back to you soon.');
-        
-        // Reset the form
-        contactForm.reset();
+        try {
+            // Send data to PHP backend
+            const response = await fetch('send-contact-email.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                alert('✅ ' + result.message);
+                contactForm.reset();
+            } else {
+                alert('❌ ' + result.message);
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('❌ Failed to send message. Please try again or contact us directly at info@shreejientserv.in');
+        } finally {
+            // Re-enable button and restore text
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalBtnText;
+        }
     });
 }
 
