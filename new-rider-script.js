@@ -1172,7 +1172,9 @@ document.getElementById('rider-contract-form').addEventListener('submit', functi
     };
     
     // Send data to PHP backend for email processing
-    fetch('send-new-rider-email.php', {
+    // Force non-www domain to avoid SSL certificate issues
+    const apiUrl = window.location.protocol + '//' + window.location.hostname.replace('www.', '') + '/send-new-rider-email.php';
+    fetch(apiUrl, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
