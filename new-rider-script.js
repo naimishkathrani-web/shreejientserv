@@ -1172,7 +1172,7 @@ document.getElementById('rider-contract-form').addEventListener('submit', functi
     };
     
     // Send data to PHP backend for email processing
-    fetch('https://www.shreejientserv.in/send-new-rider-email.php', {
+    fetch('send-new-rider-email.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
