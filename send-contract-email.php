@@ -415,46 +415,27 @@ $emailBody = "
 </html>
 ";
 
-// Email headers for HTML email
-$headers = "MIME-Version: 1.0" . "\r\n";
-$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-$headers .= "From: Shreeji Enterprise Services <info@shreejientserv.in>" . "\r\n";
-$headers .= "Reply-To: info@shreejientserv.in" . "\r\n";
+// Email headers for HTML email with HR CC
+$headers = "MIME-Version: 1.0\r\n";
+$headers .= "Content-type:text/html;charset=UTF-8\r\n";
+$headers .= "From: Shreeji Enterprise Services <info@shreejientserv.in>\r\n";
+$headers .= "Reply-To: info@shreejientserv.in\r\n";
+$headers .= "Cc: hr@shreejientserv.in\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion();
 
-// Send email to rider
-$riderEmailSent = mail($email, $emailSubject, $emailBody, $headers);
-
-// Send notification to HR with different subject
-$hrEmail = "hr@shreejientserv.in";
-$hrSubject = "New Contract Submission - Existing Rider: " . $firstName . " " . $lastName;
-$hrBody = "<div style='font-family: Arial, sans-serif; padding: 20px;'>";
-$hrBody .= "<h2 style='color: #667eea;'>New Existing Rider Contract Submission</h2>";
-$hrBody .= "<p><strong>Rider Name:</strong> " . $firstName . " " . $lastName . "</p>";
-$hrBody .= "<p><strong>Email:</strong> " . $email . "</p>";
-$hrBody .= "<p><strong>Mobile:</strong> " . $mobileNumber . "</p>";
-$hrBody .= "<p><strong>Work Location:</strong> " . $workLocation . "</p>";
-$hrBody .= "<p><strong>Vehicle Type:</strong> " . $vehicleType . "</p>";
-$hrBody .= "<p><strong>Submission Date:</strong> " . date('d/m/Y H:i:s') . "</p>";
-$hrBody .= "<hr>";
-$hrBody .= "<p><em>Complete contract details have been sent to the rider's email address.</em></p>";
-$hrBody .= "<p><em>Please review the submission and proceed with activation process.</em></p>";
-$hrBody .= "</div>";
-
-$hrEmailSent = mail($hrEmail, $hrSubject, $hrBody, $headers);
+// Send email to rider (HR will be CC'd automatically)
+$emailSent = mail($email, $emailSubject, $emailBody, $headers);
 
 // Log the submission
-$logEntry = date('Y-m-d H:i:s') . " | Existing Rider | " . $firstName . " " . $lastName . " | " . $email . " | " . $mobileNumber . " | Rider Email: " . ($riderEmailSent ? "Sent" : "Failed") . " | HR Email: " . ($hrEmailSent ? "Sent" : "Failed") . "\n";
+$logEntry = date('Y-m-d H:i:s') . " | Existing Rider | " . $firstName . " " . $lastName . " | " . $email . " | " . $mobileNumber . " | Email: " . ($emailSent ? "Sent" : "Failed") . "\n";
 file_put_contents('contract_submissions.log', $logEntry, FILE_APPEND);
 
 // Send response
-if ($riderEmailSent) {
+if ($emailSent) {
     http_response_code(200);
     echo json_encode([
         'success' => true,
-        'message' => 'Contract accepted successfully! A confirmation email with complete terms and conditions has been sent to your email address.',
-        'riderEmail' => $riderEmailSent,
-        'hrNotification' => $hrEmailSent
+        'message' => 'Contract accepted successfully! A confirmation email with complete terms and conditions has been sent to your email address.'
     ]);
 } else {
     http_response_code(500);

@@ -105,11 +105,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </html>
     ";
     
-    // Email headers
-    $headers = "From: info@shreejientserv.in\r\n";
+    // Email headers - Hostinger recommended format
+    $headers = "MIME-Version: 1.0\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8\r\n";
+    $headers .= "From: Shreeji Enterprise Services <info@shreejientserv.in>\r\n";
     $headers .= "Reply-To: $email\r\n";
-    $headers .= "MIME-Version: 1.0\r\n";
-    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+    $headers .= "X-Mailer: PHP/" . phpversion();
     
     // Send email
     if (mail($to, $subject, $emailBody, $headers)) {

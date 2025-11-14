@@ -553,61 +553,25 @@ $activationEmailBody = "
 </html>
 ";
 
-// Email headers for HTML email
-$headers = "MIME-Version: 1.0" . "\r\n";
-$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-$headers .= "From: Shreeji Enterprise Services <info@shreejientserv.in>" . "\r\n";
-$headers .= "Reply-To: info@shreejientserv.in" . "\r\n";
+// Email headers for HTML email with HR CC
+$headers = "MIME-Version: 1.0\r\n";
+$headers .= "Content-type:text/html;charset=UTF-8\r\n";
+$headers .= "From: Shreeji Enterprise Services <info@shreejientserv.in>\r\n";
+$headers .= "Reply-To: info@shreejientserv.in\r\n";
+$headers .= "Cc: hr@shreejientserv.in\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion();
 
-// Send FIRST email to rider - Contract Acceptance with full terms
+// Send FIRST email to rider - Contract Acceptance with full terms (HR will be CC'd)
 $contractEmailSent = mail($riderEmail, $contractEmailSubject, $contractEmailBody, $headers);
 
 // Wait a moment before sending second email
 sleep(2);
 
-// Send SECOND email to rider - Activation Process Information
+// Send SECOND email to rider - Activation Process Information (HR will be CC'd)
 $activationEmailSent = mail($riderEmail, $activationEmailSubject, $activationEmailBody, $headers);
 
-// Send notification to HR with different subject
-$hrEmail = "hr@shreejientserv.in";
-$hrSubject = "NEW RIDER Application - Activation Required: " . $firstName . " " . $lastName;
-$hrBody = "<div style='font-family: Arial, sans-serif; padding: 20px;'>";
-$hrBody .= "<h2 style='color: #667eea;'>🆕 New Rider Contract Submission - Action Required</h2>";
-$hrBody .= "<div style='background: #fff3cd; padding: 15px; border-radius: 5px; margin: 15px 0;'>";
-$hrBody .= "<p style='margin: 0; font-weight: bold; color: #856404;'>⚠️ This is a NEW RIDER application requiring activation process</p>";
-$hrBody .= "</div>";
-$hrBody .= "<h3>Rider Information:</h3>";
-$hrBody .= "<p><strong>Name:</strong> " . $firstName . " " . $lastName . "</p>";
-$hrBody .= "<p><strong>Email:</strong> " . $riderEmail . "</p>";
-$hrBody .= "<p><strong>Mobile:</strong> " . $mobileNumber . "</p>";
-$hrBody .= "<p><strong>Parent/Guardian:</strong> " . $parentName . " (" . $parentMobile . ")</p>";
-$hrBody .= "<p><strong>Date of Birth:</strong> " . $dateOfBirth . "</p>";
-$hrBody .= "<p><strong>Work Location:</strong> " . $workLocation . "</p>";
-$hrBody .= "<p><strong>Vehicle Type:</strong> " . $vehicleType . "</p>";
-$hrBody .= "<p><strong>Aadhar:</strong> " . $maskedAadhar . "</p>";
-$hrBody .= "<p><strong>PAN:</strong> " . $maskedPAN . "</p>";
-$hrBody .= "<p><strong>Submission Date:</strong> " . date('d/m/Y H:i:s') . "</p>";
-$hrBody .= "<hr>";
-$hrBody .= "<h3 style='color: #d32f2f;'>⏰ Action Required:</h3>";
-$hrBody .= "<ol>";
-$hrBody .= "<li>Verify submitted documents (Aadhar, PAN, vehicle documents)</li>";
-$hrBody .= "<li>Initiate background verification process</li>";
-$hrBody .= "<li>Schedule platform training at " . $workLocation . "</li>";
-$hrBody .= "<li>Prepare account credentials for Pedge platform</li>";
-$hrBody .= "</ol>";
-$hrBody .= "<p><em>Two emails have been sent to the rider:</em></p>";
-$hrBody .= "<ul>";
-$hrBody .= "<li>Email 1: Complete contract with legal declaration and all terms</li>";
-$hrBody .= "<li>Email 2: Activation process timeline and next steps</li>";
-$hrBody .= "</ul>";
-$hrBody .= "<p><strong>Estimated Timeline:</strong> 4-7 business days for complete activation</p>";
-$hrBody .= "</div>";
-
-$hrEmailSent = mail($hrEmail, $hrSubject, $hrBody, $headers);
-
 // Log the submission
-$logEntry = date('Y-m-d H:i:s') . " | NEW RIDER | " . $firstName . " " . $lastName . " | " . $riderEmail . " | " . $mobileNumber . " | Contract Email: " . ($contractEmailSent ? "Sent" : "Failed") . " | Activation Email: " . ($activationEmailSent ? "Sent" : "Failed") . " | HR Email: " . ($hrEmailSent ? "Sent" : "Failed") . "\n";
+$logEntry = date('Y-m-d H:i:s') . " | NEW RIDER | " . $firstName . " " . $lastName . " | " . $riderEmail . " | " . $mobileNumber . " | Contract Email: " . ($contractEmailSent ? "Sent" : "Failed") . " | Activation Email: " . ($activationEmailSent ? "Sent" : "Failed") . "\n";
 file_put_contents('contract_submissions.log', $logEntry, FILE_APPEND);
 
 // Send response
@@ -615,18 +579,13 @@ if ($contractEmailSent && $activationEmailSent) {
     http_response_code(200);
     echo json_encode([
         'success' => true,
-        'message' => 'Contract accepted successfully! You will receive two emails: (1) Complete contract terms, (2) Activation process timeline. Please check your inbox at ' . $riderEmail,
-        'contractEmail' => $contractEmailSent,
-        'activationEmail' => $activationEmailSent,
-        'hrNotification' => $hrEmailSent
+        'message' => 'Contract accepted successfully! You will receive two emails: (1) Complete contract terms, (2) Activation process timeline. Please check your inbox at ' . $riderEmail
     ]);
 } else {
     http_response_code(500);
     echo json_encode([
         'success' => false,
-        'message' => 'There was an error sending confirmation emails. Please contact us at +91-7016899689 or info@shreejientserv.in',
-        'contractEmail' => $contractEmailSent,
-        'activationEmail' => $activationEmailSent
+        'message' => 'There was an error sending confirmation emails. Please contact us at +91-7016899689 or info@shreejientserv.in'
     ]);
 }
 
