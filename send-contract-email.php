@@ -465,11 +465,6 @@ if ($emailSent) {
         'success' => true,
         'message' => 'Contract received successfully! We will contact you soon. (Note: Email notification may be delayed)'
     ]);
-} else {
-    http_response_code(500);
-    echo json_encode([
-        'success' => false,
-        'message' => 'There was an error sending the confirmation email. Please contact us at +91-7016899689 or info@shreejientserv.in'
-    ]);
 }
+?>
 
