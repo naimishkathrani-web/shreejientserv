@@ -1,4 +1,10 @@
 <?php
+// Catch all errors and return JSON
+set_error_handler(function($errno, $errstr, $errfile, $errline) {
+    error_log("PHP Error [$errno]: $errstr in $errfile on line $errline");
+    return true; // Don't execute PHP internal error handler
+});
+
 // Enable error reporting for debugging
 error_reporting(E_ALL);
 ini_set('display_errors', 0);
