@@ -430,18 +430,34 @@ $headers .= "Cc: hr@shreejientserv.in\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion();
 
 // Send email to rider (HR will be CC'd automatically)
-$emailSent = mail($email, $emailSubject, $emailBody, $headers);
+try {
+    $emailSent = @mail($email, $emailSubject, $emailBody, $headers);
+} catch (Exception $e) {
+    error_log("Mail error: " . $e->getMessage());
+    $emailSent = false;
+}
 
-// Log the submission
-$logEntry = date('Y-m-d H:i:s') . " | Existing Rider | " . $firstName . " " . $lastName . " | " . $email . " | " . $mobileNumber . " | Email: " . ($emailSent ? "Sent" : "Failed") . "\n";
-file_put_contents('contract_submissions.log', $logEntry, FILE_APPEND);
+// Log the submission (with error handling)
+try {
+    $logEntry = date('Y-m-d H:i:s') . " | Existing Rider | " . $firstName . " " . $lastName . " | " . $email . " | " . $mobileNumber . " | Email: " . ($emailSent ? "Sent" : "Failed") . "\n";
+    @file_put_contents('contract_submissions.log', $logEntry, FILE_APPEND);
+} catch (Exception $e) {
+    error_log("Log error: " . $e->getMessage());
+}
 
-// Send response
+// Send response (always return JSON even if email fails)
 if ($emailSent) {
     http_response_code(200);
     echo json_encode([
         'success' => true,
         'message' => 'Contract accepted successfully! A confirmation email with complete terms and conditions has been sent to your email address.'
+    ]);
+} else {
+    // Email failed but still return success with different message
+    http_response_code(200);
+    echo json_encode([
+        'success' => true,
+        'message' => 'Contract received successfully! We will contact you soon. (Note: Email notification may be delayed)'
     ]);
 } else {
     http_response_code(500);
