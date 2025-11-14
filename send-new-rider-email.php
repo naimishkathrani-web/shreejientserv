@@ -3,10 +3,16 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 0);
 ini_set('log_errors', 1);
-ini_set('error_log', __DIR__ . '/contract_email_errors.log');
+ini_set('error_log', __DIR__ . '/new_rider_email_errors.log');
 
 // Set headers for CORS and JSON response
-header('Access-Control-Allow-Origin: *');
+// Allow both www and non-www origins
+$allowed_origins = ['https://shreejientserv.in', 'https://www.shreejientserv.in'];
+if (isset($_SERVER['HTTP_ORIGIN']) && in_array($_SERVER['HTTP_ORIGIN'], $allowed_origins)) {
+    header('Access-Control-Allow-Origin: ' . $_SERVER['HTTP_ORIGIN']);
+} else {
+    header('Access-Control-Allow-Origin: *');
+}
 header('Access-Control-Allow-Methods: POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
 header('Content-Type: application/json');

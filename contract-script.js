@@ -1182,9 +1182,8 @@ document.getElementById('rider-contract-form').addEventListener('submit', functi
     };
     
     // Send data to PHP backend for email processing
-    // Force non-www domain to avoid SSL certificate issues
-    const apiUrl = window.location.protocol + '//' + window.location.hostname.replace('www.', '') + '/send-contract-email.php';
-    fetch(apiUrl, {
+    // Use relative URL to avoid CORS issues (same origin)
+    fetch('send-contract-email.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

@@ -1,8 +1,21 @@
 <?php
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: POST');
+// Set headers for CORS and JSON response
+// Allow both www and non-www origins
+$allowed_origins = ['https://shreejientserv.in', 'https://www.shreejientserv.in'];
+if (isset($_SERVER['HTTP_ORIGIN']) && in_array($_SERVER['HTTP_ORIGIN'], $allowed_origins)) {
+    header('Access-Control-Allow-Origin: ' . $_SERVER['HTTP_ORIGIN']);
+} else {
+    header('Access-Control-Allow-Origin: *');
+}
+header('Access-Control-Allow-Methods: POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
 header('Content-Type: application/json');
+
+// Handle preflight requests
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
+    exit;
+}
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Get JSON input
