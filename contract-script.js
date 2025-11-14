@@ -1182,8 +1182,8 @@ document.getElementById('rider-contract-form').addEventListener('submit', functi
     };
     
     // Send data to PHP backend for email processing
-    // Use relative URL to avoid CORS issues (same origin)
-    fetch('send-contract-email.php', {
+    // TEMPORARY: Using simple test version to diagnose issue
+    fetch('send-contract-email-simple.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
