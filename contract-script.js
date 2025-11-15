@@ -1114,14 +1114,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Integrate with global language manager
     if (typeof languageManager !== 'undefined') {
-        // Insert language selector into header
-        const headerTop = document.querySelector('.header-top');
-        if (headerTop) {
-            const langSelectorContainer = document.createElement('div');
-            langSelectorContainer.id = 'header-lang-selector';
-            headerTop.appendChild(langSelectorContainer);
-        }
-        
         // Listen for language changes from global manager
         document.addEventListener('languageChanged', function(e) {
             const newLang = e.detail.language;

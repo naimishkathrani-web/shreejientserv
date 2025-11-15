@@ -4,27 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Rider Contract - Shreeji Enterprise Services</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="contract-styles.css">
     <link rel="stylesheet" href="language-selector.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700&family=Noto+Sans+Telugu:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&family=Noto+Sans+Gujarati:wght@400;500;600;700&family=Noto+Sans+Kannada:wght@400;500;600;700&family=Noto+Sans+Malayalam:wght@400;500;600;700&family=Noto+Sans+Gurmukhi:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="Images/Shreeji Logo 1.jpg" alt="Shreeji Enterprise Services Logo">
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" data-translate="nav.home">Home</a></li>
+                    <li><a href="index.html#about" data-translate="nav.about">About</a></li>
+                    <li><a href="index.html#services" data-translate="nav.services">Services</a></li>
+                    <li><a href="contract.html" data-translate="nav.rider_agreement">Rider Agreement</a></li>
+                    <li><a href="index.html#contact" data-translate="nav.contact">Contact</a></li>
+                </ul>
+                <!-- Language selector will be inserted here by language-manager.js -->
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
         <header class="contract-header">
-            <div class="header-top">
-                <img src="Images/Shreeji Logo 1.jpg" alt="Shreeji Enterprise Services" class="logo">
-                <!-- Language selector will be inserted here by language-manager.js -->
-            </div>
             <h1 id="page-title">Freelance Rider Agreement - New Rider Application</h1>
             <p class="header-subtitle" id="header-subtitle">
                 This is a Freelancer Agreement for new riders applying to work with Shreeji Enterprise Services. 
                 This agreement includes terms for freelance riders to read, understand, and abide by.
             </p>
-                    <option value="ml">മലയാളം (Malayalam)</option>
-                    <option value="pa">ਪੰਜਾਬੀ (Punjabi)</option>
-                </select>
-            </div>
         </header>
 
         <div class="contract-content" id="contract-content">
@@ -163,8 +180,47 @@
         </div>
     </div>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Shreeji Enterprise Services</h3>
+                    <p>Your trusted partner for comprehensive manpower supply solutions across India and globally.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="contract.html">Rider Agreement</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li>Delivery Personnel</li>
+                        <li>BPO Staffing</li>
+                        <li>IT Recruitment</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>714 The Spire 2 Shital Park<br>150 Feet Ring Road, Rajkot</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Shreeji Enterprise Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
     <!-- Language Manager must load before new-rider-script.js -->
     <script src="language-manager.js"></script>
+    <script src="script.js"></script>
     <script src="new-rider-script.js"></script>
 </body>
 </html>
+```
