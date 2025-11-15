@@ -1010,44 +1010,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Helper function to update contract language
-function updateContractLanguage(lang) {
-    const content = contractContent[lang] || contractContent.en;
-    
-    // Update page title and subtitle
-    document.getElementById('page-title').textContent = content.pageTitle;
-    document.getElementById('header-subtitle').textContent = content.headerSubtitle;
-    document.getElementById('form-title').textContent = content.formTitle;
-    
-    // Update contract content
-    document.getElementById('contract-content').innerHTML = content.content;
-    
-    // Update all form labels (simplified - add more as needed)
-    if (content.labels) {
-        const labelMap = {
-            'label-firstname': 'firstname',
-            'label-lastname': 'lastname',
-            'label-parent-name': 'parentName',
-            'label-parent-mobile': 'parentMobile',
-            'label-email': 'email',
-            'label-dob': 'dateOfBirth',
-            'label-aadhar': 'aadhar',
-            'label-pan': 'pan',
-            'label-mobile': 'mobile',
-            'label-permanent-address': 'permanentAddress',
-            'label-current-address': 'currentAddress',
-            'label-location': 'location'
-        };
-        
-        for (const [elemId, labelKey] of Object.entries(labelMap)) {
-            const elem = document.getElementById(elemId);
-            if (elem && content.labels[labelKey]) {
-                elem.textContent = content.labels[labelKey];
-            }
-        }
-    }
-}
-
 function disableForm() {
     const form = document.getElementById('rider-contract-form');
     const inputs = form.querySelectorAll('input, select, textarea, button');
