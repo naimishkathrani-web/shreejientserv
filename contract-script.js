@@ -879,6 +879,7 @@ const contractContent = {
             date: "स्वीकृति की तारीख *",
             signedLocation: "हस्ताक्षर स्थान *",
             signedLocationHelp: "यह स्वचालित रूप से आपके कार्य स्थान से कॉपी किया जाता है",
+            confirmTerms: "मैंने ऊपर दिए गए सभी नियम और शर्तें पढ़ी और समझी हैं",
             agree: "मैंने सभी नियम और शर्तें पढ़ी हैं और सहमत हूं *",
             submit: "समझौता जमा करें",
             successTitle: "समझौता सफलतापूर्वक जमा किया गया!",
@@ -1183,6 +1184,14 @@ function updateContractLanguage(lang) {
     
     // Update contract content - THIS RECREATES THE CHECKBOX!
     document.getElementById('contract-content').innerHTML = content.content;
+    
+    // Update checkbox label if it exists (after HTML is inserted)
+    setTimeout(() => {
+        const checkboxLabel = document.getElementById('confirm-terms-label');
+        if (checkboxLabel && content.labels && content.labels.confirmTerms) {
+            checkboxLabel.textContent = content.labels.confirmTerms;
+        }
+    }, 50);
     
     // CRITICAL: Re-attach checkbox listener after content update
     setTimeout(() => {

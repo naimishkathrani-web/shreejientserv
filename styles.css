@@ -24,8 +24,8 @@ body {
     line-height: 1.6;
     color: var(--text-dark);
     overflow-x: hidden;
-    padding-top: 80px; /* Space for fixed header */
-    padding-bottom: 50px; /* Space for fixed footer - matches footer height */
+    padding-top: 70px; /* Space for fixed header */
+    padding-bottom: 50px; /* Space for fixed footer */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
