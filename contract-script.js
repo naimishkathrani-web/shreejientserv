@@ -1125,16 +1125,32 @@ document.addEventListener('DOMContentLoaded', function() {
         // Listen for language changes from global manager
         document.addEventListener('languageChanged', function(e) {
             const newLang = e.detail.language;
+            console.log(`Contract page received language change: ${newLang}`);
             // Update contract content based on new language
             if (contractContent[newLang]) {
                 updateContractLanguage(newLang);
             }
         });
         
-        // Initial language sync
-        const currentLang = languageManager.getCurrentLanguage();
-        if (contractContent[currentLang]) {
-            updateContractLanguage(currentLang);
+        // Initial language sync - check if language manager is loaded
+        if (typeof languageManager !== 'undefined') {
+            const currentLang = languageManager.getCurrentLanguage();
+            console.log(`Initial contract language: ${currentLang}`);
+            if (contractContent[currentLang]) {
+                updateContractLanguage(currentLang);
+            }
+        } else {
+            // If language manager not loaded yet, wait for it
+            console.log('Waiting for language manager to load...');
+            setTimeout(() => {
+                if (typeof languageManager !== 'undefined') {
+                    const currentLang = languageManager.getCurrentLanguage();
+                    console.log(`Delayed initial contract language: ${currentLang}`);
+                    if (contractContent[currentLang]) {
+                        updateContractLanguage(currentLang);
+                    }
+                }
+            }, 200);
         }
     }
 });

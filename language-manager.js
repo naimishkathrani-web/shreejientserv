@@ -24,8 +24,12 @@ class LanguageManager {
         const savedLanguage = localStorage.getItem('preferredLanguage');
         if (savedLanguage && this.supportedLanguages[savedLanguage]) {
             this.currentLanguage = savedLanguage;
+            console.log(`Loaded saved language: ${savedLanguage}`);
         } else {
             this.currentLanguage = this.detectLanguage();
+            // Save the detected language
+            localStorage.setItem('preferredLanguage', this.currentLanguage);
+            console.log(`Detected and saved language: ${this.currentLanguage}`);
         }
         
         // Apply language on page load
@@ -33,32 +37,84 @@ class LanguageManager {
         
         // Create language selector in header
         this.createLanguageSelector();
+        
+        // Trigger initial language change event after a short delay
+        // This ensures page-specific scripts have loaded
+        setTimeout(() => {
+            document.dispatchEvent(new CustomEvent('languageChanged', { 
+                detail: { language: this.currentLanguage } 
+            }));
+            console.log(`Initial language event triggered: ${this.currentLanguage}`);
+        }, 100);
     }
 
     detectLanguage() {
-        // Try to detect from browser language
+        // First, try to detect from browser language
         const browserLang = navigator.language || navigator.userLanguage;
         const langCode = browserLang.split('-')[0].toLowerCase();
         
         // Check if detected language is supported
         if (this.supportedLanguages[langCode]) {
+            console.log(`Language detected from browser: ${langCode}`);
             return langCode;
         }
         
-        // Try to detect from location/timezone (basic detection)
+        // Try to detect from location/timezone
         const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        console.log(`Detected timezone: ${timezone}`);
         
-        // Map common Indian timezones/regions to languages
-        const regionLanguageMap = {
-            'Asia/Kolkata': 'hi',
-            'Asia/Calcutta': 'bn'
-        };
-        
-        if (regionLanguageMap[timezone]) {
-            return regionLanguageMap[timezone];
+        // For Gujarat/India, all timezones are Asia/Kolkata
+        // We'll use browser hints and fallback to Gujarati for Gujarat region
+        if (timezone === 'Asia/Kolkata' || timezone === 'Asia/Calcutta') {
+            // Try to detect regional language from browser locale
+            const fullLocale = navigator.language || navigator.userLanguage;
+            console.log(`Full locale: ${fullLocale}`);
+            
+            // Check for regional variants like en-IN, gu-IN, hi-IN, etc.
+            const localeMap = {
+                'gu-IN': 'gu',  // Gujarati - India
+                'gu': 'gu',      // Gujarati
+                'hi-IN': 'hi',   // Hindi - India
+                'hi': 'hi',      // Hindi
+                'mr-IN': 'mr',   // Marathi - India
+                'mr': 'mr',      // Marathi
+                'ta-IN': 'ta',   // Tamil - India
+                'ta': 'ta',      // Tamil
+                'te-IN': 'te',   // Telugu - India
+                'te': 'te',      // Telugu
+                'kn-IN': 'kn',   // Kannada - India
+                'kn': 'kn',      // Kannada
+                'ml-IN': 'ml',   // Malayalam - India
+                'ml': 'ml',      // Malayalam
+                'bn-IN': 'bn',   // Bengali - India
+                'bn': 'bn',      // Bengali
+                'pa-IN': 'pa',   // Punjabi - India
+                'pa': 'pa'       // Punjabi
+            };
+            
+            if (localeMap[fullLocale]) {
+                console.log(`Language detected from locale: ${localeMap[fullLocale]}`);
+                return localeMap[fullLocale];
+            }
+            
+            // Check navigator.languages array for more hints
+            if (navigator.languages && navigator.languages.length > 0) {
+                for (let lang of navigator.languages) {
+                    if (localeMap[lang]) {
+                        console.log(`Language detected from languages array: ${localeMap[lang]}`);
+                        return localeMap[lang];
+                    }
+                }
+            }
+            
+            // Since you're in Gujarat, let's default to Gujarati for Indian timezone
+            // Users can always change it if needed
+            console.log('Defaulting to Gujarati for Indian timezone');
+            return 'gu';
         }
         
-        // Default to English
+        // Default to English for non-Indian timezones
+        console.log('Defaulting to English');
         return 'en';
     }
 
@@ -150,6 +206,7 @@ class LanguageManager {
 
         this.currentLanguage = langCode;
         localStorage.setItem('preferredLanguage', langCode);
+        console.log(`Language changed to: ${langCode}`);
         
         // Update button text
         const languageText = document.querySelector('.language-text');
@@ -166,9 +223,11 @@ class LanguageManager {
         this.applyLanguage(langCode);
         
         // Trigger custom event for page-specific translations
-        document.dispatchEvent(new CustomEvent('languageChanged', { 
+        const event = new CustomEvent('languageChanged', { 
             detail: { language: langCode } 
-        }));
+        });
+        document.dispatchEvent(event);
+        console.log(`Language change event dispatched for: ${langCode}`);
     }
 
     applyLanguage(langCode) {
