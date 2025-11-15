@@ -1069,8 +1069,29 @@ function updateContractLanguage(lang) {
     document.getElementById('header-subtitle').textContent = content.headerSubtitle;
     document.getElementById('form-title').textContent = content.formTitle;
     
-    // Update contract content
+    // Update contract content - THIS RECREATES THE CHECKBOX!
     document.getElementById('contract-content').innerHTML = content.content;
+    
+    // CRITICAL: Re-attach checkbox listener after content update
+    setTimeout(() => {
+        const confirmCheckbox = document.getElementById('confirmReadTerms');
+        if (confirmCheckbox) {
+            // Remove any existing listeners
+            const newCheckbox = confirmCheckbox.cloneNode(true);
+            confirmCheckbox.parentNode.replaceChild(newCheckbox, confirmCheckbox);
+            
+            // Add fresh listener
+            newCheckbox.addEventListener('change', function() {
+                if (this.checked) {
+                    hasReadContract = true;
+                    enableForm();
+                } else {
+                    hasReadContract = false;
+                    disableForm();
+                }
+            });
+        }
+    }, 100);
     
     // Update form labels
     document.getElementById('label-firstname').textContent = content.labels.firstname;
