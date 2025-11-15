@@ -1,15 +1,18 @@
 <?php
+// CRITICAL: Enable error display for debugging (remove after fixing)
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+// Also log errors to file
+ini_set('log_errors', 1);
+ini_set('error_log', __DIR__ . '/contract_email_errors.log');
+
 // Catch all errors and return JSON
 set_error_handler(function($errno, $errstr, $errfile, $errline) {
     error_log("PHP Error [$errno]: $errstr in $errfile on line $errline");
     return true; // Don't execute PHP internal error handler
 });
-
-// Enable error reporting for debugging
-error_reporting(E_ALL);
-ini_set('display_errors', 0);
-ini_set('log_errors', 1);
-ini_set('error_log', __DIR__ . '/contract_email_errors.log');
 
 // Set headers for CORS and JSON response
 // Allow both www and non-www origins

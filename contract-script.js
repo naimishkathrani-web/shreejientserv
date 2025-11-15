@@ -1182,8 +1182,7 @@ document.getElementById('rider-contract-form').addEventListener('submit', functi
     };
     
     // Send data to PHP backend for email processing
-    // TEMPORARY: Using simple test version to diagnose issue
-    fetch('send-contract-email-simple.php', {
+    fetch('send-contract-email.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
