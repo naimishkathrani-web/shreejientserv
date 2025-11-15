@@ -1000,6 +1000,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Set initial state on page load
     handleVehicleTypeChange();
     
+    // Load English content by default first
+    updateContractLanguage('en');
+    
     // Integrate with global language manager
     if (typeof languageManager !== 'undefined') {
         // Listen for language changes from global manager
@@ -1012,26 +1015,24 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Initial language sync - check if language manager is loaded
-        if (typeof languageManager !== 'undefined') {
-            const currentLang = languageManager.getCurrentLanguage();
-            console.log(`Initial new rider language: ${currentLang}`);
-            if (contractContent[currentLang]) {
-                updateContractLanguage(currentLang);
-            }
-        } else {
-            // If language manager not loaded yet, wait for it
-            console.log('Waiting for language manager to load...');
-            setTimeout(() => {
-                if (typeof languageManager !== 'undefined') {
-                    const currentLang = languageManager.getCurrentLanguage();
-                    console.log(`Delayed initial new rider language: ${currentLang}`);
-                    if (contractContent[currentLang]) {
-                        updateContractLanguage(currentLang);
-                    }
-                }
-            }, 200);
+        // Initial language sync with language manager
+        const currentLang = languageManager.getCurrentLanguage();
+        console.log(`Initial new rider language: ${currentLang}`);
+        if (contractContent[currentLang]) {
+            updateContractLanguage(currentLang);
         }
+    } else {
+        // If language manager not loaded yet, wait for it
+        console.log('Waiting for language manager to load...');
+        setTimeout(() => {
+            if (typeof languageManager !== 'undefined') {
+                const currentLang = languageManager.getCurrentLanguage();
+                console.log(`Delayed initial new rider language: ${currentLang}`);
+                if (contractContent[currentLang]) {
+                    updateContractLanguage(currentLang);
+                }
+            }
+        }, 200);
     }
 });
 
