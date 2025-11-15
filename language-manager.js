@@ -20,16 +20,24 @@ class LanguageManager {
     }
 
     init() {
-        // Load saved language from localStorage or detect from browser
+        // Check if user has manually selected a language before (flag system)
+        const manualSelection = localStorage.getItem('languageManuallySelected');
         const savedLanguage = localStorage.getItem('preferredLanguage');
-        if (savedLanguage && this.supportedLanguages[savedLanguage]) {
+        
+        if (manualSelection === 'true' && savedLanguage && this.supportedLanguages[savedLanguage]) {
+            // User has manually selected language before - use their choice
             this.currentLanguage = savedLanguage;
-            console.log(`Loaded saved language: ${savedLanguage}`);
+            console.log(`Using manually selected language: ${savedLanguage}`);
+        } else if (savedLanguage && this.supportedLanguages[savedLanguage] && manualSelection === 'false') {
+            // Language was auto-detected before and user hasn't changed it
+            this.currentLanguage = savedLanguage;
+            console.log(`Using previously auto-detected language: ${savedLanguage}`);
         } else {
+            // First time visit or no saved preference - auto-detect based on location
             this.currentLanguage = this.detectLanguage();
-            // Save the detected language
             localStorage.setItem('preferredLanguage', this.currentLanguage);
-            console.log(`Detected and saved language: ${this.currentLanguage}`);
+            localStorage.setItem('languageManuallySelected', 'false'); // Set flag to false for auto-detection
+            console.log(`Auto-detected language from location: ${this.currentLanguage}`);
         }
         
         // Apply language on page load
@@ -64,7 +72,7 @@ class LanguageManager {
         console.log(`Detected timezone: ${timezone}`);
         
         // For Gujarat/India, all timezones are Asia/Kolkata
-        // We'll use browser hints and fallback to Gujarati for Gujarat region
+        // We'll use browser hints and fallback to regional detection
         if (timezone === 'Asia/Kolkata' || timezone === 'Asia/Calcutta') {
             // Try to detect regional language from browser locale
             const fullLocale = navigator.language || navigator.userLanguage;
@@ -107,15 +115,77 @@ class LanguageManager {
                 }
             }
             
-            // Since you're in Gujarat, let's default to Gujarati for Indian timezone
-            // Users can always change it if needed
-            console.log('Defaulting to Gujarati for Indian timezone');
-            return 'gu';
+            // Try to use IP-based geolocation for more accurate state detection
+            // This is a fallback method using a free IP geolocation API
+            this.detectByIPLocation();
+            
+            // Default to Hindi for Indian timezone (most widely spoken)
+            console.log('Defaulting to Hindi for Indian timezone');
+            return 'hi';
         }
         
         // Default to English for non-Indian timezones
         console.log('Defaulting to English');
         return 'en';
+    }
+
+    async detectByIPLocation() {
+        try {
+            // Using ipapi.co for IP-based location detection (free, no API key needed)
+            const response = await fetch('https://ipapi.co/json/');
+            const data = await response.json();
+            
+            console.log(`IP Location detected: ${data.region}, ${data.country_name}`);
+            
+            // Map Indian states to languages
+            const stateLanguageMap = {
+                'Gujarat': 'gu',
+                'Maharashtra': 'mr',
+                'Tamil Nadu': 'ta',
+                'Telangana': 'te',
+                'Andhra Pradesh': 'te',
+                'Karnataka': 'kn',
+                'Kerala': 'ml',
+                'West Bengal': 'bn',
+                'Punjab': 'pa',
+                'Haryana': 'hi',
+                'Uttar Pradesh': 'hi',
+                'Madhya Pradesh': 'hi',
+                'Rajasthan': 'hi',
+                'Delhi': 'hi',
+                'Bihar': 'hi',
+                'Jharkhand': 'hi',
+                'Chhattisgarh': 'hi'
+            };
+            
+            const detectedLang = stateLanguageMap[data.region];
+            
+            if (detectedLang && data.country_code === 'IN') {
+                console.log(`Language detected by IP location: ${detectedLang} (${data.region})`);
+                this.currentLanguage = detectedLang;
+                localStorage.setItem('preferredLanguage', detectedLang);
+                localStorage.setItem('languageManuallySelected', 'false');
+                
+                // Update UI and trigger change
+                this.applyLanguage(detectedLang);
+                const languageText = document.querySelector('.language-text');
+                if (languageText) {
+                    languageText.textContent = this.supportedLanguages[detectedLang];
+                }
+                document.querySelectorAll('.language-option').forEach(btn => {
+                    btn.classList.toggle('active', btn.getAttribute('data-lang') === detectedLang);
+                });
+                
+                // Trigger language change event
+                setTimeout(() => {
+                    document.dispatchEvent(new CustomEvent('languageChanged', { 
+                        detail: { language: detectedLang } 
+                    }));
+                }, 200);
+            }
+        } catch (error) {
+            console.log('IP location detection failed, using default:', error);
+        }
     }
 
     createLanguageSelector() {
@@ -206,7 +276,9 @@ class LanguageManager {
 
         this.currentLanguage = langCode;
         localStorage.setItem('preferredLanguage', langCode);
-        console.log(`Language changed to: ${langCode}`);
+        // Set flag to TRUE when user manually selects language
+        localStorage.setItem('languageManuallySelected', 'true');
+        console.log(`Language manually changed to: ${langCode} (flag set to true)`);
         
         // Update button text
         const languageText = document.querySelector('.language-text');
