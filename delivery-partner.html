@@ -6,6 +6,16 @@
     <title>Become a Delivery Partner - Shreeji Enterprise Services</title>
     <meta name="description" content="Join Shreeji Enterprise Services as a delivery partner. Start with a 3-month trial, progress to a 1-year contract, and become a permanent employee with benefits.">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="language-selector.css">
+    <!-- Indian language fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gurmukhi:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         .navbar {
             margin-bottom: 0;
@@ -218,11 +228,12 @@
                     <img src="Images/Shreeji Logo 1.jpg" alt="Shreeji Enterprise Services">
                 </div>
                 <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="index.html#services">Services</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="index.html" data-translate="nav.home">Home</a></li>
+                    <li><a href="index.html#about" data-translate="nav.about">About</a></li>
+                    <li><a href="index.html#services" data-translate="nav.services">Services</a></li>
+                    <li><a href="index.html#contact" data-translate="nav.contact">Contact</a></li>
                 </ul>
+                <!-- Language selector will be inserted here by language-manager.js -->
                 <div class="hamburger" id="hamburger">
                     <span></span>
                     <span></span>
@@ -418,5 +429,8 @@
             <a href="index.html#contact" style="color: #667eea; text-decoration: none; margin: 0 15px;">Contact</a>
         </p>
     </footer>
+
+    <!-- Language Manager -->
+    <script src="language-manager.js"></script>
 </body>
 </html>
