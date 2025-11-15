@@ -929,6 +929,14 @@ document.addEventListener('DOMContentLoaded', function() {
         changeLanguage();
     }
     
+    // Auto-convert PAN to uppercase as user types
+    const panInput = document.getElementById('panNumber');
+    if (panInput) {
+        panInput.addEventListener('input', function() {
+            this.value = this.value.toUpperCase();
+        });
+    }
+    
     // Copy work location to signed location
     const workLocationInput = document.getElementById('workLocation');
     const signedLocationInput = document.getElementById('signedLocation');
@@ -968,6 +976,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const licenseNumberGroup = document.getElementById('licenseNumberGroup');
     const hasLicenseCheckbox = document.getElementById('hasLicense');
     const hasVehicleDocsCheckbox = document.getElementById('hasVehicleDocs');
+    
+    // Auto-convert Vehicle Number to uppercase as user types
+    if (vehicleNumberInput) {
+        vehicleNumberInput.addEventListener('input', function() {
+            this.value = this.value.toUpperCase();
+        });
+    }
     
     // Function to handle vehicle type change
     function handleVehicleTypeChange() {
