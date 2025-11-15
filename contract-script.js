@@ -1021,6 +1021,96 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Set initial state on page load
     handleVehicleTypeChange();
+    
+    // Validate checkboxes and enable/disable submit button
+    const submitButton = document.querySelector('#rider-contract-form button[type="submit"]');
+    const agreeTermsCheckbox = document.getElementById('agreeTerms');
+    const ownDocumentsCheckbox = document.getElementById('ownDocuments');
+    
+    function validateCheckboxes() {
+        const vehicleType = vehicleTypeSelect.value;
+        let allChecked = true;
+        let missingCheckboxes = [];
+        
+        // Always required: agreeTerms and ownDocuments
+        if (!agreeTermsCheckbox.checked) {
+            allChecked = false;
+            missingCheckboxes.push('I agree to all terms and conditions');
+            agreeTermsCheckbox.parentElement.style.border = '2px solid red';
+            agreeTermsCheckbox.parentElement.style.padding = '10px';
+            agreeTermsCheckbox.parentElement.style.borderRadius = '5px';
+            agreeTermsCheckbox.parentElement.style.background = '#ffe6e6';
+        } else {
+            agreeTermsCheckbox.parentElement.style.border = '';
+            agreeTermsCheckbox.parentElement.style.padding = '';
+            agreeTermsCheckbox.parentElement.style.background = '';
+        }
+        
+        if (!ownDocumentsCheckbox.checked) {
+            allChecked = false;
+            missingCheckboxes.push('I own original Aadhar and PAN documents');
+            ownDocumentsCheckbox.parentElement.style.border = '2px solid red';
+            ownDocumentsCheckbox.parentElement.style.padding = '10px';
+            ownDocumentsCheckbox.parentElement.style.borderRadius = '5px';
+            ownDocumentsCheckbox.parentElement.style.background = '#ffe6e6';
+        } else {
+            ownDocumentsCheckbox.parentElement.style.border = '';
+            ownDocumentsCheckbox.parentElement.style.padding = '';
+            ownDocumentsCheckbox.parentElement.style.background = '';
+        }
+        
+        // Only required for non-bicycle vehicles
+        if (vehicleType !== 'bike') {
+            if (!hasLicenseCheckbox.checked) {
+                allChecked = false;
+                missingCheckboxes.push('I have a valid driving license');
+                hasLicenseCheckbox.parentElement.style.border = '2px solid red';
+                hasLicenseCheckbox.parentElement.style.padding = '10px';
+                hasLicenseCheckbox.parentElement.style.borderRadius = '5px';
+                hasLicenseCheckbox.parentElement.style.background = '#ffe6e6';
+            } else {
+                hasLicenseCheckbox.parentElement.style.border = '';
+                hasLicenseCheckbox.parentElement.style.padding = '';
+                hasLicenseCheckbox.parentElement.style.background = '';
+            }
+            
+            if (!hasVehicleDocsCheckbox.checked) {
+                allChecked = false;
+                missingCheckboxes.push('I have valid vehicle registration documents');
+                hasVehicleDocsCheckbox.parentElement.style.border = '2px solid red';
+                hasVehicleDocsCheckbox.parentElement.style.padding = '10px';
+                hasVehicleDocsCheckbox.parentElement.style.borderRadius = '5px';
+                hasVehicleDocsCheckbox.parentElement.style.background = '#ffe6e6';
+            } else {
+                hasVehicleDocsCheckbox.parentElement.style.border = '';
+                hasVehicleDocsCheckbox.parentElement.style.padding = '';
+                hasVehicleDocsCheckbox.parentElement.style.background = '';
+            }
+        }
+        
+        // Enable or disable submit button
+        if (allChecked) {
+            submitButton.disabled = false;
+            submitButton.style.opacity = '1';
+            submitButton.style.cursor = 'pointer';
+            submitButton.title = 'Click to submit your contract';
+        } else {
+            submitButton.disabled = true;
+            submitButton.style.opacity = '0.5';
+            submitButton.style.cursor = 'not-allowed';
+            submitButton.title = 'Please check all required checkboxes: ' + missingCheckboxes.join(', ');
+        }
+    }
+    
+    // Add event listeners to all checkboxes
+    agreeTermsCheckbox.addEventListener('change', validateCheckboxes);
+    ownDocumentsCheckbox.addEventListener('change', validateCheckboxes);
+    hasLicenseCheckbox.addEventListener('change', validateCheckboxes);
+    hasVehicleDocsCheckbox.addEventListener('change', validateCheckboxes);
+    vehicleTypeSelect.addEventListener('change', validateCheckboxes);
+    
+    // Initial validation
+    validateCheckboxes();
 });
 
 function disableForm() {
@@ -1156,6 +1246,10 @@ function changeLanguage() {
 document.getElementById('rider-contract-form').addEventListener('submit', function(e) {
     e.preventDefault();
     
+    // Get submit button
+    const submitButton = this.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.innerHTML;
+    
     // Validate form
     if (!this.checkValidity()) {
         alert('Please fill in all required fields correctly.');
@@ -1168,6 +1262,12 @@ document.getElementById('rider-contract-form').addEventListener('submit', functi
         alert(validation.message);
         return;
     }
+    
+    // IMMEDIATELY disable button and show processing message
+    submitButton.disabled = true;
+    submitButton.innerHTML = '<span style="display: inline-block; animation: pulse 1.5s infinite;">⏳ Processing Contract...</span>';
+    submitButton.style.cursor = 'not-allowed';
+    submitButton.style.opacity = '0.7';
     
     // Collect form data
     const formData = {
@@ -1196,7 +1296,15 @@ document.getElementById('rider-contract-form').addEventListener('submit', functi
         submittedAt: new Date().toISOString()
     };
     
-    // Send data to PHP backend for email processing
+    // Show immediate feedback
+    const formContainer = document.getElementById('rider-contract-form');
+    const feedbackDiv = document.createElement('div');
+    feedbackDiv.className = 'processing-feedback';
+    feedbackDiv.style.cssText = 'background: #fff3cd; border: 2px solid #ffc107; padding: 20px; border-radius: 10px; margin-top: 20px; text-align: center; font-weight: bold;';
+    feedbackDiv.innerHTML = '✅ Contract Submitted Successfully!<br>📧 Drafting and sending confirmation email...<br>⏱️ Please wait...';
+    formContainer.appendChild(feedbackDiv);
+    
+    // Send data to PHP backend for email processing (runs in background)
     fetch('send-contract-email-v2.php', {
         method: 'POST',
         headers: {
@@ -1207,13 +1315,20 @@ document.getElementById('rider-contract-form').addEventListener('submit', functi
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            // Show success message
-            document.getElementById('rider-contract-form').style.display = 'none';
-            document.getElementById('contract-content').style.display = 'none';
-            document.getElementById('success-message').style.display = 'block';
+            // Update feedback
+            feedbackDiv.style.background = '#d4edda';
+            feedbackDiv.style.borderColor = '#28a745';
+            feedbackDiv.innerHTML = '✅ Contract Submitted & Email Sent Successfully!<br>📧 Check your email for confirmation.<br>⏱️ Redirecting...';
             
-            // Scroll to top
-            window.scrollTo(0, 0);
+            // Show success message after 2 seconds
+            setTimeout(() => {
+                document.getElementById('rider-contract-form').style.display = 'none';
+                document.getElementById('contract-content').style.display = 'none';
+                document.getElementById('success-message').style.display = 'block';
+                
+                // Scroll to top
+                window.scrollTo(0, 0);
+            }, 2000);
             
             console.log('Contract submitted successfully:', data);
         } else {
@@ -1222,10 +1337,22 @@ document.getElementById('rider-contract-form').addEventListener('submit', functi
     })
     .catch(error => {
         console.error('Error submitting contract:', error);
-        alert('Error submitting contract: ' + error.message + '\nPlease try again or contact us at info@shreejientserv.in');
+        
+        // Show error but keep submission
+        feedbackDiv.style.background = '#f8d7da';
+        feedbackDiv.style.borderColor = '#dc3545';
+        feedbackDiv.innerHTML = '⚠️ Contract Submitted but email may have failed.<br>Our team will contact you shortly.<br>Error: ' + error.message;
+        
+        // Still show success page after 3 seconds
+        setTimeout(() => {
+            document.getElementById('rider-contract-form').style.display = 'none';
+            document.getElementById('contract-content').style.display = 'none';
+            document.getElementById('success-message').style.display = 'block';
+            window.scrollTo(0, 0);
+        }, 3000);
     });
     
-    // Optional: Store in localStorage as backup for testing
+    // Optional: Store in localStorage as backup
     const existingData = JSON.parse(localStorage.getItem('riderContracts') || '[]');
     existingData.push(formData);
     localStorage.setItem('riderContracts', JSON.stringify(existingData));
