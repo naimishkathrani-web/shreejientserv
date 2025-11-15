@@ -892,35 +892,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('rider-contract-form');
     form.classList.remove('visible');
     
-    // Detect browser language and set accordingly
-    const browserLang = navigator.language || navigator.userLanguage;
-    const langCode = browserLang.split('-')[0];
-    const languageSelect = document.getElementById('language');
-    
-    // Always default to English first
-    languageSelect.value = 'en';
-    
-    // Load English content immediately
-    changeLanguage();
-    
-    // Force load content if still empty after changeLanguage
-    setTimeout(function() {
-        const contractContentDiv = document.getElementById('contract-content');
-        if (!contractContentDiv.innerHTML.trim()) {
-            const enContent = contractContent['en'];
-            if (enContent && enContent.content) {
-                contractContentDiv.innerHTML = enContent.content;
-                document.getElementById('page-title').textContent = enContent.pageTitle;
-                document.getElementById('header-subtitle').textContent = enContent.headerSubtitle;
-            }
-        }
-    }, 100);
-    
-    // Then check if browser language is supported and switch
-    if (contractContent[langCode] && langCode !== 'en') {
-        languageSelect.value = langCode;
-        changeLanguage();
-    }
+    // Load initial contract content (language-manager.js handles language detection)
+    const currentLang = localStorage.getItem('preferredLanguage') || 'en';
+    updateContractLanguage(currentLang);
     
     // Copy work location to signed location
     const workLocationInput = document.getElementById('workLocation');
@@ -1124,14 +1098,13 @@ function enableForm() {
     }, 5000);
 }
 
-function changeLanguage() {
-    const lang = document.getElementById('language').value;
+// Update contract language (called by global language-manager.js)
+function updateContractLanguage(lang) {
     const content = contractContent[lang] || contractContent.en;
     
     // Update page title and subtitle
     document.getElementById('page-title').textContent = content.pageTitle;
     document.getElementById('header-subtitle').textContent = content.headerSubtitle;
-    document.getElementById('lang-label').textContent = content.langLabel;
     document.getElementById('form-title').textContent = content.formTitle;
     
     // Update contract content
@@ -1200,6 +1173,7 @@ function changeLanguage() {
     }
 }
 
+
 // Form submission handling with comprehensive validation
 document.getElementById('rider-contract-form').addEventListener('submit', function(e) {
     e.preventDefault();
@@ -1250,7 +1224,7 @@ document.getElementById('rider-contract-form').addEventListener('submit', functi
         acceptanceDate: document.getElementById('acceptanceDate').value,
         signedLocation: document.getElementById('signedLocation').value,
         agreeTerms: document.getElementById('agreeTerms').checked,
-        language: document.getElementById('language').value,
+        language: localStorage.getItem('preferredLanguage') || 'en',
         submittedAt: new Date().toISOString()
     };
     
