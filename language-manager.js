@@ -233,7 +233,9 @@ class LanguageManager {
                 <div class="language-options" id="languageOptions">
                     ${Object.entries(this.supportedLanguages).map(([code, name]) => `
                         <button class="language-option ${code === this.currentLanguage ? 'active' : ''}" 
-                                data-lang="${code}">
+                                data-lang="${code}"
+                                title="${name}">
+                            <span class="option-icon">${code === this.currentLanguage ? '✓ ' : ''}</span>
                             ${name}
                         </button>
                     `).join('')}
@@ -278,28 +280,41 @@ class LanguageManager {
         localStorage.setItem('preferredLanguage', langCode);
         // Set flag to TRUE when user manually selects language
         localStorage.setItem('languageManuallySelected', 'true');
-        console.log(`Language manually changed to: ${langCode} (flag set to true)`);
+        
+        console.log(`Language manually changed to: ${langCode}`);
         
         // Update button text
-        const languageText = document.querySelector('.language-text');
-        if (languageText) {
-            languageText.textContent = this.supportedLanguages[langCode];
+        const languageButton = document.getElementById('languageButton');
+        if (languageButton) {
+            const langText = languageButton.querySelector('.language-text');
+            if (langText) {
+                langText.textContent = this.supportedLanguages[langCode];
+            }
         }
-
-        // Update active state
-        document.querySelectorAll('.language-option').forEach(btn => {
-            btn.classList.toggle('active', btn.getAttribute('data-lang') === langCode);
+        
+        // Update active state in dropdown
+        document.querySelectorAll('.language-option').forEach(option => {
+            const optionLang = option.getAttribute('data-lang');
+            if (optionLang === langCode) {
+                option.classList.add('active');
+                const icon = option.querySelector('.option-icon');
+                if (icon) icon.textContent = '✓ ';
+            } else {
+                option.classList.remove('active');
+                const icon = option.querySelector('.option-icon');
+                if (icon) icon.textContent = '';
+            }
         });
-
+        
         // Apply language changes
         this.applyLanguage(langCode);
         
-        // Trigger custom event for page-specific translations
-        const event = new CustomEvent('languageChanged', { 
+        // Dispatch event for page-specific language updates
+        document.dispatchEvent(new CustomEvent('languageChanged', { 
             detail: { language: langCode } 
-        });
-        document.dispatchEvent(event);
-        console.log(`Language change event dispatched for: ${langCode}`);
+        }));
+        
+        console.log(`Language changed event dispatched for: ${langCode}`);
     }
 
     applyLanguage(langCode) {

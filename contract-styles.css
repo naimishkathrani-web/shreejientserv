@@ -20,6 +20,7 @@ body {
     line-height: 1.6;
     color: var(--text-dark);
     background-color: var(--bg-light);
+    padding-top: 80px; /* Add space for fixed navbar */
 }
 
 .container {
@@ -31,6 +32,7 @@ body {
 .contract-header {
     text-align: center;
     margin-bottom: 3rem;
+    margin-top: 2rem; /* Additional spacing from navbar */
     background: white;
     padding: 2rem;
     border-radius: 12px;

@@ -14,30 +14,43 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 8px 16px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
+    padding: 10px 18px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
     color: white;
     cursor: pointer;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 600;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
 
 .language-button:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.5);
+    background: linear-gradient(135deg, #5568d3 0%, #653a8b 100%);
+    border-color: rgba(255, 255, 255, 0.8);
     transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
 }
 
 .globe-icon {
-    font-size: 18px;
+    font-size: 20px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
 }
 
 .language-text {
     font-family: inherit;
+    letter-spacing: 0.3px;
 }
 
 .dropdown-arrow {
@@ -45,8 +58,9 @@
     transition: transform 0.3s ease;
 }
 
-.language-button:hover .dropdown-arrow {
-    transform: translateY(2px);
+.language-button:hover .dropdown-arrow,
+.language-options.show ~ .language-button .dropdown-arrow {
+    transform: rotate(180deg);
 }
 
 .language-options {
@@ -73,7 +87,9 @@
 }
 
 .language-option {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 8px;
     width: 100%;
     padding: 12px 20px;
     text-align: left;
@@ -103,6 +119,11 @@
 
 .language-option.active:hover {
     background: linear-gradient(135deg, #5568d3 0%, #653a8b 100%);
+}
+
+.option-icon {
+    font-weight: bold;
+    min-width: 15px;
 }
 
 /* Language-specific font families */
