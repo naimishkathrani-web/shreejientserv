@@ -1182,7 +1182,7 @@ document.getElementById('rider-contract-form').addEventListener('submit', functi
     };
     
     // Send data to PHP backend for email processing
-    fetch('send-contract-email.php', {
+    fetch('send-contract-email-v2.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
