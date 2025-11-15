@@ -1,0 +1,219 @@
+/* Global Language Selector Styles */
+
+.language-selector {
+    position: relative;
+    margin-left: 20px;
+    z-index: 1001;
+}
+
+.language-dropdown {
+    position: relative;
+}
+
+.language-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.language-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.globe-icon {
+    font-size: 18px;
+}
+
+.language-text {
+    font-family: inherit;
+}
+
+.dropdown-arrow {
+    font-size: 10px;
+    transition: transform 0.3s ease;
+}
+
+.language-button:hover .dropdown-arrow {
+    transform: translateY(2px);
+}
+
+.language-options {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.language-options.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.language-option {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    text-align: left;
+    background: white;
+    border: none;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.language-option:last-child {
+    border-bottom: none;
+}
+
+.language-option:hover {
+    background: #f8f9fa;
+    padding-left: 25px;
+}
+
+.language-option.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-weight: 600;
+}
+
+.language-option.active:hover {
+    background: linear-gradient(135deg, #5568d3 0%, #653a8b 100%);
+}
+
+/* Language-specific font families */
+.font-hindi {
+    font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif;
+}
+
+.font-gujarati {
+    font-family: 'Noto Sans Gujarati', 'Poppins', sans-serif;
+}
+
+.font-marathi {
+    font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif;
+}
+
+.font-tamil {
+    font-family: 'Noto Sans Tamil', 'Poppins', sans-serif;
+}
+
+.font-telugu {
+    font-family: 'Noto Sans Telugu', 'Poppins', sans-serif;
+}
+
+.font-kannada {
+    font-family: 'Noto Sans Kannada', 'Poppins', sans-serif;
+}
+
+.font-malayalam {
+    font-family: 'Noto Sans Malayalam', 'Poppins', sans-serif;
+}
+
+.font-bengali {
+    font-family: 'Noto Sans Bengali', 'Poppins', sans-serif;
+}
+
+.font-punjabi {
+    font-family: 'Noto Sans Gurmukhi', 'Poppins', sans-serif;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .language-selector {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .language-button {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+    .language-text {
+        display: none; /* Hide text on mobile, show only icon */
+    }
+
+    .globe-icon {
+        font-size: 20px;
+    }
+
+    .language-options {
+        right: -10px;
+        min-width: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .language-button {
+        padding: 6px 10px;
+    }
+
+    .dropdown-arrow {
+        display: none;
+    }
+}
+
+/* Smooth scroll for language changes */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Animation for language change */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.language-changed {
+    animation: fadeIn 0.5s ease;
+}
+
+/* Custom scrollbar for language options */
+.language-options::-webkit-scrollbar {
+    width: 6px;
+}
+
+.language-options::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.language-options::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+}
+
+.language-options::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #5568d3 0%, #653a8b 100%);
+}

@@ -7,7 +7,17 @@
     <meta name="keywords" content="manpower supply, recruitment, delivery boys, BPO jobs, IT recruitment, Rajkot">
     <title>Shreeji Enterprise Services - Manpower Supply & Recruitment Solutions</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="language-selector.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Indian language fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gurmukhi:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
@@ -18,12 +28,13 @@
                     <img src="Images/Shreeji Logo 1.jpg" alt="Shreeji Enterprise Services Logo">
                 </div>
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="contract.html">Rider Agreement</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home" data-translate="nav.home">Home</a></li>
+                    <li><a href="#about" data-translate="nav.about">About</a></li>
+                    <li><a href="#services" data-translate="nav.services">Services</a></li>
+                    <li><a href="contract.html" data-translate="nav.rider_agreement">Rider Agreement</a></li>
+                    <li><a href="#contact" data-translate="nav.contact">Contact</a></li>
                 </ul>
+                <!-- Language selector will be inserted here by language-manager.js -->
                 <div class="hamburger" id="hamburger">
                     <span></span>
                     <span></span>
@@ -300,6 +311,8 @@
         </div>
     </footer>
 
+    <!-- Language Manager must load before other scripts -->
+    <script src="language-manager.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
