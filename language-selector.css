@@ -25,6 +25,7 @@
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    min-width: 150px; /* Ensure button is always wide enough */
 }
 
 .language-button:hover {
@@ -36,26 +37,19 @@
 
 .globe-icon {
     font-size: 20px;
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
 }
 
 .language-text {
     font-family: inherit;
     letter-spacing: 0.3px;
+    flex: 1; /* Take available space */
+    text-align: left;
 }
 
 .dropdown-arrow {
     font-size: 10px;
     transition: transform 0.3s ease;
+    margin-left: auto;
 }
 
 .language-button:hover .dropdown-arrow,
@@ -171,31 +165,39 @@
     }
 
     .language-button {
-        padding: 6px 12px;
-        font-size: 13px;
+        padding: 8px 14px;
+        font-size: 14px;
+        min-width: 120px;
     }
 
     .language-text {
-        display: none; /* Hide text on mobile, show only icon */
+        /* Keep text visible on mobile */
+        display: block;
+        font-size: 13px;
     }
 
     .globe-icon {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .language-options {
-        right: -10px;
-        min-width: 180px;
+        right: 0;
+        min-width: 160px;
     }
 }
 
 @media (max-width: 480px) {
     .language-button {
-        padding: 6px 10px;
+        padding: 6px 12px;
+        min-width: 100px;
+    }
+    
+    .language-text {
+        font-size: 12px;
     }
 
     .dropdown-arrow {
-        display: none;
+        font-size: 8px;
     }
 }
 

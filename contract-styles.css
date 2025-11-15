@@ -20,19 +20,20 @@ body {
     line-height: 1.6;
     color: var(--text-dark);
     background-color: var(--bg-light);
-    padding-top: 80px; /* Add space for fixed navbar */
+    /* Removed padding-top here as it's in main styles.css */
 }
 
 .container {
     max-width: 900px;
     margin: 0 auto;
     padding: 2rem 1rem;
+    padding-bottom: 80px; /* Extra space above footer */
 }
 
 .contract-header {
     text-align: center;
     margin-bottom: 3rem;
-    margin-top: 2rem; /* Additional spacing from navbar */
+    margin-top: 1rem; /* Reduced since body has padding-top */
     background: white;
     padding: 2rem;
     border-radius: 12px;
