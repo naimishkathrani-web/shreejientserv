@@ -890,13 +890,15 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Hide form initially
     const form = document.getElementById('rider-contract-form');
-    form.classList.remove('visible');
+    if (form) {
+        form.classList.remove('visible');
+    }
     
     // Load initial contract content (language-manager.js handles language detection)
     const currentLang = localStorage.getItem('preferredLanguage') || 'en';
     updateContractLanguage(currentLang);
     
-    // Copy work location to signed location
+    // Set up work location to signed location copy - no setTimeout needed now
     const workLocationInput = document.getElementById('workLocation');
     const signedLocationInput = document.getElementById('signedLocation');
     
