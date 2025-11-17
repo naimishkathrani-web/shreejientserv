@@ -542,6 +542,17 @@ const contractContent = {
                 વેબસાઇટ: www.shreejientserv.in<br>
                 ફોન: +91-7016899689</p>
             </div>
+            
+            <!-- Confirmation checkbox at bottom of terms -->
+            <div class="terms-confirmation" id="terms-confirmation">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="confirmReadTerms" />
+                    <span class="checkmark"></span>
+                    <span class="checkbox-label" id="confirm-terms-label">
+                        મેં ઉપરોક્ત તમામ નિયમો અને શરતોને વાંચી અને સમજી છે
+                    </span>
+                </label>
+            </div>
         `,
         labels: {
             firstname: "પ્રથમ નામ *",
@@ -846,6 +857,17 @@ const contractContent = {
                 ईमेल: info@shreejientserv.in<br>
                 वेबसाइट: www.shreejientserv.in<br>
                 फोन: +91-7016899689</p>
+            </div>
+            
+            <!-- Confirmation checkbox at bottom of terms -->
+            <div class="terms-confirmation" id="terms-confirmation">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="confirmReadTerms" />
+                    <span class="checkmark"></span>
+                    <span class="checkbox-label" id="confirm-terms-label">
+                        मैंने ऊपर दिए गए सभी नियम और शर्तें पढ़ी और समझी हैं
+                    </span>
+                </label>
             </div>
         `,
         labels: {
