@@ -20,7 +20,8 @@ body {
     line-height: 1.6;
     color: var(--text-dark);
     background-color: var(--bg-light);
-    /* Removed padding-top here as it's in main styles.css */
+    padding-top: 70px; /* Space for fixed navbar */
+    padding-bottom: 60px; /* Space for fixed footer */
 }
 
 .container {
