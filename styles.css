@@ -24,7 +24,7 @@ body {
     line-height: 1.6;
     color: var(--text-dark);
     overflow-x: hidden;
-    padding-top: 110px; /* Space for fixed header - increased to prevent overlap */
+    padding-top: 130px; /* Space for fixed header - FINAL FIX with extra buffer */
     padding-bottom: 60px; /* Space for fixed footer */
     min-height: 100vh;
     display: flex;
@@ -317,6 +317,26 @@ section {
     font-style: italic;
     color: var(--primary-color);
     font-weight: 500;
+}
+
+/* Service CTA Button */
+.service-cta-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+}
+
+.service-cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(37, 99, 235, 0.3);
 }
 
 /* Why Choose Us Section */
