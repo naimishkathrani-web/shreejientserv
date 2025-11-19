@@ -3,26 +3,29 @@ UPLOAD TO HOSTINGER - 4 FILES
 
 Upload these files to fix header overlap and checkbox issues:
 
-1. styles.css
+1. styles.css (11.45 KB) - Modified: Nov 19, 2025
    Location: public_html/css/styles.css
    Fix: Body padding-top increased to 110px
 
-2. contract-styles.css
+2. contract-styles.css (10.63 KB) - Modified: Nov 19, 2025
    Location: public_html/css/contract-styles.css
    Fix: Body padding-top 110px, removed extra margin
 
-3. contract-script.js
+3. contract-script.js (162.86 KB) - Modified: Nov 17, 2025
    Location: public_html/js/contract-script.js
    Fix: Checkbox added for Hindi/Gujarati (existing riders)
 
-4. new-rider-script.js
+4. new-rider-script.js (161.36 KB) - Modified: Nov 15, 2025
    Location: public_html/js/new-rider-script.js
    Fix: Checkbox added for all languages (new riders)
 
-AFTER UPLOAD:
-- Header will stay fixed at top
-- No text will be hidden behind header
-- Checkbox will appear in all languages
-- Proper spacing on all pages
+WHAT'S FIXED:
+✅ Header stays fixed at top
+✅ No text hidden behind header (110px padding)
+✅ Checkbox appears in Hindi (मैंने ऊपर दिए गए सभी नियम और शर्तें पढ़ी और समझी हैं)
+✅ Checkbox appears in Gujarati (મેં ઉપરોક્ત તમામ નિયમો અને શરતોને વાંચી અને સમજી છે)
+✅ Checkbox appears in all other languages
+✅ Proper spacing on all pages
 
-All changes are committed and pushed to GitHub.
+All files are ready in your local folder and pushed to GitHub.
+Just upload these 4 files to Hostinger File Manager.
