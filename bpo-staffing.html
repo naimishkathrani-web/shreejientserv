@@ -7,6 +7,7 @@
     <title>BPO & Staffing Solutions - Shreeji Enterprise Services</title>
     <link rel="stylesheet" href="styles.css?v=2025111902">
     <link rel="stylesheet" href="service-pages.css">
+    <link rel="stylesheet" href="language-selector.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -18,11 +19,12 @@
                     <img src="Images/Shreeji Logo 1.jpg" alt="Shreeji Enterprise Services Logo">
                 </div>
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="index.html#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="index.html" data-translate="nav.home">Home</a></li>
+                    <li><a href="index.html#about" data-translate="nav.about">About</a></li>
+                    <li><a href="index.html#services" data-translate="nav.services">Services</a></li>
+                    <li><a href="#contact" data-translate="nav.contact">Contact</a></li>
                 </ul>
+                <!-- Language selector will be inserted here by language-manager.js -->
                 <div class="hamburger" id="hamburger">
                     <span></span>
                     <span></span>
@@ -329,9 +331,10 @@
                     <p>714 The Spire 2, Rajkot | © 2024 All rights reserved</p>
                 </div>
             </div>
-        </div>
     </footer>
 
     <script src="script.js"></script>
+    <script src="language-manager.js"></script>
 </body>
+</html>
 </html>

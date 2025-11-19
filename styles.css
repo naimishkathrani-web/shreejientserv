@@ -267,6 +267,9 @@ section {
     border-radius: var(--border-radius);
     transition: var(--transition);
     border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .service-card:hover {
@@ -322,7 +325,7 @@ section {
 /* Service CTA Button */
 .service-cta-btn {
     display: inline-block;
-    margin-top: 1.5rem;
+    margin-top: auto; /* Push button to bottom */
     padding: 14px 28px;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: var(--white);
@@ -332,6 +335,7 @@ section {
     text-align: center;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+    align-self: flex-start; /* Don't stretch full width */
 }
 
 .service-cta-btn:hover {
