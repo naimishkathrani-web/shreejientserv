@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rider Agreement - Shreeji Enterprise Services</title>
+    <link rel="stylesheet" href="styles.css?v=2025111902">
+    <link rel="stylesheet" href="contract-styles.css?v=2025111902">
+    <link rel="stylesheet" href="language-selector.css?v=2025111902">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700&family=Noto+Sans+Telugu:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&family=Noto+Sans+Gujarati:wght@400;500;600;700&family=Noto+Sans+Kannada:wght@400;500;600;700&family=Noto+Sans+Malayalam:wght@400;500;600;700&family=Noto+Sans+Gurmukhi:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="Images/Shreeji Logo 1.jpg" alt="Shreeji Enterprise Services Logo">
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" data-translate="nav.home">Home</a></li>
+                    <li><a href="index.html#about" data-translate="nav.about">About</a></li>
+                    <li><a href="index.html#services" data-translate="nav.services">Services</a></li>
+                    <li><a href="index.html#contact" data-translate="nav.contact">Contact</a></li>
+                </ul>
+                <!-- Language selector will be inserted here by language-manager.js -->
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="contract-content" id="contract-content">
+            <!-- Contract content will be loaded here based on language -->
+        </div>
+
+        <form id="rider-contract-form" class="contract-form">
+            <h2 id="form-title">Rider Information & Acceptance</h2>
+            
+            <div class="form-group">
+                <label for="firstName" id="label-firstname">First Name *</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lastName" id="label-lastname">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="parentName" id="label-parent-name">Father/Mother Full Name *</label>
+                <input type="text" id="parentName" name="parentName" placeholder="Enter father's or mother's full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="parentMobile" id="label-parent-mobile">Father/Mother Mobile Number *</label>
+                <input type="tel" id="parentMobile" name="parentMobile" pattern="[0-9]{10}" maxlength="10" placeholder="10-digit mobile number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email" id="label-email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dateOfBirth" id="label-dob">Date of Birth *</label>
+                <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+            </div>
+
+            <div class="form-group">
+                <label for="aadharNumber" id="label-aadhar">Aadhar Card Number *</label>
+                <input type="text" id="aadharNumber" name="aadharNumber" pattern="[0-9]{12}" maxlength="12" placeholder="Enter 12-digit Aadhar number" required>
+                <small id="aadhar-help">Enter 12-digit Aadhar number</small>
+            </div>
+
+            <div class="form-group">
+                <label for="panNumber" id="label-pan">PAN Card Number *</label>
+                <input type="text" id="panNumber" name="panNumber" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" maxlength="10" style="text-transform: uppercase" placeholder="ABCDE1234F" required>
+                <small id="pan-help">Enter 10-character PAN number (e.g., ABCDE1234F)</small>
+            </div>
+
+            <div class="form-group">
+                <label for="mobileNumber" id="label-mobile">Mobile Number *</label>
+                <input type="tel" id="mobileNumber" name="mobileNumber" pattern="[0-9]{10}" maxlength="10" placeholder="10-digit mobile number" required>
+                <small id="mobile-help">Enter 10-digit mobile number</small>
+            </div>
+
+            <div class="form-group">
+                <label for="permanentAddress" id="label-permanent-address">Permanent/Hometown Address *</label>
+                <textarea id="permanentAddress" name="permanentAddress" rows="3" placeholder="Complete address with village/town, district, state, PIN code" required></textarea>
+                <small id="permanent-help">Enter your hometown/permanent address</small>
+            </div>
+
+            <div class="form-group">
+                <label for="currentAddress" id="label-current-address">Current Address *</label>
+                <textarea id="currentAddress" name="currentAddress" rows="3" placeholder="Complete address with area, city, state, PIN code" required></textarea>
+                <small id="current-help">Enter your current residential address</small>
+            </div>
+
+            <div class="form-group">
+                <label for="workLocation" id="label-location">Work Location *</label>
+                <input type="text" id="workLocation" name="workLocation" placeholder="City, State" required>
+            </div>
+
+            <div class="form-group">
+                <label for="vehicleType" id="label-vehicle">Vehicle Type *</label>
+                <select id="vehicleType" name="vehicleType" required>
+                    <option value="" id="vehicle-select">Select Vehicle Type</option>
+                    <option value="motorcycle" id="vehicle-motorcycle" selected>Motorcycle</option>
+                    <option value="scooter" id="vehicle-scooter">Scooter</option>
+                    <option value="bike" id="vehicle-bike">Bicycle</option>
+                </select>
+            </div>
+
+            <div class="form-group" id="vehicleNumberGroup">
+                <label for="vehicleNumber" id="label-vehicle-number">Vehicle Registration Number *</label>
+                <input type="text" id="vehicleNumber" name="vehicleNumber" style="text-transform: uppercase" placeholder="GJ01AB1234" required>
+            </div>
+
+            <div class="form-group" id="licenseNumberGroup">
+                <label for="licenseNumber" id="label-license-number">Driving License Number *</label>
+                <input type="text" id="licenseNumber" name="licenseNumber" style="text-transform: uppercase" placeholder="GJ0120230012345" required>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="hasLicense" name="hasLicense" required>
+                <label for="hasLicense" id="label-license">I confirm that I have a valid driving license *</label>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="hasVehicleDocs" name="hasVehicleDocs" required>
+                <label for="hasVehicleDocs" id="label-vehicle-docs">I confirm that I have valid RC, insurance, and PUC *</label>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="ownDocuments" name="ownDocuments" required>
+                <label for="ownDocuments" id="label-own-docs">I confirm all documents are my own and authentic *</label>
+            </div>
+
+            <div class="form-group">
+                <label for="acceptanceDate" id="label-date">Date of Acceptance *</label>
+                <input type="date" id="acceptanceDate" name="acceptanceDate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="signedLocation" id="label-signed-location">Signed Location *</label>
+                <input type="text" id="signedLocation" name="signedLocation" placeholder="Location where agreement is signed" required readonly>
+                <small id="signed-location-help">This is automatically copied from your work location</small>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                <label for="agreeTerms" id="label-agree">
+                    <strong>I have read and agree to all terms and conditions *</strong>
+                </label>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" id="submit-btn" class="submit-btn">Submit Agreement</button>
+            </div>
+        </form>
+
+        <div id="success-message" class="success-message" style="display: none;">
+            <h3 id="success-title">Agreement Submitted Successfully!</h3>
+            <p id="success-text">Your rider agreement has been submitted. You will be contacted by our team soon.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Shreeji Enterprise Services</h3>
+                </div>
+                <div class="footer-section">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="contract.html">Rider Agreement</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <p>714 The Spire 2, Rajkot | © 2024 All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Language Manager must load before contract-script.js -->
+    <script src="language-manager.js"></script>
+    <script src="script.js"></script>
+    <script src="contract-script.js"></script>
+</body>
+</html>
+```

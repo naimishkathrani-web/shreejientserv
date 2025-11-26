@@ -1,0 +1,16 @@
+# Enable rewrite engine
+RewriteEngine On
+
+# Redirect /services/it/ to /services/it.html
+RewriteRule ^services/it/?$ /services/it.html [L]
+RewriteRule ^services/bpo/?$ /services/bpo.html [L]
+RewriteRule ^services/delivery/?$ /services/delivery.html [L]
+
+# Redirect /contract/ to /contract.html
+RewriteRule ^contract/?$ /contract.html [L]
+RewriteRule ^new-rider-contract/?$ /new-rider-contract.html [L]
+
+# Remove .html extension from URLs (optional - for clean URLs)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
